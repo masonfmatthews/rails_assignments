@@ -1,0 +1,10 @@
+{
+  "name": "battleship-instructions",
+  "version": "0.0.1",
+  "title": "Instructions for Battleship",
+  "description": "Write detailed instructions on how to play a game of Battleship. Compose these instructions as if they were written for a computer interacting with a human.",
+  "keywords": [
+    "week-1",
+    "instructions"
+  ]
+}

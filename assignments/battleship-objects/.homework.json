@@ -1,0 +1,11 @@
+{
+  "name": "battleship-objects",
+  "version": "0.0.1",
+  "title": "Object Oriented Design for Battleship",
+  "description": "In preparation for building a Battleship game, create a set of classes representing concepts from the game.  Specify their behavior and state, then use them for simple exercises.",
+  "keywords": [
+    "week-1",
+    "ruby-basics",
+    "oo"
+  ]
+}
