@@ -1,18 +1,18 @@
-# Shirt Class
+# Employees and Departments
 
 ## Description
 
-Fix an error, simplify the code, and add defaults to an existing Shirt class.
+Create two classes to store, change, and communicate information about employees.
 
 ## Instructions
 
-Examine `shirt.rb`.  Feel free to save it on your computer or paste it into `irb`.  
+You are an employer who has just recently hired a bunch of people.  Unfortunately, you can no longer keep all of their names straight, and you've got no hope of remembering which department they work with.
 
-Answer the following questions:
+You want to keep track of employees (with their names and salaries), departments (with their names), and which employees are in which department.  You should be able to:
 
-* Which method is a class method?
-* Where is the bug in one of the instance methods?
-* Which method is a "getter" method, and which method is a "setter" method?
-* What one line of code could you write to get rid of both the getter and the setter at the same time?
-* What two lines of code could you write (after this class definition) to create a new shirt object with a color of "Blue", then change its color to "Red"?
-* How can you change line 2 (and JUST line 2) so that you don't have to give a color when creating a new shirt?
+* Create a new department.
+* Create a new employee.
+* Add an employee to a department.
+* Get an employee's name.
+* Give raises to an individual.
+* Give raises to a department.
