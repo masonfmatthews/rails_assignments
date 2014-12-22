@@ -5,51 +5,54 @@ require './human_genome'
 
 class ParentalTestTest < Minitest::Test
 
-  def test_class_exists
+  #This is not good practice, AND it forces you to do dumb things like test_c_
+  #  in the code.  However, it's easier to follow as you're learning if the
+  #  tests always run in the same order.
+  def self.test_order
+    :alpha
+  end
+
+  def test_a_class_exists
     assert HumanGenome
   end
 
-  def test_initializer_takes_array_parameter
-    assert HumanGenome.new((1..46).to_a)
+  def test_b_initializer_takes_array_parameter
+    assert HumanGenome.new([23, 54, 23, 12, 11, 85])
   end
 
-  def test_to_a
-    odd_array = OddArray.new([1, 3, 5])
-    assert_equal odd_array.to_a, [1, 3, 5]
+  def test_c_true_parent
+    human = HumanGenome.new([23, 54, 23, 12, 11, 85])
+    assert_equal human.parent_of?([23, 11, 85]), true
   end
 
-  def test_add_number
-    odd_array = OddArray.new([1, 3, 5])
-    odd_array.add(7)
-    assert_equal odd_array.to_a, [1, 3, 5, 7]
+  def test_d_not_parent
+    human = HumanGenome.new([23, 54, 23, 12, 11, 85])
+    assert_equal human.parent_of?([123, 154, 123]), false
   end
 
-  def test_initialize_with_evens
-    odd_array = OddArray.new([1, 2, 3, 4, 5])
-    assert_equal odd_array.to_a, [1, 3, 5]
+  def test_e_no_child
+    human = HumanGenome.new([23, 54, 23, 12, 11, 85])
+    assert_raises(RuntimeError) do
+      human.parent_of?([])
+    end
   end
 
-  def test_add_evens
-    odd_array = OddArray.new([1, 3, 5])
-    odd_array.add(2)
-    assert_equal odd_array.to_a, [1, 3, 5]
+  def test_f_partial_child
+    human = HumanGenome.new([23, 54, 23, 12, 11, 85])
+    assert_raises(RuntimeError) do
+      human.parent_of?([23])
+    end
   end
 
-  def test_add_negatives
-    odd_array = OddArray.new([-1, -2, 3, 4, -5])
-    odd_array.add(-4)
-    assert_equal odd_array.to_a, [-1, 3, -5]
+  def test_g_uneven_initialization
+    assert_raises(RuntimeError) do
+      HumanGenome.new([23])
+    end
   end
 
-  def test_add_decimals
-    odd_array = OddArray.new([1, 3.2, 5])
-    odd_array.add(2.1)
-    assert_equal odd_array.to_a, [1, 5]
-  end
-
-  def test_add_strings
-    odd_array = OddArray.new([1, "Bob", 2])
-    odd_array.add("Jen")
-    assert_equal odd_array.to_a, [1]
+  def test_h_empty_initialization
+    assert_raises(RuntimeError) do
+      HumanGenome.new([])
+    end
   end
 end
