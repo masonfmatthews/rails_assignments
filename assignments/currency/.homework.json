@@ -1,0 +1,15 @@
+{
+    "name": "currency",
+    "version": "0.0.1",
+    "title": "Currency",
+    "description": "Create a ruby class for storing currencies using Test-Driven Development.",
+    "difficultyModes": [
+        "Normal"
+    ],
+    "keywords": [
+        "Currency",
+        "OO",
+        "Ruby",
+        "TDD"
+    ]
+}

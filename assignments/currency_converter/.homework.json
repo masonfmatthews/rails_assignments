@@ -1,0 +1,16 @@
+{
+    "name": "currency_converter",
+    "version": "0.0.1",
+    "title": "Currency Converter",
+    "description": "Build on the Currency assignment.  Create a ruby class for converting currencies using Test-Driven Development.",
+    "difficultyModes": [
+        "Normal",
+        "Hard"
+    ],
+    "keywords": [
+        "Currency",
+        "OO",
+        "Ruby",
+        "TDD"
+    ]
+}
