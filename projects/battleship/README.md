@@ -20,10 +20,10 @@ After completing this assignment, you should...
 
 After completing this assignment, you should be able to effectively...
 
-* Accomplish all objectives from earlier in the week
-* Build a game-playing application that asks the user for input and provides output to the user
-* Create a computer player that can act like a human (albeit not necessarily an intelligent one)
-* Write an program that can satisfy a test suite
+* Accomplish all objectives from earlier in the week.
+* Build a game-playing application that asks the user for input and provides output to the user.
+* Create a computer player that can act like a human (albeit not necessarily an intelligent one).
+* Write an program that can satisfy a test suite.
 
 ## Details
 
