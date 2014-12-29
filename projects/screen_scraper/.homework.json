@@ -1,0 +1,21 @@
+{
+    "name": "screen_scraper",
+    "version": "0.0.1",
+    "title": "Google Scholar Screen Scraper",
+    "description": "Build an application which pulls information from the scholar.google.com website and stores it in a useful form.",
+    "difficultyModes": [
+        "Normal",
+        "Hard",
+        "Nightmare"
+    ],
+    "keywords": [
+        "Classes",
+        "HTML",
+        "HTTP",
+        "Parsing",
+        "Ruby",
+        "Pair Programming",
+        "TDD",
+        "Refactoring"
+    ]
+}
