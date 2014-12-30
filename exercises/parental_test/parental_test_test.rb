@@ -22,12 +22,12 @@ class ParentalTestTest < Minitest::Test
 
   def test_c_true_parent
     human = HumanGenome.new([23, 54, 23, 12, 11, 85])
-    assert_equal human.parent_of?([23, 11, 85]), true
+    assert human.parent_of?([23, 11, 85])
   end
 
   def test_d_not_parent
     human = HumanGenome.new([23, 54, 23, 12, 11, 85])
-    assert_equal human.parent_of?([123, 154, 123]), false
+    refute human.parent_of?([123, 154, 123])
   end
 
   def test_e_no_child
