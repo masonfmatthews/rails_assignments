@@ -10,9 +10,11 @@ You are an employer who has just recently hired a bunch of people.  Unfortunatel
 
 You want to keep track of employees (with their names and salaries), departments (with their names), and which employees are in which department.  You should be able to:
 
-* Create a new department.
-* Create a new employee.
+* Create a new department (once you know its name).
+* Create a new employee (once you know his/her name and salary).
 * Add an employee to a department.
 * Get an employee's name.
-* Give raises to an individual.
-* Give raises to a department.
+* Get an employee's salary.
+* Get a department's name.
+* Give a raise (in percent) to an individual.
+* Give raises (in percent) to a department.
