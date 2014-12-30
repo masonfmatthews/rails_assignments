@@ -4,8 +4,6 @@
 
 Create a set of classes to represent concepts from the game of Battleship.  
 
-
-
 ## Objectives
 
 ### Learning Objectives
@@ -17,7 +15,8 @@ After completing this assignment, you should...
 * Understand and be able to define "method"
 * Understand when and why methods require parameters
 * Understand mappings between simple real-world concepts and their code representation in classes and methods
-* Understand how a Ruby application can span more than one file on disk.
+* Understand how a Ruby application can span more than one file on disk
+* Understand simple inheritance
 
 ### Performance Objectives
 
@@ -48,6 +47,7 @@ Send the link to your repository to your instructor.
 * Each class should be in a separate file.  If the class is called `Ship`, then the file should be named `ship.rb`.
 * Each of your classes should have an initializer.  These initializers SHOULD have code in them to set all the instance variables you provided in your diagram.
 * All other methods you write for your classes will NOT need to have code in them.  You'll just be writing "stubs" for those.
+* At least one class should inherit from another class.
 * Consider the following behaviors.  They will all need to be executed during a game of Battleship.  Each of these behaviors will need to be a method, and you have to place them in the appropriate classes.  You DO NOT have to write code inside of them.  Just give them reasonable names and put them in the right places:
   * Start a new game
   * Place a ship on the game board
