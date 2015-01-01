@@ -40,7 +40,7 @@ Send the link to your repository to your instructor.
 
 The major requirement of this project is for the TEST SUITE TO PASS.  You are coding to the tests, and ideally, you're making them pass one at a time.  As discussed in class, I would suggest making the first test pass USING THE SIMPLEST MEANS POSSIBLE.  Then move on to the second test, the third test and so on.  You should commit after each test passes.
 
-Here's the odd thing.  READ THIS.  If you're ever going to call `gets.chomp` in your code to prompt the user for his/her input, don't.  Put the following code in the top of any file that needs to prompt the user:
+Here's the odd thing.  READ THIS.  If you're ever going to call `gets.chomp` in your code to prompt the user for his/her input, don't.  Put the following code at the top of any file that needs to prompt the user:
 
 ```
 def get_user_input
