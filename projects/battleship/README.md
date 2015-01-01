@@ -40,7 +40,7 @@ Send the link to your repository to your instructor.
 
 The major requirement of this project is for the TEST SUITE TO PASS.  You are coding to the tests, and ideally, you're making them pass one at a time.  As discussed in class, I would suggest making the first test pass USING THE SIMPLEST MEANS POSSIBLE.  Then move on to the second test, the third test and so on.  You should commit after each test passes.
 
-Here's the odd thing.  READ THIS.  If you're ever going to call `gets.chomp` in your code to prompt the user for his/her input, don't.  Put the following code in the top of your file instead:
+Here's the odd thing.  READ THIS.  If you're ever going to call `gets.chomp` in your code to prompt the user for his/her input, don't.  Put the following code in the top of any file that needs to prompt the user:
 
 ```
 def get_user_input
@@ -48,7 +48,7 @@ def get_user_input
 end
 ```
 
-I know that looks stupid, but the test suite will only run if you ALWAYS ask for user input by calling `get_user_input` rather than `gets.chomp`.  I apologize for this.
+This goes BEFORE you start defining your class.  I know that looks stupid, and I apologize for it, but the test suite will only run if you ALWAYS ask for user input by calling `get_user_input` rather than `gets.chomp`.  Sorry again.
 
 Just to be clear, your computer player does not have to be smart.  It just has to play until the game is finished.
 
