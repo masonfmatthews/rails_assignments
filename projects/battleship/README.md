@@ -2,7 +2,7 @@
 
 ## Description
 
-Write a program that plays the game of Battleship.  The user will act as Player 1, and the computer will act as Player 2.
+Write a program that plays the game of Battleship.  The user can act as Player 1, and the computer can act as Player 2.
 
 ## Objectives
 
@@ -39,6 +39,16 @@ Send the link to your repository to your instructor.
 ### Requirements
 
 The major requirement of this project is for the TEST SUITE TO PASS.  You are coding to the tests, and ideally, you're making them pass one at a time.  As discussed in class, I would suggest making the first test pass USING THE SIMPLEST MEANS POSSIBLE.  Then move on to the second test, the third test and so on.  You should commit after each test passes.
+
+Here's the odd thing.  READ THIS.  If you're ever going to call `gets.chomp` in your code to prompt the user for his/her input, don't.  Put the following code in the top of your file instead:
+
+```
+def get_user_input
+  gets.chomp
+end
+```
+
+I know that looks stupid, but the test suite will only run if you ALWAYS ask for user input by calling `get_user_input` rather than `gets.chomp`.  I apologize for this.
 
 Just to be clear, your computer player does not have to be smart.  It just has to play until the game is finished.
 
