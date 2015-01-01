@@ -1,4 +1,3 @@
-gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 require './battleship'
@@ -510,7 +509,7 @@ J |   |   |   |   |   |   |   |   |   |   |
     end
   end
 
-  def mid_41_game_status
+  def mid_game_status
     %Q{    1   2   3   4   5   6   7   8   9   10
   -----------------------------------------
 A |   |   |   |   |   |   |   |   |   |   |
@@ -541,7 +540,7 @@ J |   |   |   |   |   |   |   |   |   |   |
 }
   end
 
-  def test_42_game_can_be_won
+  def test_41_game_can_be_won
     human1 = HumanPlayer.new("Amy")
     human2 = HumanPlayer.new("Beth")
     game = Game.new(human1, human2, [2])
