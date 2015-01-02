@@ -1,0 +1,15 @@
+{
+    "name": "css_reverse_engineering",
+    "version": "0.0.1",
+    "title": "CSS Reverse Engineering",
+    "description": "Given screenshots of web pages, reproduce the look of each using CSS.",
+    "difficultyModes": [
+        "Normal",
+        "Hard"
+    ],
+    "keywords": [
+        "CSS",
+        "HTML",
+        "Ruby"
+    ]
+}
