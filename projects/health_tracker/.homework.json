@@ -1,0 +1,17 @@
+{
+    "name": "health_tracker",
+    "version": "0.0.1",
+    "title": "Health Tracker",
+    "description": "Build a Rails application to store information on your weight, calories consumed, and exercise performed",
+    "difficultyModes": [
+        "Normal",
+        "Hard",
+        "Nightmare"
+    ],
+    "keywords": [
+        "First App",
+        "Rails",
+        "Rails Basics",
+        "Ruby"
+    ]
+}
