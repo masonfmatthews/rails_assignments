@@ -1,0 +1,14 @@
+{
+    "name": "online_voting",
+    "version": "0.0.1",
+    "title": "Online Voting",
+    "description": "Build an application allowing an entire state to provide individual votes for their senator.",
+    "difficultyModes": [
+        "Normal"
+    ],
+    "keywords": [
+        "Normalized Database Design",
+        "Rails",
+        "Ruby"
+    ]
+}
