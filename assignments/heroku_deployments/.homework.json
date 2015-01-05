@@ -1,0 +1,16 @@
+{
+    "name": "heroku_deployments",
+    "version": "0.0.1",
+    "title": "My First Heroku Deployments",
+    "description": "Deploy two of your prior rails projects to Heroku, then modify them to add Bourbon and Neat and redeploy.",
+    "difficultyModes": [
+        "Normal"
+    ],
+    "keywords": [
+        "Bourbon",
+        "Heroku",
+        "Neat",
+        "Rails",
+        "Ruby"
+    ]
+}
