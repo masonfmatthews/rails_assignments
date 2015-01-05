@@ -19,6 +19,7 @@ After completing this assignment, you should...
 
 After completing this assignment, you should be able to effectively...
 
+* Build an application with a Front End Engineering student
 * Design data structures of intermediate complexity
 * Model and query relational databases with ActiveRecord and AREL
 * Allow users of multiple types to log in
@@ -52,41 +53,33 @@ Your application should allow for the following:
   * View all users' questions on a single upcoming bill
   * View answers to all questions on single upcoming bill
   * +1 a question (in essence, mark it to say that you think it's a good question)
+  * View all questions that you +1'd (and their answers)
+  * View constituent voting results of closed bills
+  * View the congressperson's voting history on these bills
 * Someone from the congressperson's office can log in and:
   * Create constituent accounts
   * Create new upcoming bills
   * See questions on a bill written by constituents
   * Answer questions
   * See the constituent voting results of each bill
+  * See all constituent questions on any upcoming bill in one place (with number of followers for each question, ordered by number of followers)
+  * Mark an upcoming bill as closed (no longer "upcoming")
+  * Enter the congressperson's actual vote on a bill placed in congress
 
 Your code should also:
 
 * Use AREL queries throughout
 * Use at least one scope
 * Use delegation at least once
+* Be written using TDD
 
 ## Normal Mode
 
-Assume that you are building an application for a Senator or Representative who actually wants all of his or her votes in congress to be representative of their constituents.  In order to meet this goal, the congressperson's office will post details of upcoming bills and ask constituents to log in and vote yes or no.  The congressperson will then cast a real vote that matches the views of the majority of his or her constituents.
+Assume that you are building an application for a Senator or Representative who actually wants all of his or her votes in congress to be representative of their constituents.  In order to meet this goal, the congressperson's office will post details of upcoming bills and ask constituents to log in and vote yes or no.  The congressperson will then cast a real vote in congress that matches the views of the majority of his or her constituents.
 
 You must satisfy all of the requirements given in the section above.  People using the app will be in one of the three states shown in the requirements section (Visitor not logged in; Constituent logged in; Congressperson's staff logged in), and different actions will be available in those different states.
 
 And yes, real-world adoption of this software would be... unlikely.  Sorry about that.
-
-## Hard Mode
-
-Add the following requirements to your application:
-
-* Constituents can log in and:
-  * View all questions that you +1'd (and their answers)
-  * View constituent voting results of closed bills
-  * View the congressperson's voting history on these bills
-* Someone from the congressperson's office can log in and:
-  * See all constituent questions on any upcoming bill in one place (with number of followers for each question, ordered by number of followers)
-  * Mark an upcoming bill as closed (no longer "upcoming")
-  * Enter the congressperson's actual vote on a bill placed in congress
-
-First, branch your code.  Second, create a separate, updated data structure diagram.  Third, write the code (but don't forget to use TDD!)
 
 ## Additional Resources
 
