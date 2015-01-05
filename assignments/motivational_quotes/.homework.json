@@ -1,0 +1,16 @@
+{
+    "name": "motivational_quotes",
+    "version": "0.0.1",
+    "title": "Motivational Quote Generator",
+    "description": "Build a two-page Rails app.  The first page asks you to select your mood from a dropdown.  The second page displays a random motivational quote that matches that mood.",
+    "difficultyModes": [
+        "Normal",
+        "Hard"
+    ],
+    "keywords": [
+        "HTML Forms",
+        "MVC",
+        "Rails Basics",
+        "Ruby"
+    ]
+}
