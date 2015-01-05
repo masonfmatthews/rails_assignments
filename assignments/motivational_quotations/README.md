@@ -11,7 +11,7 @@ Build a two-page Rails app.  The first page asks you to select your mood from a 
 
 After completing this assignment, you should...
 
-* Understand how to create a basic Rails app (with no database tables).
+* Understand how to create a basic Rails app (with no database tables)
 * Understand the MVC architecture
 * Understand GET and POST
 * Understand basic HTML forms
