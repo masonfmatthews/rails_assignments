@@ -36,9 +36,9 @@ After completing this assignment, you should be able to effectively...
   * Manage their students (scaffold is fine)
   * Manage their students' parents (name and e-mail address)
   * Change their own passwords
-  * Change their
+  * Change their name without changing their password at the same time
   * Log out
-* Teachers should not see other teachers' students or their parents.
+* Teachers should not see other teachers' students or their parents
 
 ## Normal Mode
 
