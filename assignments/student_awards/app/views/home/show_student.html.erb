@@ -1,0 +1,18 @@
+<h2><%= @student.name %>'s Awards!</h2>
+
+<% @student.awards.each do |award| %>
+  <p>
+    <%= award.name %>: awarded on <%= award.awarded_on %>.
+    <%= link_to "Delete", home_remove_award_path(id: award.id) %>
+  </p>
+<% end %>
+<%= "No Awards Found." if @student.awards.blank? %>
+
+<%= form_for @new_award, url: home_add_award_path do |f| %>
+  <h4>New Award</h4>
+
+  <%= f.hidden_field :student_id %>
+  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.text_field :awarded_on, placeholder: "Date (yyyy-mm-dd)" %>
+  <%= f.submit %>
+<% end %>

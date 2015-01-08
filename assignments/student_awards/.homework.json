@@ -1,0 +1,19 @@
+{
+    "name": "student_awards",
+    "version": "0.0.1",
+    "title": "Student Awards",
+    "description": "Given an existing application with code duplication and sloppy routing, modify the application to use partials, helpers, and REST.",
+    "difficultyModes": [
+        "Normal",
+        "Hard"
+    ],
+    "keywords": [
+        "Helpers",
+        "Integration Testing.",
+        "Partials",
+        "REST",
+        "Rails",
+        "Routes",
+        "Ruby"
+    ]
+}

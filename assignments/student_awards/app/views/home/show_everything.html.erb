@@ -1,0 +1,29 @@
+<h2>Awards!</h2>
+
+<% @teachers.each do |teacher| %>
+  <h4><%= link_to teacher.name, home_show_teacher_path(id: teacher.id) %>'s Class</h4>
+  <% teacher.students.each do |student| %>
+    <dt><%= link_to student.name, home_show_student_path(id: student.id) %></dt>
+    <dd>
+      <% student.awards.each do |award| %>
+        <p><%= award.name %>: awarded on <%= award.awarded_on %>.</p>
+      <% end %>
+      <% if student.awards.blank? %>
+        <em>No Awards Found.</em>
+      <% end %>
+    </dd>
+  <% end %>
+  <% if teacher.students.blank? %>
+    <em>No Students Found.</em>
+  <% end %>
+<% end %>
+<% if @teachers.blank? %>
+  <em>No Teachers Found.</em>
+<% end %>
+
+<%= form_for @new_teacher, url: home_add_teacher_path do |f| %>
+  <h4>Create a New Teacher</h4>
+
+  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.submit %>
+<% end %>
