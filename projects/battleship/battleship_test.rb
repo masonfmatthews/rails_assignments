@@ -296,8 +296,6 @@ J |   |   |   |   |   |   |   |   |   |   |
     assert_equal 7, board.y_of("G1")
     assert_equal 4, board.y_of("D6")
     assert_equal 4, board.y_of("D10")
-
-    # refute board.fire_at("MONKEY")
   end
 
   def test_30_human_player_is_asked_to_place_ships
