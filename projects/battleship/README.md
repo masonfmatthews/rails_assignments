@@ -34,11 +34,13 @@ After completing this assignment, you should be able to effectively...
 * **Ruby Files.** You'll need a lot of these, and you'll be creating them from scratch.  Again, you should have one per class, plus at least one other to be executed from the command line to run the game.
 * **A Playable Game.** When I clone your repository, I should be able to run your program and play through an entire game of Battleship.  I should be able to win and to lose.
 
-Send the link to your repository to your instructor.
+When you are finished, create a pull request.
 
 ### Requirements
 
 The major requirement of this project is for the TEST SUITE TO PASS.  You are coding to the tests, and ideally, you're making them pass one at a time.  As discussed in class, I would suggest making the first test pass USING THE SIMPLEST MEANS POSSIBLE.  Then move on to the second test, the third test and so on.  You should commit after each test passes.
+
+Just to be clear, your computer player does not have to be smart.  It just has to play until the game is finished.
 
 Here's the odd thing.  READ THIS.  If you're ever going to call `gets.chomp` in your code to prompt the user for his/her input, don't.  Put the following code at the top of any file that needs to prompt the user:
 
@@ -50,11 +52,9 @@ end
 
 This goes BEFORE you start defining your class.  I know that looks stupid, and I apologize for it, but the test suite will only run if you ALWAYS ask for user input by calling `get_user_input` rather than `gets.chomp`.  Sorry again.
 
-Just to be clear, your computer player does not have to be smart.  It just has to play until the game is finished.
-
 ## Normal Mode
 
-It's finally time.  Your task this weekend, whether or not you choose to accept it, is to write a program that plays the game of Battleship.  The user will act as Player 1, and the computer will act as Player 2.
+It's finally time.  Your task this weekend, whether or not you choose to accept it, is to write a program that plays the game of Battleship.  The user can act as Player 1, and the computer can act as Player 2.  However, as you work through the assignment, you'll notice that you're also building it so that two humans could play each other.
 
 This assignment will bring together two of the assignments from earlier in the week: your written set of computer-friendly instructions from Day 1, and the draft code of your objects from Day 3.  You WON'T be using that draft code as a starting point, because it's likely that the classes you designed won't match what the test suite is expecting.  You'll be writing code to make a test suite pass, so it is going to dictate a lot of what you put together.
 

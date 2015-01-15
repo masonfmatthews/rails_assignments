@@ -36,6 +36,8 @@ After you get each requirement working, run `git add .`, then `git commit -m "TE
 
 After your work is complete, make sure to `git push` to get your changes up to github.  Feel free to do this more than once along the way, of course.
 
+Finally, create a pull request for your completed project.  This will count as turning in your work.
+
 ### Requirements  
 
 * The gameplay should match the instructions given in the Mode(s) below.
