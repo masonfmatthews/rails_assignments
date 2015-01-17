@@ -17,7 +17,7 @@ Thankfully, you fly on a very very very loud plane, so you don't have to worry a
 * I approve: thumbs up.
 * Go away: flick of the wrist.
 
-You happen to also be a developer.  Create a ruby class called `Human` which has one method for each of these behaviors and returns symbols.  For instance, the `say_yes` method should return `:nod`.
+You happen to also be a developer.  Create a ruby class called `Human` which has one method for each of these behaviors and outputs using `puts`.  For instance, the `say_yes` method should `puts "nod"`.
 
 Now, you've learned that people from the following countries have different motions for the following meanings:
 
