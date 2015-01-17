@@ -1,6 +1,8 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './battleship'
+
+#Note: This line is going to fail
+require './battleship.rb'
 
 $mock_inputs = []
 def get_user_input
@@ -9,9 +11,10 @@ end
 
 class BattleshipTest < Minitest::Test
 
-  #This is not good practice, AND it forces you to do dumb things like test_00_
-  #  in the code.  However, it's easier to follow as you're learning if the
-  #  tests always run in the same order.
+  #This self.test_order methidis not good practice, AND it forces you to write
+  #   dumb things like test_00_ in the code.  However,
+  #   it's easier to follow as you're learning if the
+  #   tests always run in the same order.  Sorry.
   def self.test_order
     :alpha
   end
@@ -85,7 +88,6 @@ class BattleshipTest < Minitest::Test
     assert ship.sunk?
   end
 
-
   def test_08_board_class_exists
     assert Board
   end
@@ -113,6 +115,7 @@ class BattleshipTest < Minitest::Test
     refute board.place_ship(Ship.new(4), 1, 3, true)
     refute board.place_ship(Ship.new(4), 4, 3, true)
     refute board.place_ship(Ship.new(4), 4, 2, false)
+    assert board.place_ship(Ship.new(4), 7, 7, true)
   end
 
   def test_12_misses_on_empty_board
