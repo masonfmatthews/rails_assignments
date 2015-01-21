@@ -34,6 +34,7 @@ Currency:
 
 * Should be created with an amount and a currency code
 * Should equal another Currency object with the same amount and currency code
+* Should NOT equal another Currency object with different amount or currency code
 * Should be able to be added to another Currency object with the same currency code
 * Should be able to be subtracted by another Currency object with the same currency code
 * Should raise a DifferentCurrencyCodeError when you try to add or subtract two Currency objects with different currency codes.
@@ -57,5 +58,7 @@ There are right ways to do this, wrong ways to do this, and okay ways to do this
 
 ## Additional Resources
 
-* A good site to get [real conversion rates](http://www.xe.com/currencyconverter/#rates)
-* A list of [active currency codes](https://en.wikipedia.org/wiki/ISO_4217#Active_codes)
+* [Documentation for Minitest asserts](http://www.ruby-doc.org/stdlib-1.9.3/libdoc/minitest/unit/rdoc/MiniTest/Assertions.html)
+* [A good blog post about creating your own error classes](http://www.skorks.com/2009/09/ruby-exceptions-and-exception-handling/)
+* [A good site to get real conversion rates](http://www.xe.com/currencyconverter/#rates)
+* [A list of active currency codes](https://en.wikipedia.org/wiki/ISO_4217#Active_codes)

@@ -19,7 +19,7 @@ After completing this assignment, you should...
 
 After completing this assignment, you should be able to effectively...
 
-* Use online tools like JSFiddle for rapid HTML and CSS experimentation
+* Use online tools like Codepen for rapid HTML and CSS experimentation
 * Create simple HTML documents
 * Style them with simple CSS documents
 
@@ -27,7 +27,7 @@ After completing this assignment, you should be able to effectively...
 
 ### Deliverables
 
-* Links to your fiddles.
+* Links to your pens.
 
 ### Requirements
 
@@ -35,15 +35,14 @@ Your goal today is to reproduce webpages or components of webpages that you migh
 
 Your work will probably proceed like this:
 
-* Set up an account with JSFiddle.net.  Don't worry about registration fields you'd rather not enter.  Just leave them blank.
-* You should be taken directly to a blank fiddle, but if you aren't, you can always type "jsfiddle.net" directly into your browser's address bar to be given a new fiddle.
-* Whenever you change your HTML or CSS, you'll have to hit the "Run" button to see your changes.
-* The first time you save, the button will be called "Save."  Every time after that, it will be called "Update." Regardless of its name, make sure to hit it often.  The "Run" button does NOT save by itself.
-* When you are finished with each part of this assignment, MAKE SURE TO HIT UPDATE, then hit the "Share" button, then copy the first link and turn it in to your instructor.
+* Set up an account with codepen.io.
+* Build a new "pen".
+* As you change HTML or CSS, the view of the page below will automatically refresh, but you do need to save before your changes stick around.
+* When you are finished with each mode of this assignment, you can copy the link from your address bar and submit it to your instructor via e-mail.
 
 ## Easy Mode
 
-The first task is to make a (terribly ugly) webpage containing one of Shakespeare's sonnets.  You will be making a webpage in JSFiddle that looks exactly like this:
+The first task is to make a (terribly ugly) webpage containing one of Shakespeare's sonnets.  You will be making a webpage in Codepen that looks exactly like this:
 
 ![Easy Mode Screenshot](sonnet.png)
 
