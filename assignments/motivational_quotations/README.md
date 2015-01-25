@@ -29,8 +29,10 @@ After completing this assignment, you should be able to effectively...
 
 ### Deliverables
 
-* **A Repository.** Create a new github repository under your account.  Commit often, not just at the end.
+* **A Repository.** Fork this Github repository.  Commit often, not just at the end.
 * **Your First Rails App!**
+
+Create a pull request when you are finished with your work.
 
 ### Requirements
 
