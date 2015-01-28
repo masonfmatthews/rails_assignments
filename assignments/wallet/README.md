@@ -26,11 +26,11 @@ After completing this assignment, you should be able to effectively...
 
 ### Deliverables
 
-* **A Repository.** Create a new github repository under your account.  Commit often, not just at the end.
+* **A Repository.** Fork this github repository, then clone it to your local machine, cd into the directory, and call `rails new .`.  Commit often, not just at the end.
 * **Your Second Rails App!**
 * **A README.** Create a README that describes the purpose of this project and the steps necessary to set it up and use it.
 
-Send your instructor an e-mail with a link to your repository when you are finished with your work.
+Create a pull request when you're done.
 
 ### Requirements
 
@@ -38,8 +38,7 @@ This application will be built around a set of scaffold-like views (for editing 
 
 * The user should be able to go to the root URL of the application and see:
   * the total amount of money in his/her account.
-  * the net amount spent in each of the past six months.
-  * the total number of transactions in each of the past six months.
+  * the number of transactions on the account.
 * The user should be chastised vehemently if the balance on the account is negative.
 * The user should be able to see all transactions, add new transactions, and edit or delete existing transactions.  The total and count on the root page should update as these transactions change.
 

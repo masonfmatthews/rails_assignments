@@ -49,6 +49,8 @@ You want to keep track of employees (with their names and salaries), departments
 * Give a raise to an individual.  You decide if this makes sense in dollars or in percent.
 * Give raises to a department's employees.  You must pass this method a total dollar amount, and it must distribute the raise amounts reasonably to the department's employees.  Only employees who are performing satisfactorily should get raises.
 
+Your code should use keyword arguments at least once.
+
 ## Normal Mode
 
 To complete normal mode, you must first meet all of the requirements above.  Your test suite should have at least one complete example (also known as a "pathological" example) of how the two classes can be used in the real world.
