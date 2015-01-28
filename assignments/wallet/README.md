@@ -10,7 +10,7 @@ Build a Rails app to tell you how much money you have right now.  The applicatio
 
 After completing this assignment, you should...
 
-* Understand how to create a basic Rails app (with no database tables)
+* Understand how to create a basic Rails app (with one database table)
 * Understand the MVC architecture
 * Understand GET and POST
 * Understand basic HTML forms
@@ -20,8 +20,7 @@ After completing this assignment, you should...
 After completing this assignment, you should be able to effectively...
 
 * Generate a new Rails app
-* Create and use a plain (not ActiveRecord) model
-* Create an HTML form and process user input from the form
+* Create and use an ActiveRecord model
 
 ## Details
 
@@ -30,6 +29,8 @@ After completing this assignment, you should be able to effectively...
 * **A Repository.** Create a new github repository under your account.  Commit often, not just at the end.
 * **Your Second Rails App!**
 * **A README.** Create a README that describes the purpose of this project and the steps necessary to set it up and use it.
+
+Send your instructor an e-mail with a link to your repository when you are finished with your work.
 
 ### Requirements
 
