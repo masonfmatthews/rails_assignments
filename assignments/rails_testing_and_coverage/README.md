@@ -1,8 +1,8 @@
-# Integration Testing and Coverage
+# Rails Testing and Coverage
 
 ## Description
 
-Start with the completed project from last week, add extensive integration tests, and check coverage along the way.
+Start with the completed project from last weekend, add extensive tests, and check coverage along the way.
 
 ## Objectives
 
@@ -10,21 +10,21 @@ Start with the completed project from last week, add extensive integration tests
 
 After completing this assignment, you should...
 
-* Understand integration testing in Rails
+* Understand unit, controller, and integration testing in Rails
 * Understand coverage tools and how to use them
 
 ### Performance Objectives
 
 After completing this assignment, you should be able to effectively...
 
-* Write integration tests on an existing codebase
+* Write tests on an existing Rails codebase
 * Implement SimpleCov on your Rails projects
 
 ## Details
 
 ### Deliverables
 
-* A link to the repository you worked on over the last weekend, and which now has an extensive suite of integration tests.
+* A link to the repository you worked on over the last weekend, and which now has an extensive suite of tests.
 * A screenshot of your coverage results.
 * A written list of changes you made to your original codebase while adding tests.
 

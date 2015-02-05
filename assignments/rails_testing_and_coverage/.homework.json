@@ -1,0 +1,15 @@
+{
+    "name": "rails_testing_and_coverage",
+    "version": "0.0.1",
+    "title": "Rails Testing and Coverage",
+    "description": "Take the project from last weekend, add extensive tests, and check coverage along the way.",
+    "difficultyModes": [
+        "Normal"
+    ],
+    "keywords": [
+        "Coverage",
+        "Integration Testing",
+        "Rails",
+        "Ruby"
+    ]
+}
