@@ -1,0 +1,16 @@
+{
+    "name": "teacherbook",
+    "version": "0.0.1",
+    "title": "Teacherbook",
+    "description": "Build an application that allows teachers to log in and log out based on email address and password, and to keep track of parent names and e-mail addresses.",
+    "difficultyModes": [
+        "Normal",
+        "Hard",
+        "Nightmare"
+    ],
+    "keywords": [
+        "Authentication",
+        "Rails",
+        "Ruby"
+    ]
+}
