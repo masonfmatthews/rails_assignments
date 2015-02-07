@@ -36,6 +36,10 @@ Submit your homework via the class assignments Google Form.
 
 ### Requirements
 
+The expected data structure for this assignment is for teachers to have many students, students to have many parents, and students to have many grades.  This means that we're implicitly making the assumption that no parent has two kids in the same school.  That's unrealistic, true, but it's the set of assumptions that makes the data structure simplest.  
+
+In addition, you might think about making grades and assignments separate tables.  That is not expected at this point.  For now, you can have a `grades` table with an `assignment_name` string column.  On both of these fronts, increase flexibility at your own risk.
+
 The following actions should possible for the following types of users:
 
 * Visitors who have not logged in should only see the login page.

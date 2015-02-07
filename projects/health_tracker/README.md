@@ -61,6 +61,7 @@ There are a few data requirements:
 * Each of these measurements should be given for a particular date.
 * You should not be able to enter two weight measurements for the same date.
 * You should be able to enter multiple records for steps taken, calories consumed, and exercises performed for the same date.
+* Hint: when naming tables, think about how the names will work in singular and in plural.  For example, you might be tempted to have a model called `CaloriesConsumed`, but you have to admit that `calories_consumeds` is an awful table name.  Also, don't name a table `calories`.  Try it and you'll see why.
 
 ## Hard Mode
 

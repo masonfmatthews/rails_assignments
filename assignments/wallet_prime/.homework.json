@@ -1,0 +1,15 @@
+{
+    "name": "wallet_prime",
+    "version": "0.0.1",
+    "title": "Wallet Prime",
+    "description": "Start from your existing Wallet application and add the ability to track multiple accounts.",
+    "difficultyModes": [
+        "Normal"
+    ],
+    "keywords": [
+        "ActiveRecord",
+        "MVC",
+        "Rails",
+        "Ruby"
+    ]
+}
