@@ -1,0 +1,19 @@
+{
+    "name": "achievement_gradebook",
+    "version": "0.0.1",
+    "title": "Achievement Gradebook",
+    "description": "Modify a existing Gradebook application to allow teachers give out student grades based on achievements rather than assignments.  Utilize a many-to-many relationship and database seeding.",
+    "difficultyModes": [
+        "Normal",
+        "Hard",
+        "Nightmare"
+    ],
+    "keywords": [
+        "Seeds",
+        "ERD",
+        "Many-to-many",
+        "Checkboxes",
+        "Rails",
+        "Ruby"
+    ]
+}
