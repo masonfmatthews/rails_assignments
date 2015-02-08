@@ -2,7 +2,7 @@
 
 ## Description
 
-Modify a existing Gradebook application to allow teachers give out student grades based on achievements rather than assignments.  Utilize a many-to-many relationship and database seeding.
+Modify an existing Gradebook application to allow teachers give out student grades based on achievements rather than assignments.  Utilize a many-to-many relationship and database seeding.
 
 ## Objectives
 
