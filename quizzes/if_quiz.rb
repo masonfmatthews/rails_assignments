@@ -15,34 +15,34 @@ require 'minitest/pride'
 
 class IfQuiz < MiniTest::Test
   def test_one
-    assert_equal fizzbuzz(1), 1
+    assert_equal 1, fizzbuzz(1)
   end
 
   def test_three
-    assert_equal fizzbuzz(3), "Fizz"
+    assert_equal "Fizz", fizzbuzz(3)
   end
 
   def test_five
-    assert_equal fizzbuzz(5), "Buzz"
+    assert_equal "Buzz", fizzbuzz(5)
   end
 
   def test_eight
-    assert_equal fizzbuzz(8), 8
+    assert_equal 8, fizzbuzz(8)
   end
 
   def test_ten
-    assert_equal fizzbuzz(10), "Buzz"
+    assert_equal "Buzz", fizzbuzz(10)
   end
 
   def test_fifteen
-    assert_equal fizzbuzz(15), "FizzBuzz"
+    assert_equal "FizzBuzz", fizzbuzz(15)
   end
 
   def test_twenty_three
-    assert_equal fizzbuzz(23), 23
+    assert_equal 23, fizzbuzz(23)
   end
 
   def test_thirty
-    assert_equal fizzbuzz(30), "FizzBuzz"
+    assert_equal "FizzBuzz", fizzbuzz(30)
   end
 end
