@@ -1,0 +1,16 @@
+{
+    "name": "address_book_data_structure",
+    "version": "0.0.1",
+    "title": "Address Book Data Structure",
+    "description": "Create a data structure diagram for a web app that stores address book information.",
+    "difficultyModes": [
+        "Normal",
+        "Hard"
+    ],
+    "keywords": [
+        "ERD",
+        "Many-to-many",
+        "Rails",
+        "Ruby"
+    ]
+}
