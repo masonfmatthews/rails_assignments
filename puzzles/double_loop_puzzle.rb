@@ -9,7 +9,7 @@ require 'minitest/pride'
 
 # WRITE YOUR CODE HERE.  Name your method `primes`.
 
-class DoubleLoopQuiz < MiniTest::Test
+class DoubleLoopPuzzle < MiniTest::Test
   def test_one_prime
     assert_equal [2], primes(1)
   end

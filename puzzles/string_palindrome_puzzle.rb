@@ -7,7 +7,7 @@ require 'minitest/pride'
 
 # WRITE YOUR CODE HERE.
 
-class StringPrimeQuiz < MiniTest::Test
+class StringPalindromePuzzle < MiniTest::Test
   def test_words
     assert palindrome?("tacocat")
     assert palindrome?("anna")

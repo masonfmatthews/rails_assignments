@@ -8,7 +8,7 @@ require 'minitest/pride'
 
 # WRITE YOUR CODE HERE.
 
-class StringQuiz < MiniTest::Test
+class StringPuzzle < MiniTest::Test
   def test_first_name
     assert_equal "Mason", first_name("Mason Matthews")
   end

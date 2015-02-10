@@ -13,7 +13,7 @@ require 'minitest/pride'
 
 # WRITE YOUR CODE HERE.  Name your method `fizzbuzz`.
 
-class IfQuiz < MiniTest::Test
+class IfPuzzle < MiniTest::Test
   def test_one
     assert_equal 1, fizzbuzz(1)
   end
