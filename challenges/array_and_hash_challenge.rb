@@ -8,7 +8,7 @@ require 'minitest/pride'
 # WRITE YOUR CODE HERE.  Name your method `names`.
 
 
-class ArrayAndHashPuzzle < MiniTest::Test
+class ArrayAndHashChallenge < MiniTest::Test
 
   def test_one_name
     expected = {"Washington" => "George"}
