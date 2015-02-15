@@ -6,25 +6,14 @@ Build an application which would enable a US Senator or Representative to query 
 
 ## Objectives
 
-### Learning Objectives
-
 After completing this assignment, you should...
 
 * Understand relational and normalized database concepts
-* Understand how Rails models and associations map to database concepts
 * Understand scopes and delegators
 * Understand the purpose of indices
-
-### Performance Objectives
-
-After completing this assignment, you should be able to effectively...
-
-* Build an application with a Front End Engineering student
-* Design data structures of intermediate complexity
-* Model and query relational databases with ActiveRecord and AREL
-* Allow users of multiple types to log in
-* Build different views of the same data for different types of users
-* Restrict access to parts of an application based on identity
+* Be able to send email from a Rails app
+* Be able to accept file uploads in a Rails app
+* Be able to write a Rails app using TDD
 
 ## Details
 
@@ -37,9 +26,9 @@ After completing this assignment, you should be able to effectively...
   * A mark to indicate that it's a required field
   * A different mark to indicate that the field has an index on it
   * Relationships between each pair of tables with a primary/foreign key pair
-* **A Repository.** Fork this repository to your own github account (or your project's organization account).
+* **A Repository.** Create a new repository under your organization's github account.
 * **A README.** Wipe out this README and write your own.
-* **A Working Rails App.** The README should describe how to run the application, and it should include standard steps like `bundle install` and `rake db:migrate`.
+* **A Working Rails App on Heroku.**
 * **A Test Suite.** Not only must this test suite be conceptually complete, it must be written before the code that satisfies it.  This can be determined by git commits (so commit often!!!)
 
 ### Requirements
@@ -49,20 +38,14 @@ Your application should allow for the following:
 * Any visitor to the app can view details of upcoming bills.
 * Constituents can log in and:
   * Vote yes or no on any upcoming bill
-  * Ask a question about an upcoming bill
-  * View all users' questions on a single upcoming bill
-  * View answers to all questions on single upcoming bill
-  * +1 a question (in essence, mark it to say that you think it's a good question)
-  * View all questions that you +1'd (and their answers)
   * View constituent voting results of closed bills
   * View the congressperson's voting history on these bills
 * Someone from the congressperson's office can log in and:
   * Create constituent accounts
-  * Create new upcoming bills
-  * See questions on a bill written by constituents
-  * Answer questions
+  * Create new upcoming bills and upload a PDF of each bill
+    * This should send an e-mail to all constituents notifying them of the new bill to view
   * See the constituent voting results of each bill
-  * See all constituent questions on any upcoming bill in one place (with number of followers for each question, ordered by number of followers)
+  * See all constituent questions on any upcoming bill in one place
   * Mark an upcoming bill as closed (no longer "upcoming")
   * Enter the congressperson's actual vote on a bill placed in congress
 
@@ -81,6 +64,17 @@ You must satisfy all of the requirements given in the section above.  People usi
 
 And yes, real-world adoption of this software would be... unlikely.  Sorry about that.
 
-## Additional Resources
+## Hard Mode
 
-* There are many tutorials out there regarding how to set up authentication for multiple types of users.  Do some Googling.
+In addition to normal mode requirements, hard mode should also include:
+* Any visitor to the app can view details of upcoming bills.
+* Constituents can log in and:
+  * Ask a question about an upcoming bill
+  * View all users' questions on a single upcoming bill
+  * View answers to all questions on single upcoming bill
+  * +1 a question (in essence, mark it to say that you think it's a good question)
+  * View all questions that you +1'd (and their answers)
+* Someone from the congressperson's office can log in and:
+  * See questions on a bill written by constituents
+  * Answer questions
+  * See number of followers for each question
