@@ -1,0 +1,19 @@
+{
+    "name": "survey_opossum_plus_sql",
+    "version": "0.0.1",
+    "title": "Survey Opossum Plus SQL",
+    "description": "You have completed Survey Opossum, so it is now a playground on which we can practice other new skills.  In this assignment, you will write SQL queries to return useful pieces of information on the data structure, and will write methods in the models using AREL to return the pertinent data.",
+    "difficultyModes": [
+        "Normal",
+        "Hard",
+        "Nightmare"
+    ],
+    "keywords": [
+        "Databases",
+        "SQL",
+        "AREL",
+        "Models",
+        "Rails",
+        "Ruby"
+    ]
+}
