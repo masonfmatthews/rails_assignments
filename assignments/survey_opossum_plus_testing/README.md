@@ -1,50 +1,49 @@
-# Survey Opossum Plus SQL
+# Survey Opossum Plus Testing
 
 ## Description
 
-You have completed Survey Opossum, so it is now a playground on which we can practice other new skills.  In this assignment, you will write SQL queries to return useful pieces of information on the data structure, and will write methods in the models using AREL to return the pertinent data.
+You have completed Survey Opossum, so it is now a playground on which we can practice other new skills.  In this assignment, you will add a test suite to the application.
 
 ## Objectives
 
 After completing this assignment, you should...
 
-* Understand the structure and components of SQL SELECT statements.
-* Understand how AREL commands (.where, .order, .group, etc) map to the components of SQL statements.
-* Understand and be able to create database indices.
-* Be able to write model methods which return data from complex queries.
+* Understand the general structure of Rails test suites.
+* Be able to write fixtures with MiniTest
+* Be able to write unit tests with MiniTest
+* Be able to write controller tests with MiniTest
+* Be able to write an integration test with MiniTest
 
 ## Deliverables
 
-* **A Gist of SQL SELECT Commands.**  For each of the data requested below, write an SQL statement which will give it to you.  Create one gist with all of these SQL commands in it.
 * **A Repository.** You will all be forking the code from one weekend submission.  Your instructor will provide that link.  Fork it to your individual account and make changes there.
 
 ## Normal Mode
 
-First, create a migration to add the appropriate indices to the application's data structure.
+Your goal is to add tests to an existing application.  This is not Test-Driven Development, as the application code already exists, but it is a fine approach for your first shot at Rails testing.
 
-Second, write SQL statements (in your gist) and model methods (in your model files) to accomplish the following:
+Unit tests.  Create at least one test to ensure each of the following:
 
-* Find all authors with an email address of "shakespeare@example.com"
-* Find the author who was created most recently
-* Find the number (count) of each type of question in the database
-* Find the most common answer to a particular question (given a question_id)
-* Find all survey names, and show their author's email addresses with them
-* Find all authors who have never created a survey
+* that your fixtures ran (this will require you to write at least one fixture).
+* that an unsatisfied validation will prevent a record from saving.
+* that a successful save changes the number of records in the database.
+* that one of the six SQL/AREL methods we created on a model last night runs properly.
 
-Unless otherwise specified, return all columns in the requested table (e.g. authors).
+Controller tests.  Create at least one test to ensure each of the following:
 
-Third (and in conjunction with Second), you will want to make sufficient seed data to test if your queries are working.
+* that a `get` request returns a `success` response (e.g. that a page loads successfully)
+* that the right number of a certain element exists on a page (perhaps test that the right number of questions show up when attempting to take a survey)
+* that an expected template is rendered
+* that an expected redirect actually occurs
+
+Integration tests.  Create at least one test to ensure that:
+
+* a user who attempts to create a survey is redirected to the login page and given a flash message instructing him or her to log in.
+
+And, of course, all of these tests must pass when you run the `rake test` command.
 
 ## Hard Mode
 
-Add these queries to your SQL gist and to your models:
+Add an additional integration test:
 
-* Find the email address of the author who has created the most surveys
-* Find all questions which have been answered more than five timess
-
-## Nightmare Mode
-
-Add these queries to your SQL gist and to your models:
-
-* Find the title of the question of each type which was answered most recently.
-* Find a list of the missing author ids. In other words, over time the list of ids in a data table can be sparse.  We may have created authors 1 through 10, and then deleted 4, 5, 6, and 9.  This means that the list of ids present in the authors table will be 1, 2, 3, 7, 8, 10.  In this case, your query should return 4, 5, 6, and 9.
+* an author can get the login page, fail to login once, succeed to log in the second time, create a new survey, and see the number of surveys on his/her survey index page go up by one.

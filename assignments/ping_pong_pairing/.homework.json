@@ -1,0 +1,14 @@
+{
+    "name": "ping_pong_pairing",
+    "version": "0.0.1",
+    "title": "Ping Pong Pairing",
+    "description": "Begin work on a new, large Rails app, but do so using ping-pong pair programming.  Getting in time with your partner, writing good tests, and #shippingit is more important than finishing particular features.",
+    "difficultyModes": [
+        "Normal"
+    ],
+    "keywords": [
+        "Databases",
+        "Rails",
+        "Ruby"
+    ]
+}
