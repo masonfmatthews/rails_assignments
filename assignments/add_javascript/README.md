@@ -1,15 +1,17 @@
-# Add Javascript
+# Add JQuery
 
 ## Description
 
-Given an existing application with `accepts_nested_attributes_for` behavior, add javascript to make a page more responsive.
+Given an existing application, add JQuery to give a page more functionality.
 
 ## Objectives
 
 After completing this assignment, you should...
 
-* Understand how Javascript fits into the Rails asset pipeline.
-* Be able to create simple Javascript behaviors.
+* Understand how JQuery fits into the Rails asset pipeline.
+* Be able to create simple JQuery behaviors.
+* Be able to implement a date select field.
+* Be able to implement a modal window.
 
 ## Deliverables
 
@@ -17,24 +19,22 @@ After completing this assignment, you should...
 
 ## Normal Mode
 
-For this assignment, you will be modifying Coursyl, an existing open source application.  This application uses `accepts_nested_attributes_for` in multiple places, but does not have any Javascript in place to make this behavior as clean as users would expect.
+For this assignment, you will continue to modify Coursyl, an existing open source application.  This application has a course detail page which lists (among other things) all the assignments for the course.  Each assignment has two dates: `starts_on` and `ends_on`.  Although the application has a page for editing an assignment, dates shift like crazy due to snow days.  The users would like a quick way to edit just the start and end dates on an assignment.
 
-To access the appropriate page of this application, pull down the repository, run migrations and seeds, then log into the application using `mason.matthews@theironyard.com` and `password`.  Click on the Databases course on your dashboard, then scroll to the bottom and click on "Edit Grading Scale."
+You must add the following JQuery functionality to this page:
 
-You must add the following Javascript functionality to this page:
+* Add a link (which looks like an icon) to each row of the assignments table.  Choose an icon which seems reasonable for changing dates.
+* When the user clicks on that link, they should NOT leave the page.  They should see a modal popup appear hovering over the page, and it should have two fields: starts_on and ends_on.
+* There should also be a button for submitting this modal form.  On submit, it is fine if the page loads.  Feel free to submit this form to `assignments/update`.
+* The date fields should not be simple text fields.  Instead, when you place the cursor in the box, it should display a visual calendar nearby and allow you to pick a date from it.
 
-* When the user clicks on the save button, disable the button so that it cannot be accidentally double-clicked.
-* Hide the last empty row of the grading scale section when the page loads.
-* When the "Add Grade Threshold" button is clicked, show the last row.  You do not need to make it show an additional row if the user clicks again.
-* When a Delete button is clicked, hide the row to which it belongs, but mark the hidden _destroy field in that row as truthy.
-* Back on the course detail page, you'll notice that clicking on the various nav buttons in the blue box will cause the page to snap to that section.  Implement smooth scrolling instead. You'll have to look it up on Google.
+Note that this application currently uses Bootstrap 2.  Bootstrap has modal functionality built into it, so you should use those components to create this modal.  Also note that Bootstrap 2 has Fontawesome built into it, so you should use that font set to pick out an icon for the link to the modal.
 
 ## Hard Mode
 
-If you dig around on the course page, you'll notice that there are other pages that use accepts_nested_attributes.  For instance, editing the course details will take you to a page where you can add more instructors for a course.  Also, editing an assignment will allow you to add more questions to the assignment.
+Rather than using Bootstrap's built-in modal functionality, build your own modal from scratch.  It should include an X link to close the modal, a cancel button to close the modal, and it should grey out and prevent you from clicking on other parts of the page visible behind it.
 
-These are all examples of `accepts_nested_attributes_for`.  Modify your Javascript so that this enhanced behavior from Normal Mode will work on ALL of those pages.
+## Notes
 
-## Nightmare Mode
-
-Change the "Add Grade Threshold" button to work more than once without reloading the page.  Yes, this means that you'll be in the business of changing the `[4]` section of the fields' names.
+* [JQuery Documentation](http://api.jquery.com/)
+* [Bootstrap Documentation](http://getbootstrap.com/2.3.2/javascript.html#modals)
