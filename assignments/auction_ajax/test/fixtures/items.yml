@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+phone:
+  name: iPhone 4
+  description: Used, white, 16GB, all original packaging and cables
+  starting_price: 9.99
+  image_url: http://cdn.theatlantic.com/static/mt/assets/science/iphone-4-white.jpg
+
+car:
+  name: Nissan Leaf
+  description: Silver, 38k miles, good condition
+  starting_price: 12000
+  image_url: http://image.motortrend.com/f/wot/cheaper-ev-nissan-leaf-s-debuts-in-japan-with-lower-msrp-same-ev-performance-293735/55291499/revised-nissan-leaf-japanese-spec-brilliant-silver.jpg

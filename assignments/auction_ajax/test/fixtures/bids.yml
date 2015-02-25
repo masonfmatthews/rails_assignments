@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+car_one:
+  item: car
+  amount: 13000
+
+car_two:
+  item_id: car
+  amount: 14000

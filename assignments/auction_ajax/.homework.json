@@ -1,0 +1,15 @@
+{
+    "name": "auction_ajax",
+    "version": "0.0.1",
+    "title": "Auction App with AJAX",
+    "description": "Given an existing (incredibly simple) auction app, increase its functionality by adding AJAX functionality.",
+    "difficultyModes": [
+        "Normal",
+        "Hard"
+    ],
+    "keywords": [
+        "AJAX",
+        "Rails",
+        "Ruby"
+    ]
+}
