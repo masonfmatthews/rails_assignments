@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th></th>
       <th>Name</th>
       <th>Description</th>
       <th>Starting Price</th>
@@ -16,12 +17,14 @@
   <tbody>
     <% @items.each do |item| %>
       <tr>
+        <td><%= image_tag item.image_url, class: "thumbnail" %></td>
         <td><%= item.name %></td>
         <td><%= item.description %></td>
         <td><%= number_to_currency(item.starting_price) %></td>
         <td><%= number_to_currency(item.highest_bid_amount) %></td>
-        <td><%= link_to 'Bid!', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
+        <td><%= link_to 'Bid!', item, class: "button tiny" %></td>
+        <td><%= link_to 'Edit', edit_item_path(item), class: "button tiny" %></td>
+        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "button tiny alert" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Item', new_item_path %>
+<%= link_to 'New Item', new_item_path, class: "button tiny success" %>

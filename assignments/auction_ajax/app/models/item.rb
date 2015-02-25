@@ -9,4 +9,8 @@ class Item < ActiveRecord::Base
     return 0 if bids.empty?
     bids.order(amount: :desc).first.amount
   end
+
+  def next_bid_amount
+    [starting_price, highest_bid_amount + 10].max
+  end
 end

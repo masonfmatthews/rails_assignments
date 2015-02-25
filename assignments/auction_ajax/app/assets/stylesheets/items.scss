@@ -3,6 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .thumbnail {
-  width: 400px;
-  border: 1px solid black;
+  height: 100px;
+  border: 1px solid grey;
+}
+
+.featured {
+  height: 400px;
+  padding: 4px;
+  border: 1px solid lightgrey;
+  box-shadow: 0;
+}
+
+.back-link {
+  margin: 20px 0px;
 }

@@ -18,8 +18,8 @@ class StringSplitChallenge < MiniTest::Test
   end
 
   def test_one_word_name
-    assert_equal "", first_name("deadmou5")
-    assert_equal "deadmou5", last_name("deadmou5")
+    assert_equal "deadmou5", first_name("deadmou5")
+    assert_equal "", last_name("deadmou5")
   end
 
   def test_three_word_name

@@ -1,18 +1,40 @@
-<p id="notice"><%= notice %></p>
+<div class="back-link"><%= link_to '<< Back to All Items', items_path %></div>
 
-<%= link_to '<< Back to All Items For Sale', items_path %>
+<% if notice %>
+  <div class="alert-box success radius"><%= notice %></div>
+<% end %>
 
-<h2>
+<h1>
   <%= @item.name %>
-</h2>
+</h1>
+<div class="small-4 columns">
+  <%= image_tag @item.image_url, class: "featured" %>
+</div>
+<div class="small-4 columns">
+  <p>
+    <%= @item.description %>
+  </p>
 
-<%= image_tag @item.image_url, class: "thumbnail" %>
+  <p>
+    Starting price:
+    <%= number_to_currency(@item.starting_price) %>
+  </p>
 
-<p>
-  <%= @item.description %>
-</p>
+  <h3>Highest bid</h3>
+  <div class="row collapse">
+    <div class="small-2 columns"><span class="prefix">$</span></div>
+    <div class="small-10 columns"><%= text_field_tag :nothing, @item.highest_bid_amount, disabled: true %></div>
+  </div>
 
-<p>
-  <strong>Starting price:</strong>
-  <%= @item.starting_price %>
-</p>
+  <%= form_for @bid do |f| %>
+    <h3>Your Bid</h3>
+    <%= f.hidden_field :item_id %>
+    <div class="row collapse">
+      <div class="small-2 columns"><span class="prefix">$</span></div>
+      <div class="small-10 columns"><%= f.text_field :amount %></div>
+    </div>
+    <%= f.submit "Submit Bid!", class: "button success small" %>
+  <% end %>
+</div>
+<div class="small-4 columns">
+</div>

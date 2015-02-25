@@ -1,15 +1,15 @@
 {
-    "name": "add_jquery",
+    "name": "add_javascript",
     "version": "0.0.1",
-    "title": "Add JQuery",
-    "description": "Given an existing application, add JQuery to give a page more functionality.",
+    "title": "Add Javascript",
+    "description": "Given an existing application with `accepts_nested_attributes_for` behavior, add javascript to make a page more responsive.",
     "difficultyModes": [
         "Normal",
         "Hard",
         "Nightmare"
     ],
     "keywords": [
-        "JQuery",
+        "Javascript",
         "Rails",
         "Ruby"
     ]
