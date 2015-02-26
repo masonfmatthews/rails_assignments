@@ -1,0 +1,17 @@
+{
+    "name": "todo_app",
+    "version": "0.0.1",
+    "title": "To-do App",
+    "description": "Build an application from the ground up which utilizes many of the concepts covered in class, culminating in a drag-and-drop interface.",
+    "difficultyModes": [
+        "Normal",
+        "Hard",
+        "Nightmare"
+    ],
+    "keywords": [
+        "JQuery",
+        "MVC",
+        "Rails",
+        "Ruby"
+    ]
+}
