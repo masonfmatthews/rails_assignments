@@ -1,0 +1,16 @@
+{
+    "name": "voting_api",
+    "version": "0.0.1",
+    "title": "Voting API",
+    "description": "Create an API using Rails which allows users to vote for candidates for public office.",
+    "difficultyModes": [
+        "Normal",
+        "Hard"
+    ],
+    "keywords": [
+        "API Creation",
+        "API Authentication",
+        "Rails",
+        "Ruby"
+    ]
+}
