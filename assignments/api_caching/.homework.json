@@ -1,0 +1,17 @@
+{
+    "name": "api_caching",
+    "version": "0.0.1",
+    "title": "API Caching",
+    "description": "Given an existing application which pulls from the Github API and displays its results in an HTML page, add a database which will store the Github responses so that the API does not need to be queried repeatedly.  Decide on a cache invalidation strategy.",
+    "difficultyModes": [
+        "Normal",
+        "Hard"
+    ],
+    "keywords": [
+        "API",
+        "Database Caching",
+        "Cache Invalidation",
+        "Rails",
+        "Ruby"
+    ]
+}

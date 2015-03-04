@@ -12,7 +12,7 @@ After completing this assignment, you should...
 * Understand how APIs can be used to change data as well as view it.
 * Be able to write a versioned, nested API to share and allow edits to a database.
 * Be able to write Rails tests to cover a Rails API.
-* Be able to write a token-based authentication system for an API.
+* Be able to write a basic-auth or token-based authentication system for an API.
 
 ## Deliverables
 
@@ -56,6 +56,9 @@ Modify the candidates, voters, and votes models and controllers to allow:
 * votes to be unique for a voter and a race, not just one vote per voter
 * votes index page to show number of votes per candidate grouped by race.
 
+## Nightmare Mode
+
+Instead of using Basic Auth or Token Auth, use OAuth.
 
 ## Notes
 

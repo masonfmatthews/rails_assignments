@@ -5,8 +5,7 @@
     "description": "Given an existing application, add JQuery to give a page more functionality.",
     "difficultyModes": [
         "Normal",
-        "Hard",
-        "Nightmare"
+        "Hard"
     ],
     "keywords": [
         "JQuery",
