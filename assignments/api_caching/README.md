@@ -35,7 +35,7 @@ Unfortunately, we can't just assume that user profiles never change.  They may m
 Make two additional changes to your application:
 
 1. If information about the requested user's profile is more than one day old, requery from the API and refresh your database cache of that profile.
-2. If information about the requested user's profile is more than two hours old, requery from the API and refresh your database's cache of those repositories.
+2. If information about the requested user's repositories is more than two hours old, requery from the API and refresh your database's cache of those repositories.
 
 This is called a cache invalidation strategy.  May the force be with you.
 

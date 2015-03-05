@@ -1,0 +1,16 @@
+{
+    "name": "novel_api",
+    "version": "0.0.1",
+    "title": "Novel API",
+    "description": "Create a Rails application which presents a novel (unique, new) API to the world.  This API must consume at least two other, publicly available APIs.",
+    "difficultyModes": [
+        "Normal",
+        "Hard"
+    ],
+    "keywords": [
+        "API Consumption",
+        "API Creation",
+        "Rails",
+        "Ruby"
+    ]
+}
