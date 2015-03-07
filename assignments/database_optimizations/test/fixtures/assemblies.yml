@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  run_on: 2015-03-05
+
+two:
+  name: MyString
+  run_on: 2015-03-05

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  match_gene_name: MyString
+  match_gene_dna: MyText
+  percent_similarity: 1.5
+  subject_id: 1
+  subject_type: MyString
+
+two:
+  match_gene_name: MyString
+  match_gene_dna: MyText
+  percent_similarity: 1.5
+  subject_id: 1
+  subject_type: MyString

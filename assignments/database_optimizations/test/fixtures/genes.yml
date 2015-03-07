@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dna: MyText
+  starting_position: 1
+  direction: false
+  sequence_id: 1
+
+two:
+  dna: MyText
+  starting_position: 1
+  direction: false
+  sequence_id: 1

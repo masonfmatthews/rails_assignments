@@ -1,0 +1,19 @@
+{
+    "name": "database_optimization",
+    "version": "0.0.1",
+    "title": "Database Optimization",
+    "description": "Given an existing application which generates a report from a large data set, improve the efficiency of the report using database optimization methods.",
+    "difficultyModes": [
+        "Normal",
+        "Hard"
+    ],
+    "keywords": [
+        "Database Optimization",
+        "Indices",
+        "Runtime Analysis",
+        "Foreign Key Caching",
+        "Callbacks",
+        "Rails",
+        "Ruby"
+    ]
+}
