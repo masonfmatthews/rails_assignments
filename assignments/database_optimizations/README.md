@@ -27,7 +27,6 @@ For this project, you will be starting with an application which runs very slowl
 Once you pull down the application from Github, run `bundle install` and `rake db:migrate`, then follow the steps below.
 
 * Run `rake db:seed`, but time it.  Record the amount of time it takes for the seeds to run.
-* Check the size of your database (in bytes).  Record that number.
 * Turn on your server and open your browser.
 * Open Chrome's timeline in developer tools, then go to `localhost:3000`.
 * Determine how long it takes the index page to load.  Record that time.
@@ -39,6 +38,13 @@ Once you pull down the application from Github, run `bundle install` and `rake d
 * Calculate your percent improvement in runtime.
 * Once you have optimized your code as much as you think you can, drop the database, run `rake db:migrate`, and then time how long it takes to run `rake db:seed`.  Was there an improvement or a worsening of runtime?  By what percent and why?
 * Which is faster: (a) running `rake db:seed` without indices and then running a migration to add indices, or (b) adding indices during your initial `rake db:migrate`, then running `rake db:seed`?
+
+You've done a good job of analyzing runtime, but now take a look at storage space:
+
+* Record the size of your database (in bytes).
+* Record the size of your development log.
+* Give at least one method (feel free to Google) for reducing the size of one of these, yet keeping your data intact.
+* Do you think that this is smaller, about right, or larger than the size of databases you'll be working with in your career?
 
 ## Hard Mode
 
