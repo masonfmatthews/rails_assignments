@@ -2,7 +2,7 @@
     "name": "overview_time_tracking_app",
     "version": "0.0.1",
     "title": "Overview: Time Tracking App",
-    "description": "In order to review, practice, and demonstrate your Rails knowledge, build a Rails application of moderate complexity from scratch.",
+    "description": "In order to review, practice, and demonstrate your Rails knowledge, build a Rails application of moderate complexity from the ground up by yourself.",
     "difficultyModes": [
         "Overview"
     ],
