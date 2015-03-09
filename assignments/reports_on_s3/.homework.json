@@ -1,0 +1,17 @@
+{
+    "name": "reports_on_s3",
+    "version": "0.0.1",
+    "title": "Reports on S3",
+    "description": "Given an existing application which generates a report from a large data set, store that report as a file on Amazon S3 to improve runtime when requesting it again.",
+    "difficultyModes": [
+        "Normal",
+        "Hard"
+    ],
+    "keywords": [
+        "File Storage",
+        "S3",
+        "Paperclip",
+        "Rails",
+        "Ruby"
+    ]
+}
