@@ -21,7 +21,7 @@ After completing this assignment, you should...
 
 In last night's homework, you improved the efficiency of an application by offloading report generation to a background process.  This was helpful, but we can take it yet another step further.  Since we have thousands of users, the same report is likely to be requested by more than one user.
 
-Your task in this assignment is to store each report in a file (HTML or CSV is fine, but feel free to get creative).  If a particular report that a user requests has already been generated, don't regenerate it, but send it again.
+Your task in this assignment is to store each report in a file (HTML or CSV is fine, but feel free to get creative).  If a particular report that a user requests has already been generated, don't regenerate it, but just send it again.
 
 Since your theoretical end goal (not tonight) is to deploy this application on a service like Heroku, you're not going to be able to store these files in a local folder.  You'll instead have to use Amazon's S3 storage service.  Write these files to S3 when they are generated and pull them down when they are requested again.
 
