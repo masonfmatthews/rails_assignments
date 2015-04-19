@@ -2,43 +2,33 @@
 
 ## Description
 
-Create a number-guessing game.
+Create a number guessing game in which the computer picks a number and you have to guess it.  The computer will give you cues like 'Too High' or 'Too Low.'
 
 ## Objectives
 
-### Learning Objectives
-
 After completing this assignment, you should...
 
-* Understand basic ways in which a Ruby program can present information to the user and request information from the user.
 * Understand what methods are and how they can be used to:
   * Reduce code repetition
   * Improve readers' ability to reason about code
 * Understand how ruby code resides on the file system and how it is executed
-
-### Performance Objectives
-
-After completing this assignment, you should be able to effectively...
-
-* Use puts and gets
-* Fork a github repository
-* Add, commit, and push to github
+* Be able to use puts and gets
+* Be able to add, commit, and push to github
 * Create, add to, and check for presence in an array
-* Run ruby code from the command line
 
-## Details
+## Deliverables
 
-### Deliverables
+* **A GitHub repository.**
+* **A Ruby file called `game.rb`.**
+* **A series of commits on that repository.** After you get each requirement working, run `git add .`, then `git commit -m "TEXT HERE"`, where TEXT HERE should be replaced with the description of the requirement you just finished.
 
-Fork this git repository and check it out to your local machine.  Create a ruby file called `game.rb`.
+After your work is complete, make sure to `git push` your changes up to GitHub.  Feel free to do this more than once along the way, of course.
 
-After you get each requirement working, run `git add .`, then `git commit -m "TEXT HERE"`, where TEXT HERE should be replaced with the description of the requirement you just finished.
+Use the homework submission form on the course website to turn in a link to your GitHub repository.
 
-After your work is complete, make sure to `git push` to get your changes up to github.  Feel free to do this more than once along the way, of course.
+## Normal Mode
 
-Finally, create a pull request for your completed project.  This will count as turning in your work.
-
-### Requirements  
+Your goal for tonight is to create a number guessing game. Your program should pick a random number between 1 and 100 and ask you for a guess. If your guess is less than the program's number, it should tell you that you were low and let you guess again. If the guess is greater than the program's number,  it should tell you that you were high and let you guess again. If your guess is correct, the program should tell you that you win and then quit.
 
 * The gameplay should match the instructions given in the Mode(s) below.
 * After 5 incorrect guesses, the program should tell you that you lose.
@@ -46,15 +36,12 @@ Finally, create a pull request for your completed project.  This will count as t
 * Your code should include at least two methods.
 * This game should be run from the command line by typing "ruby game.rb".
 
-## Normal Mode
-
-Your goal for tonight is to create a number guessing game. Your program should pick a random number between 1 and 100 and ask you for a guess. If your guess is less than the program's number, it should tell you that you were low and let you guess again. If the guess is greater than the program's number,  it should tell you that you were high and let you guess again. If your guess is correct, the program should tell you that you win and then quit.
 
 ## Hard Mode
 
 Hard Mode has two parts to it:
 
-1. In normal mode, you will probably use the "rand" method. See if you can find another way!
+1. In normal mode, you will probably use the "rand" method. In hard mode, find another way!
 2. The program should also comment on your behavior if you make a guess that doesn't help you.  For example, you might say "50" and then be told "that's too low."  If you then guess "25," you're just wasting a guess.
 
 ## Nightmare Mode

@@ -4,10 +4,8 @@
   "title": "Number Guessing Game",
   "description": "Create a number guessing game in which the computer picks a number and you have to guess it.  The computer will give you cues like 'Too High' or 'Too Low.'",
   "keywords": [
-    "week-1",
-    "ruby-basics",
     "arrays",
-    "github-basics",
+    "git commit",
     "methods"
   ]
 }
