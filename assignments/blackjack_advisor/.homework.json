@@ -1,0 +1,12 @@
+{
+  "name": "blackjack-advisor",
+  "version": "0.0.1",
+  "title": "Blackjack Advisor",
+  "description": "Create a program which will take information about a current blackjack hand and return the optimal action for the player to take.",
+  "keywords": [
+    "hashes",
+    "nested data structures",
+    "READMEs",
+    "markdown"
+  ]
+}

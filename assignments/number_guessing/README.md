@@ -19,7 +19,7 @@ After completing this assignment, you should...
 ## Deliverables
 
 * **A GitHub repository.**
-* **A Ruby file called `game.rb`.**
+* **A Ruby file called `guessing_game.rb`.**
 * **A series of commits on that repository.** After you get each requirement working, run `git add .`, then `git commit -m "TEXT HERE"`, where TEXT HERE should be replaced with the description of the requirement you just finished.
 
 After your work is complete, make sure to `git push` your changes up to GitHub.  Feel free to do this more than once along the way, of course.
