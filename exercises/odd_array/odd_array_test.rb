@@ -1,4 +1,3 @@
-gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 require './odd_array'
