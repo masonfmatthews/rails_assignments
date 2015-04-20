@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 
-#Note: This line is going to fail
+#Note: This line is going to fail first.
 require './battleship.rb'
 
 $mock_inputs = []
@@ -19,28 +19,56 @@ class BattleshipTest < Minitest::Test
     :alpha
   end
 
-  def test_00_ship_class_exists
+  def test_01_player_classes_exist
+    assert Player
+    assert HumanPlayer
+    assert ComputerPlayer
+  end
+
+  def test_02_players_have_inheritance
+    assert_equal Player, HumanPlayer.superclass
+    assert_equal Player, ComputerPlayer.superclass
+  end
+
+  def test_03_humans_can_be_named
+    assert_equal "Alice", HumanPlayer.new("Alice").name
+  end
+
+  def test_04_computers_cannot_be_named
+    assert_raises(ArgumentError) do
+      ComputerPlayer.new("The Red Queen")
+    end
+  end
+
+  def test_05_players_have_default_names
+    assert_equal "Dave", HumanPlayer.new.name
+    assert_equal "HAL 9000", ComputerPlayer.new.name
+  end
+
+  def test_06_ship_class_exists
     assert Ship
   end
 
-  def test_01_ship_knows_its_length
+  def test_07_ship_knows_its_length
     ship = Ship.new(4)
     assert_equal 4, ship.length
   end
 
-  def test_02_ship_can_be_placed_across
+  def test_08_ship_can_be_placed_across
     ship = Ship.new(4)
     assert ship.place(2, 1, true)
-    refute ship.covers?(1, 1)
+
     assert ship.covers?(2, 1)
     assert ship.covers?(3, 1)
     assert ship.covers?(4, 1)
     assert ship.covers?(5, 1)
+
+    refute ship.covers?(1, 1)
     refute ship.covers?(6, 1)
     refute ship.covers?(4, 2)
   end
 
-  def test_03_ship_can_be_placed_down
+  def test_09_ship_can_be_placed_down
     ship = Ship.new(4)
     assert ship.place(2, 2, false)
     refute ship.covers?(2, 1)
@@ -52,13 +80,13 @@ class BattleshipTest < Minitest::Test
     refute ship.covers?(3, 2)
   end
 
-  def test_04_ship_cant_be_placed_twice
+  def test_10_ship_cant_be_placed_twice
     ship = Ship.new(4)
     assert ship.place(2, 1, true)
     refute ship.place(3, 2, false)
   end
 
-  def test_05_ships_know_if_they_overlap
+  def test_11_ships_know_if_they_overlap
     ship1 = Ship.new(4)
     ship1.place(2, 1, true)
     ship2 = Ship.new(4)
@@ -66,21 +94,24 @@ class BattleshipTest < Minitest::Test
     ship3 = Ship.new(4)
     ship3.place(2, 1, false)
 
+    # Try to use your `covers?` method inside your `overlaps_with?` code.
     assert ship1.overlaps_with?(ship2)
     assert ship1.overlaps_with?(ship3)
     refute ship2.overlaps_with?(ship3)
   end
 
-  def test_06_ships_can_be_fired_at
+  def test_12_ships_can_be_fired_at
     ship = Ship.new(4)
     ship.place(2, 1, true)
+
     assert ship.fire_at(2, 1)
     refute ship.fire_at(1, 1)
   end
 
-  def test_07_ships_can_be_sunk
+  def test_13_ships_can_be_sunk
     ship = Ship.new(2)
     ship.place(2, 1, true)
+
     refute ship.sunk?
     ship.fire_at(2, 1)
     refute ship.sunk?
@@ -88,17 +119,34 @@ class BattleshipTest < Minitest::Test
     assert ship.sunk?
   end
 
-  def test_08_board_class_exists
+  # Around here, you're going to get frustrated if you have been keeping an
+  # array of positions like [[1, 1], [2, 1], [3,1]].  Consider making this an
+  # array of Position objects instead.  Then you can add other fields besides x
+  # and y.  For instance, you can write a method `hit?` on Position.
+
+  def test_14_unplaced_ship_is_not_sunk
+    ship = Ship.new(2)
+    refute ship.sunk?
+  end
+
+  # One last note before we move onto the board.  The best solution to the above
+  # tests would be to use `covers?` inside `fire_at`.  For this to be really
+  # slick, though, you'll want `covers?` to not just return a true or a false.
+  # Make it wicked cool by having it return the specific position object
+  # that was being fired on.  Then you can immediately mark it as hit without
+  # searching for it again.
+
+  def test_15_board_class_exists
     assert Board
   end
 
-  def test_09_empty_board
+  def test_16_empty_board
     board = Board.new
     refute board.has_ship_on?(1, 1)
     refute board.has_ship_on?(10, 7)
   end
 
-  def test_10_place_ship
+  def test_17_place_ship
     board = Board.new
     assert board.place_ship(Ship.new(4), 3, 3, true)
     refute board.has_ship_on?(2, 3)
@@ -109,7 +157,7 @@ class BattleshipTest < Minitest::Test
     refute board.has_ship_on?(5, 4)
   end
 
-  def test_11_cant_place_overlapping_ships
+  def test_18_cant_place_overlapping_ships
     board = Board.new
     assert board.place_ship(Ship.new(4), 3, 3, true)
     refute board.place_ship(Ship.new(4), 1, 3, true)
@@ -118,40 +166,40 @@ class BattleshipTest < Minitest::Test
     assert board.place_ship(Ship.new(4), 7, 7, true)
   end
 
-  def test_12_misses_on_empty_board
+  def test_20_misses_on_empty_board
     board = Board.new
     refute board.fire_at(1, 1)
     refute board.fire_at(10, 7)
   end
 
-  def test_13_hits_on_board
+  def test_20_hits_on_board
     board = Board.new
     board.place_ship(Ship.new(4), 3, 3, true)
     refute board.fire_at(1, 1)
     assert board.fire_at(3, 3)
   end
 
-  def test_14_repeat_miss
+  def test_20_repeat_miss
     board = Board.new
     board.place_ship(Ship.new(4), 3, 3, true)
     refute board.fire_at(1, 1)
     refute board.fire_at(1, 1)
   end
 
-  def test_15_repeat_hit
+  def test_20_repeat_hit
     board = Board.new
     board.place_ship(Ship.new(4), 3, 3, true)
     assert board.fire_at(3, 3)
     refute board.fire_at(3, 3)
   end
 
-  def test_16_misses_outside_board
+  def test_20_misses_outside_board
     board = Board.new
     refute board.fire_at(18, 1)
     refute board.fire_at(10, 26)
   end
 
-  def test_17_empty_board_can_display_itself
+  def test_20_empty_board_can_display_itself
     board = Board.new
     assert_output(empty_board) do
       board.display
@@ -175,7 +223,7 @@ J |   |   |   |   |   |   |   |   |   |   |
 }
   end
 
-  def test_18_full_board_can_display_itself
+  def test_20_full_board_can_display_itself
     board = Board.new
     board.place_ship(Ship.new(2), 3, 6, true)
     board.place_ship(Ship.new(3), 7, 4, true)
@@ -204,7 +252,7 @@ J |   |   |   |   |   |   |   |   |   |   |
 }
   end
 
-  def test_19_used_board_can_display_itself
+  def test_20_used_board_can_display_itself
     board = Board.new
     board.place_ship(Ship.new(4), 6, 4, true)
     board.fire_at(7, 4)
@@ -244,31 +292,9 @@ J |   |   |   |   |   |   |   |   |   |   |
 
 
 
-  def test_21_player_classes_exist
-    assert Player
-    assert HumanPlayer
-    assert ComputerPlayer
-  end
 
-  def test_22_players_have_inheritance
-    assert_equal Player, HumanPlayer.superclass
-    assert_equal Player, ComputerPlayer.superclass
-  end
 
-  def test_23_humans_can_be_named
-    assert_equal "Alice", HumanPlayer.new("Alice").name
-  end
 
-  def test_24_computers_cannot_be_named
-    assert_raises(ArgumentError) do
-      ComputerPlayer.new("The Red Queen")
-    end
-  end
-
-  def test_25_players_have_default_names
-    assert_equal "Dave", HumanPlayer.new.name
-    assert_equal "HAL 9000", ComputerPlayer.new.name
-  end
 
   def test_26_players_have_boards
     assert_equal Board, HumanPlayer.new.board.class
