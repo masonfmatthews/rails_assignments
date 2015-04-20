@@ -140,69 +140,15 @@ class BattleshipTest < Minitest::Test
     assert Board
   end
 
+  # Remember, for a moment, just solve this one in the simplest way possible. As
+  # far as this test is concerned, what does `has_ship_on?` always return?
   def test_16_empty_board
     board = Board.new
     refute board.has_ship_on?(1, 1)
     refute board.has_ship_on?(10, 7)
   end
 
-  def test_17_place_ship
-    board = Board.new
-    assert board.place_ship(Ship.new(4), 3, 3, true)
-    refute board.has_ship_on?(2, 3)
-    assert board.has_ship_on?(3, 3)
-    assert board.has_ship_on?(4, 3)
-    assert board.has_ship_on?(6, 3)
-    refute board.has_ship_on?(7, 3)
-    refute board.has_ship_on?(5, 4)
-  end
-
-  # Don't forget on this next one that giving the ship coordinates and placing
-  # it on the board are two separate steps.  You can do the first before knowing
-  # whether it's possible to do the second.
-  def test_18_cant_place_overlapping_ships
-    board = Board.new
-    assert board.place_ship(Ship.new(4), 3, 3, true)
-    refute board.place_ship(Ship.new(4), 1, 3, true)
-    refute board.place_ship(Ship.new(4), 4, 3, true)
-    refute board.place_ship(Ship.new(4), 4, 2, false)
-    assert board.place_ship(Ship.new(4), 7, 7, true)
-  end
-
-  def test_20_misses_on_empty_board
-    board = Board.new
-    refute board.fire_at(1, 1)
-    refute board.fire_at(10, 7)
-  end
-
-  def test_20_hits_on_board
-    board = Board.new
-    board.place_ship(Ship.new(4), 3, 3, true)
-    refute board.fire_at(1, 1)
-    assert board.fire_at(3, 3)
-  end
-
-  def test_20_repeat_miss
-    board = Board.new
-    board.place_ship(Ship.new(4), 3, 3, true)
-    refute board.fire_at(1, 1)
-    refute board.fire_at(1, 1)
-  end
-
-  def test_20_repeat_hit
-    board = Board.new
-    board.place_ship(Ship.new(4), 3, 3, true)
-    assert board.fire_at(3, 3)
-    refute board.fire_at(3, 3)
-  end
-
-  def test_20_misses_outside_board
-    board = Board.new
-    refute board.fire_at(18, 1)
-    refute board.fire_at(10, 26)
-  end
-
-  def test_20_empty_board_can_display_itself
+  def test_17_empty_board_can_display_itself
     board = Board.new
     assert_output(empty_board) do
       board.display
@@ -226,19 +172,42 @@ J |   |   |   |   |   |   |   |   |   |   |
 }
   end
 
-  def test_20_full_board_can_display_itself
+  def test_18_place_ship
     board = Board.new
-    board.place_ship(Ship.new(2), 3, 6, true)
-    board.place_ship(Ship.new(3), 7, 4, true)
-    board.place_ship(Ship.new(3), 4, 8, true)
-    board.place_ship(Ship.new(4), 1, 1, true)
-    board.place_ship(Ship.new(5), 6, 2, false)
-    assert_output(full_board) do
+    assert board.place_ship(Ship.new(4), 3, 3, true)
+    refute board.has_ship_on?(2, 3)
+    assert board.has_ship_on?(3, 3)
+    assert board.has_ship_on?(4, 3)
+    assert board.has_ship_on?(6, 3)
+    refute board.has_ship_on?(7, 3)
+    refute board.has_ship_on?(5, 4)
+  end
+
+  # Don't forget on this next one that giving the ship coordinates and placing
+  # it on the board are two separate steps.  You can do the first before knowing
+  # whether it's possible to do the second.
+  def test_19_cant_place_overlapping_ships
+    board = Board.new
+    assert board.place_ship(Ship.new(4), 3, 3, true)
+    refute board.place_ship(Ship.new(4), 1, 3, true)
+    refute board.place_ship(Ship.new(4), 4, 3, true)
+    refute board.place_ship(Ship.new(4), 4, 2, false)
+    assert board.place_ship(Ship.new(4), 7, 7, true)
+  end
+
+  def test_20_ready_board_can_display_itself
+    board = Board.new
+    assert board.place_ship(Ship.new(2), 3, 6, true)
+    assert board.place_ship(Ship.new(3), 7, 4, true)
+    assert board.place_ship(Ship.new(3), 4, 8, true)
+    assert board.place_ship(Ship.new(4), 1, 1, true)
+    assert board.place_ship(Ship.new(5), 6, 2, false)
+    assert_output(ready_board) do
       board.display
     end
   end
 
-  def full_board
+  def ready_board
     %Q{    1   2   3   4   5   6   7   8   9   10
   -----------------------------------------
 A | O | O | O | O |   |   |   |   |   |   |
@@ -255,11 +224,42 @@ J |   |   |   |   |   |   |   |   |   |   |
 }
   end
 
-  def test_20_used_board_can_display_itself
+  def test_21_misses_on_empty_board
+    board = Board.new
+    refute board.fire_at(1, 1)
+    refute board.fire_at(10, 7)
+  end
+
+  def test_22_misses_outside_board
+    board = Board.new
+    refute board.fire_at(18, 1)
+    refute board.fire_at(10, 26)
+  end
+
+  def test_23_hits_on_board
+    board = Board.new
+    board.place_ship(Ship.new(4), 3, 3, true)
+    refute board.fire_at(1, 1)
+    assert board.fire_at(3, 3)
+  end
+
+  # Depending on how you implemented prior steps, this next one might
+  # be a big refactor.  You might have to change board.fire_at, ship.fire_at,
+  # and a position method (if you made a Position class).
+  def test_24_repeat_hit
+    board = Board.new
+    board.place_ship(Ship.new(4), 3, 3, true)
+    assert board.fire_at(3, 3)
+    refute board.fire_at(3, 3)
+  end
+
+  # The test before this one needed to set a position as hit.  This tests need
+  # to do the opposite: see if positions are hit.
+  def test_25_used_board_can_display_itself
     board = Board.new
     board.place_ship(Ship.new(4), 6, 4, true)
-    board.fire_at(7, 4)
-    board.fire_at(7, 5)
+    assert board.fire_at(7, 4)
+    refute board.fire_at(7, 5)
     assert_output(used_board) do
       board.display
     end
@@ -282,7 +282,7 @@ J |   |   |   |   |   |   |   |   |   |   |
 }
   end
 
-  def test_20_entire_board_can_be_sunk
+  def test_26_entire_board_can_be_sunk
     board = Board.new
     refute board.sunk?
     board.place_ship(Ship.new(2), 6, 4, true)
@@ -293,28 +293,7 @@ J |   |   |   |   |   |   |   |   |   |   |
     assert board.sunk?
   end
 
-
-
-
-
-
-
-  def test_26_players_have_boards
-    assert_equal Board, HumanPlayer.new.board.class
-    assert_equal Board, ComputerPlayer.new.board.class
-  end
-
-  def test_27_computer_player_automatically_places_ships
-    player = ComputerPlayer.new
-    assert_output("HAL 9000 has placed his ships.\n") do
-      assert player.place_ships([2, 3, 3, 4, 5])
-    end
-    assert_equal 5, player.ships.length
-    assert_equal 4, player.ships[3].length
-  end
-
-
-  def test_28_x_of
+  def test_27_x_of
     board = Board.new
     assert_equal 1, board.x_of("A1")
     assert_equal 1, board.x_of("G1")
@@ -322,7 +301,7 @@ J |   |   |   |   |   |   |   |   |   |   |
     assert_equal 10, board.x_of("D10")
   end
 
-  def test_29_y_of
+  def test_28_y_of
     board = Board.new
     assert_equal 1, board.y_of("A1")
     assert_equal 7, board.y_of("G1")
@@ -330,16 +309,28 @@ J |   |   |   |   |   |   |   |   |   |   |
     assert_equal 4, board.y_of("D10")
   end
 
+  def test_29_players_have_boards
+    assert_equal Board, HumanPlayer.new.board.class
+    assert_equal Board, ComputerPlayer.new.board.class
+  end
+
+  # Finally, we ask the user for input.  When the human player places ships,
+  # the only parameter is an array with the lengths of the ships that need to be
+  # placed.  The user is asked two things for each ship.  First, what is the
+  # starting coordinate of that ship, and second, which direction (down/across).
+  #
+  # REMEMBER: don't call `gets.chomp` anywhere in your code.  Use the
+  # `get_user_input` method from the assignment README.
   def test_30_human_player_is_asked_to_place_ships
-    player = HumanPlayer.new
+    player = HumanPlayer.new("Jess")
     $mock_inputs.clear
     $mock_inputs << "A1"
     $mock_inputs << "Down"
     $mock_inputs << "A4"
     $mock_inputs << "Down"
-    assert_output("Dave, where would you like to place a ship of length 2?\nAcross or Down?\n"+
-                  "Dave, where would you like to place a ship of length 5?\nAcross or Down?\n") do
-      assert player.place_ships([2, 5])
+    assert_output("Jess, where would you like to place a ship of length 2?\nAcross or Down?\n"+
+                  "Jess, where would you like to place a ship of length 5?\nAcross or Down?\n") do
+      player.place_ships([2, 5])
     end
     assert_equal 2, player.ships.length
     assert_equal 5, player.ships[1].length
@@ -350,12 +341,51 @@ J |   |   |   |   |   |   |   |   |   |   |
   end
 
 
+  def test_31_human_player_cannot_overlap_ships
+    player = HumanPlayer.new("Alice")
+    $mock_inputs.clear
+    $mock_inputs << "A2"
+    $mock_inputs << "Down"
+    $mock_inputs << "A1"
+    $mock_inputs << "Across"
+    $mock_inputs << "F1"
+    $mock_inputs << "Across"
+    assert_output("Alice, where would you like to place a ship of length 2?\nAcross or Down?\n"+
+                  "Alice, where would you like to place a ship of length 3?\nAcross or Down?\n"+
+                  "Unfortunately, that ship overlaps with one of your other ships.  Please try again.\n"+
+                  "Alice, where would you like to place a ship of length 3?\nAcross or Down?\n") do
+      player.place_ships([2, 3])
+    end
+    assert_equal 2, player.ships.length
+    assert_equal 3, player.ships[1].length
+    assert player.board.has_ship_on?(2, 1)
+    assert player.board.has_ship_on?(2, 2)
+    assert player.board.has_ship_on?(1, 6)
+    refute player.board.has_ship_on?(1, 1)
+  end
 
-  def test_31_game_class_exists
+
+
+  # This test is the first that involves you coming up with a strategy.
+  def test_33_computer_player_automatically_places_ships
+    player = ComputerPlayer.new
+    assert_output("HAL 9000 has placed his ships.\n") do
+      assert player.place_ships([2, 3, 3, 4, 5])
+    end
+    assert_equal 5, player.ships.length
+    assert_equal 4, player.ships[3].length
+  end
+
+
+
+
+
+
+  def test_33_game_class_exists
     assert Game
   end
 
-  def test_32_games_require_players
+  def test_33_games_require_players
     assert_raises(ArgumentError) do
       Game.new
     end
@@ -408,42 +438,6 @@ J |   |   |   |   |   |   |   |   |   |   |
                   "Frank, where would you like to place a ship of length 5?\nAcross or Down?\n"+
                   "HAL 9000 has placed his ships.\n") do
       @game.place_ships
-    end
-  end
-
-  def test_35_game_can_have_nonstandard_set_of_ships
-    human = HumanPlayer.new("Alice")
-    computer = ComputerPlayer.new
-    game = Game.new(human, computer, [2, 3])
-    $mock_inputs.clear
-    $mock_inputs << "A1"
-    $mock_inputs << "Down"
-    $mock_inputs << "A3"
-    $mock_inputs << "Down"
-    assert_output("Alice, where would you like to place a ship of length 2?\nAcross or Down?\n"+
-                  "Alice, where would you like to place a ship of length 3?\nAcross or Down?\n"+
-                  "HAL 9000 has placed his ships.\n") do
-      game.place_ships
-    end
-  end
-
-  def test_36_game_tells_you_if_your_ships_overlap
-    human = HumanPlayer.new("Alice")
-    computer = ComputerPlayer.new
-    game = Game.new(human, computer, [2, 3])
-    $mock_inputs.clear
-    $mock_inputs << "A2"
-    $mock_inputs << "Down"
-    $mock_inputs << "A1"
-    $mock_inputs << "Across"
-    $mock_inputs << "F1"
-    $mock_inputs << "Across"
-    assert_output("Alice, where would you like to place a ship of length 2?\nAcross or Down?\n"+
-                  "Alice, where would you like to place a ship of length 3?\nAcross or Down?\n"+
-                  "Unfortunately, that ship overlaps with one of your other ships.  Please try again.\n"+
-                  "Alice, where would you like to place a ship of length 3?\nAcross or Down?\n"+
-                  "HAL 9000 has placed his ships.\n") do
-      game.place_ships
     end
   end
 
