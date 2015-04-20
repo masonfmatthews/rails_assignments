@@ -157,6 +157,9 @@ class BattleshipTest < Minitest::Test
     refute board.has_ship_on?(5, 4)
   end
 
+  # Don't forget on this next one that giving the ship coordinates and placing
+  # it on the board are two separate steps.  You can do the first before knowing
+  # whether it's possible to do the second.
   def test_18_cant_place_overlapping_ships
     board = Board.new
     assert board.place_ship(Ship.new(4), 3, 3, true)
