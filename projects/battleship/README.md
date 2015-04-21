@@ -49,10 +49,16 @@ This goes BEFORE you start defining your class.  I know that looks stupid, and I
 
 ## Hard Mode
 
-Modify your computer player so that it makes intelligent moves.  In other words, Normal Mode is satisfied if the computer fires randomly.  Hard mode required the computer to fire with some meaning.  It has to have a chance of winning.
+This game currently only works for 9x9 grids, and for five ships with pre-set lengths.  Add two optional parameters to `Grid.new` to allow the user to specify width and height of the board.  Add one optional parameter to `Game.new` which is an array of integers.  These integers define the lengths of the ships to be placed.
 
 In addition to the above, add ten more (meaningful) tests to the test suite.  Get them to pass!
 
 ## Nightmare Mode
 
-In addition to the above, modify your existing code to ask the user which type of game he/she would like to play: regular or SALVO.  Allow the user to select and play either game.
+You have two paths to choose from in Nightmare mode:
+
+1. In addition to the above, modify your existing code to ask the user which type of game he/she would like to play: regular or SALVO.  Allow the user to select and play either game.
+
+2. Modify your computer player so that it makes intelligent moves.  In other words, Normal Mode is satisfied if the computer fires randomly.  Hard mode required the computer to fire with some meaning.  It has to have a chance of winning.
+
+Don't forget to modify the test suite to continue to pass!
