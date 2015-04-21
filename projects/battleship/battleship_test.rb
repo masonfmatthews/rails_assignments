@@ -365,27 +365,45 @@ J |   |   |   |   |   |   |   |   |   |   |
   end
 
 
-
-  # This test is the first that involves you coming up with a strategy.
-  def test_33_computer_player_automatically_places_ships
+  # This is the first test that involves you coming up with a strategy. The
+  # computer player will need to put the ships somewhere.  Again, it can be as
+  # dumb as you want, but the ships can't overlap.
+  def test_32_computer_player_automatically_places_ships
     player = ComputerPlayer.new
-    assert_output("HAL 9000 has placed his ships.\n") do
-      assert player.place_ships([2, 3, 3, 4, 5])
+    assert_output("HAL 9000 has placed its ships.\n") do
+      player.place_ships([2, 3, 3, 4, 5])
     end
     assert_equal 5, player.ships.length
     assert_equal 4, player.ships[3].length
   end
 
+  # This is the second bit of "intelligence" that you can make as dumb as you
+  # want.  The computer has to be able to decide where to shoot.
+  def test_33_computer_players_can_call_shots
+    player = ComputerPlayer.new
 
+    computer_shot = player.call_shot
+    assert ("A".."J").include?(computer_shot[0])
+    assert (1..10).include?(computer_shot[1..-1].to_i)
+  end
 
+  def test_34_human_players_can_call_shots
+    player = HumanPlayer.new
 
+    $mock_inputs.clear
+    $mock_inputs << "G10"
+    assert_output("Dave, please enter the coordinates for your next shot (e.g. 'B10'):\n") do
+      human_shot = player.call_shot
+      assert human_shot[0] = "G"
+      assert human_shot[1..-1] = "10"
+    end
+  end
 
-
-  def test_33_game_class_exists
+  def test_35_game_class_exists
     assert Game
   end
 
-  def test_33_games_require_players
+  def test_36_games_require_players
     assert_raises(ArgumentError) do
       Game.new
     end
@@ -394,7 +412,9 @@ J |   |   |   |   |   |   |   |   |   |   |
     assert Game.new(human, computer)
   end
 
-  def test_33_game_welcomes_player
+  # Tests 35 through XX are testing parts of game play, not the entire game.
+  # First, test that the welcome method works.
+  def test_37_game_welcomes_player
     human = HumanPlayer.new("Frank")
     computer = ComputerPlayer.new
     game = Game.new(human, computer)
@@ -403,68 +423,82 @@ J |   |   |   |   |   |   |   |   |   |   |
     end
   end
 
-  def test_34_game_can_ask_to_set_up_ships
-    set_up_new_game
-
-    assert_equal 5, @human.ships.length
-    assert @human.board.has_ship_on?(1, 2)
-    assert @human.board.has_ship_on?(3, 3)
-    assert @human.board.has_ship_on?(9, 5)
-    refute @human.board.has_ship_on?(7, 7)
-
-    assert_equal 5, @computer.ships.length
-    assert_equal 4, @computer.ships[3].length
-  end
-
-  def set_up_new_game
-    @human = HumanPlayer.new("Frank")
-    @computer = ComputerPlayer.new
-    @game = Game.new(@human, @computer)
+  # Second, test that the place_ships method works.
+  def test_38_game_can_place_ships
+    human = HumanPlayer.new("Frank")
+    computer = ComputerPlayer.new
+    game = Game.new(human, computer)
     $mock_inputs.clear
-    $mock_inputs << "A1"
-    $mock_inputs << "Down"
-    $mock_inputs << "A3"
-    $mock_inputs << "Down"
-    $mock_inputs << "A5"
-    $mock_inputs << "Down"
-    $mock_inputs << "A7"
-    $mock_inputs << "Down"
-    $mock_inputs << "A9"
-    $mock_inputs << "Down"
+    $mock_inputs += standard_placement
     assert_output("Frank, where would you like to place a ship of length 2?\nAcross or Down?\n"+
                   "Frank, where would you like to place a ship of length 3?\nAcross or Down?\n"+
                   "Frank, where would you like to place a ship of length 3?\nAcross or Down?\n"+
                   "Frank, where would you like to place a ship of length 4?\nAcross or Down?\n"+
                   "Frank, where would you like to place a ship of length 5?\nAcross or Down?\n"+
-                  "HAL 9000 has placed his ships.\n") do
-      @game.place_ships
+                  "HAL 9000 has placed its ships.\n") do
+      game.place_ships
     end
+
+    assert_equal 5, human.ships.length
+    assert human.board.has_ship_on?(1, 2)
+    assert human.board.has_ship_on?(3, 3)
+    assert human.board.has_ship_on?(9, 5)
+    refute human.board.has_ship_on?(7, 7)
+
+    assert_equal 5, computer.ships.length
+    assert_equal 4, computer.ships[3].length
   end
 
-  def test_37_human_can_take_first_turn
-    set_up_new_game
+  def standard_placement
+    ["A1","Down","A3","Down","A5","Down","A7","Down","A9","Down"]
+  end
+
+  # Third, test that turns can be taken.  This should call `call_shot` on the
+  # player who is up next.
+  def test_39_two_humans_can_exchange_fire
+    human1 = HumanPlayer.new("Amy")
+    human2 = HumanPlayer.new("Beth")
+    game = Game.new(human1, human2)
+
+    $mock_inputs.clear
+    $mock_inputs += standard_placement # Set up Amy's ships
+    $mock_inputs += standard_placement # Set up Beth's ships in the same places
+
+    # The /./ means that it doesn't matter what its putsed to the screen.
+    assert_output(/./) do
+      game.place_ships
+    end
+
+    # Amy should fire at Beth at A1 and should be told "Hit!" somewhere in the message.
     $mock_inputs.clear
     $mock_inputs << "A1"
-
-    # This /(Miss!|Hit!)/ thing just checks to see if Miss! or Hit! was included anywhere in the message.
-    assert_output(/(Miss!|Hit!)/) do
-      @game.take_turn
+    assert_output(/Hit!/) do
+      game.take_turn
     end
-  end
 
-  def test_38_computer_can_take_second_turn
-    set_up_new_game
+    # Beth should fire at Amy at A2 and should be told "Miss!" somewhere in the message.
+    $mock_inputs.clear
+    $mock_inputs << "A2"
+    assert_output(/Miss!/) do
+      game.take_turn
+    end
+
+    # Amy should fire at Beth at A1 again and be told "Miss!"
     $mock_inputs.clear
     $mock_inputs << "A1"
-    assert_output(/(Miss!|Hit!)/) do
-      @game.take_turn
+    assert_output(/Miss!/) do
+      game.take_turn
     end
-    assert_output(/(Miss!|Hit!)/) do
-      @game.take_turn
+
+    # Beth should fire at Amy at A1 and should be told "Hit!"
+    $mock_inputs.clear
+    $mock_inputs << "A1"
+    assert_output(/Hit!/) do
+      game.take_turn
     end
   end
 
-  def test_39_display_game_status
+  def test_939_display_game_status
     set_up_new_game
     assert_output(starting_game_status) do
       @human.display_game_status
@@ -502,7 +536,7 @@ J |   |   |   |   |   |   |   |   |   |   |
 }
   end
 
-  def test_40_game_status_shows_hits_and_misses
+  def test_940_game_status_shows_hits_and_misses
     human1 = HumanPlayer.new("Amy")
     human2 = HumanPlayer.new("Beth")
     game = Game.new(human1, human2, [2])
@@ -567,7 +601,7 @@ J |   |   |   |   |   |   |   |   |   |   |
 }
   end
 
-  def test_41_game_can_be_won
+  def test_941_game_can_be_won
     human1 = HumanPlayer.new("Amy")
     human2 = HumanPlayer.new("Beth")
     game = Game.new(human1, human2, [2])
@@ -586,4 +620,13 @@ J |   |   |   |   |   |   |   |   |   |   |
       game.play  #When Amy wins, it has to say 'Congratulations, Amy' somewhere in the victory message.
     end
   end
+
+
+  # Well done, developers!  You should now be able to open irb and run the
+  # following commands to play your game against the computer:
+  #
+  # require './battleship'
+  # Game.new(HumanPlayer.new("Your Name"), ComputerPlayer.new).play
+
+
 end
