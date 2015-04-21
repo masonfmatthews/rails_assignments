@@ -453,9 +453,9 @@ J |   |   |   |   |   |   |   |   |   |   |
     ["A1","Down","A3","Down","A5","Down","A7","Down","A9","Down"]
   end
 
-  # Third, test that turns can be taken.  This should call `call_shot` on the
-  # player who is up next.
-  def test_39_two_humans_can_exchange_fire
+
+  # Third, test that a human player can see the two boards.
+  def test_39_display_game_status
     human1 = HumanPlayer.new("Amy")
     human2 = HumanPlayer.new("Beth")
     game = Game.new(human1, human2)
@@ -464,7 +464,60 @@ J |   |   |   |   |   |   |   |   |   |   |
     $mock_inputs += standard_placement # Set up Amy's ships
     $mock_inputs += standard_placement # Set up Beth's ships in the same places
 
-    # The /./ means that it doesn't matter what its putsed to the screen.
+    # The /./ means that it doesn't matter what its puts'ed to the screen.
+    assert_output(/./) do
+      game.place_ships
+    end
+    assert_output(starting_game_status) do
+      game.display_status
+    end
+  end
+
+  def starting_game_status
+    %Q{SHOTS TAKEN:
+    1   2   3   4   5   6   7   8   9   10
+  -----------------------------------------
+A |   |   |   |   |   |   |   |   |   |   |
+B |   |   |   |   |   |   |   |   |   |   |
+C |   |   |   |   |   |   |   |   |   |   |
+D |   |   |   |   |   |   |   |   |   |   |
+E |   |   |   |   |   |   |   |   |   |   |
+F |   |   |   |   |   |   |   |   |   |   |
+G |   |   |   |   |   |   |   |   |   |   |
+H |   |   |   |   |   |   |   |   |   |   |
+I |   |   |   |   |   |   |   |   |   |   |
+J |   |   |   |   |   |   |   |   |   |   |
+  -----------------------------------------
+
+YOUR BOARD:
+    1   2   3   4   5   6   7   8   9   10
+  -----------------------------------------
+A | O |   | O |   | O |   | O |   | O |   |
+B | O |   | O |   | O |   | O |   | O |   |
+C |   |   | O |   | O |   | O |   | O |   |
+D |   |   |   |   |   |   | O |   | O |   |
+E |   |   |   |   |   |   |   |   | O |   |
+F |   |   |   |   |   |   |   |   |   |   |
+G |   |   |   |   |   |   |   |   |   |   |
+H |   |   |   |   |   |   |   |   |   |   |
+I |   |   |   |   |   |   |   |   |   |   |
+J |   |   |   |   |   |   |   |   |   |   |
+  -----------------------------------------
+}
+  end
+
+  # Fourth, test that turns can be taken.  This should call `call_shot` on the
+  # player who is up next.
+  def test_40_two_humans_can_exchange_fire
+    human1 = HumanPlayer.new("Amy")
+    human2 = HumanPlayer.new("Beth")
+    game = Game.new(human1, human2)
+
+    $mock_inputs.clear
+    $mock_inputs += standard_placement # Set up Amy's ships
+    $mock_inputs += standard_placement # Set up Beth's ships in the same places
+
+    # The /./ means that it doesn't matter what its puts'ed to the screen.
     assert_output(/./) do
       game.place_ships
     end
@@ -498,19 +551,56 @@ J |   |   |   |   |   |   |   |   |   |   |
     end
   end
 
-  def test_939_display_game_status
-    set_up_new_game
-    assert_output(starting_game_status) do
-      @human.display_game_status
+  # Just checking to see if the display works after some shots have been fired.
+  # Note that Amy can see on the top board where she has hit Beth's ships and
+  # missed Beth's ships.
+  #
+  # This one is surprisingly hard.  Up until now, you won't kept any track of
+  # shots taken that were misses.  Now you have to do that.
+  def test_41_game_status_shows_hits_and_misses
+    human1 = HumanPlayer.new("Amy")
+    human2 = HumanPlayer.new("Beth")
+    game = Game.new(human1, human2)
+
+    $mock_inputs.clear
+    $mock_inputs += standard_placement # Set up Amy's ships
+    $mock_inputs += standard_placement # Set up Beth's ships in the same places
+
+    # The /./ means that it doesn't matter what its puts'ed to the screen.
+    assert_output(/./) do
+      game.place_ships
+    end
+
+    # It doesn't matter what messages come up during the turns
+    assert_output(/./) do
+      $mock_inputs.clear
+
+      $mock_inputs << "C3"     #Amy's hit
+      game.take_turn
+
+      $mock_inputs << "B7"     #Beth's hit
+      game.take_turn
+
+      $mock_inputs << "C4"     #Amy's miss
+      game.take_turn
+
+      $mock_inputs << "B7"     #Beth's miss (she shot in the same spot as last time)
+      game.take_turn
+    end
+
+    # Now the visuals matter.  Should show Amy's shots up top and Amy's own ships below.
+    assert_output(mid_game_status) do
+      game.display_status
     end
   end
 
-  def starting_game_status
-    %Q{    1   2   3   4   5   6   7   8   9   10
+  def mid_game_status
+    %Q{SHOTS TAKEN:
+    1   2   3   4   5   6   7   8   9   10
   -----------------------------------------
 A |   |   |   |   |   |   |   |   |   |   |
 B |   |   |   |   |   |   |   |   |   |   |
-C |   |   |   |   |   |   |   |   |   |   |
+C |   |   | + | - |   |   |   |   |   |   |
 D |   |   |   |   |   |   |   |   |   |   |
 E |   |   |   |   |   |   |   |   |   |   |
 F |   |   |   |   |   |   |   |   |   |   |
@@ -520,10 +610,11 @@ I |   |   |   |   |   |   |   |   |   |   |
 J |   |   |   |   |   |   |   |   |   |   |
   -----------------------------------------
 
+YOUR BOARD:
     1   2   3   4   5   6   7   8   9   10
   -----------------------------------------
 A | O |   | O |   | O |   | O |   | O |   |
-B | O |   | O |   | O |   | O |   | O |   |
+B | O |   | O |   | O |   | X |   | O |   |
 C |   |   | O |   | O |   | O |   | O |   |
 D |   |   |   |   |   |   | O |   | O |   |
 E |   |   |   |   |   |   |   |   | O |   |
@@ -536,88 +627,60 @@ J |   |   |   |   |   |   |   |   |   |   |
 }
   end
 
-  def test_940_game_status_shows_hits_and_misses
+  # The previous five tests have required you to build methods on Game:
+  # * `welcome`
+  # * `place_ships`
+  # * `display_status`
+  # * `take_turn`
+  # Now you have to build a final method on Game which will `play` the game.
+  # It should call the four methods listed above in the appropriate order in the
+  # appropriate control structures.  Good luck!
+  def test_42_game_can_be_won
     human1 = HumanPlayer.new("Amy")
     human2 = HumanPlayer.new("Beth")
-    game = Game.new(human1, human2, [2])
+    game = Game.new(human1, human2)
+
     $mock_inputs.clear
+    $mock_inputs += standard_placement # Set up Amy's ships
+    $mock_inputs += standard_placement # Set up Beth's ships in the same places
 
-    # It doesn't matter what messages come up during the turns
-    assert_output(/./) do
-      $mock_inputs << "A2"     #Amy's ship's location
-      $mock_inputs << "Down"   #Amy's ship's direction
-
-      $mock_inputs << "F3"     #Beth's ship's location
-      $mock_inputs << "Across" #Beth's ship's direction
-      game.place_ships
-
-      $mock_inputs << "F3"     #Amy's hit
-      game.take_turn
-
-      $mock_inputs << "A2"     #Beth's hit
-      game.take_turn
-
-      $mock_inputs << "H4"     #Amy's miss
-      game.take_turn
-
-      $mock_inputs << "A2"     #Beth's miss (she shot in the same spot as last time)
-      game.take_turn
-    end
-
-    # Now the visuals matter.  Should show Amy's shots up top and Amy's own ship below.
-    assert_output(mid_game_status) do
-      human1.display_game_status
-    end
-  end
-
-  def mid_game_status
-    %Q{    1   2   3   4   5   6   7   8   9   10
-  -----------------------------------------
-A |   |   |   |   |   |   |   |   |   |   |
-B |   |   |   |   |   |   |   |   |   |   |
-C |   |   |   |   |   |   |   |   |   |   |
-D |   |   |   |   |   |   |   |   |   |   |
-E |   |   |   |   |   |   |   |   |   |   |
-F |   |   | + |   |   |   |   |   |   |   |
-G |   |   |   |   |   |   |   |   |   |   |
-H |   |   |   | - |   |   |   |   |   |   |
-I |   |   |   |   |   |   |   |   |   |   |
-J |   |   |   |   |   |   |   |   |   |   |
-  -----------------------------------------
-
-    1   2   3   4   5   6   7   8   9   10
-  -----------------------------------------
-A |   | X |   |   |   |   |   |   |   |   |
-B |   | O |   |   |   |   |   |   |   |   |
-C |   |   |   |   |   |   |   |   |   |   |
-D |   |   |   |   |   |   |   |   |   |   |
-E |   |   |   |   |   |   |   |   |   |   |
-F |   |   |   |   |   |   |   |   |   |   |
-G |   |   |   |   |   |   |   |   |   |   |
-H |   |   |   |   |   |   |   |   |   |   |
-I |   |   |   |   |   |   |   |   |   |   |
-J |   |   |   |   |   |   |   |   |   |   |
-  -----------------------------------------
-}
-  end
-
-  def test_941_game_can_be_won
-    human1 = HumanPlayer.new("Amy")
-    human2 = HumanPlayer.new("Beth")
-    game = Game.new(human1, human2, [2])
-    $mock_inputs.clear
-    $mock_inputs << "A2"     #Amy's ship's location
-    $mock_inputs << "Down"   #Amy's ship's direction
-
-    $mock_inputs << "F3"     #Beth's ship's location
-    $mock_inputs << "Across" #Beth's ship's direction
-
-    $mock_inputs << "F3"     #Amy's first shot
+    $mock_inputs << "A1"     #Amy's first shot
     $mock_inputs << "A1"     #Beth's first shot
-    $mock_inputs << "F4"     #Amy's winning shot
+    $mock_inputs << "B1"     #Amy sinks ship 1
+    $mock_inputs << "A1"     #Beth doesn't seem to get Battleship.
+    $mock_inputs << "A3"     #Amy
+    $mock_inputs << "A1"     #Come on, Beth.
+    $mock_inputs << "B3"     #Amy
+    $mock_inputs << "A1"     #... really?
+    $mock_inputs << "C3"     #Amy sinks ship 2
+    $mock_inputs << "A1"
+    $mock_inputs << "A5"     #Amy
+    $mock_inputs << "A1"
+    $mock_inputs << "B5"     #Amy
+    $mock_inputs << "A1"
+    $mock_inputs << "C5"     #Amy sinks ship 3
+    $mock_inputs << "A1"
+    $mock_inputs << "A7"     #Amy
+    $mock_inputs << "A1"
+    $mock_inputs << "B7"     #Amy
+    $mock_inputs << "A1"
+    $mock_inputs << "C7"     #Amy
+    $mock_inputs << "A1"
+    $mock_inputs << "D7"     #Amy sinks ship 4
+    $mock_inputs << "A1"
+    $mock_inputs << "A9"     #Amy
+    $mock_inputs << "A1"
+    $mock_inputs << "B9"     #Amy
+    $mock_inputs << "A1"
+    $mock_inputs << "C9"     #Amy
+    $mock_inputs << "A1"
+    $mock_inputs << "D9"     #Amy
+    $mock_inputs << "A1"
+    $mock_inputs << "E9"     #Amy wins!
 
+    #When Amy wins, it has to say 'Congratulations, Amy' somewhere in the victory message.
     assert_output(/Congratulations, Amy!/) do
-      game.play  #When Amy wins, it has to say 'Congratulations, Amy' somewhere in the victory message.
+      game.play
     end
   end
 
