@@ -120,42 +120,42 @@ class BattleshipTest < Minitest::Test
   end
 
   # Around here, you're going to get frustrated if you have been keeping an
-  # array of positions like [[1, 1], [2, 1], [3,1]].  Consider making this an
-  # array of Position objects instead.  Then you can add other fields besides x
-  # and y.  For instance, you can write a method `hit?` on Position.
+  # array of holes like [[1, 1], [2, 1], [3,1]].  Consider making this an
+  # array of Hole objects instead.  Then you can add other fields besides x
+  # and y.  For instance, you can write a method `hit?` on Hole.
 
   def test_14_unplaced_ship_is_not_sunk
     ship = Ship.new(2)
     refute ship.sunk?
   end
 
-  # One last note before we move onto the board.  The best solution to the above
+  # One last note before we move onto the grid.  The best solution to the above
   # tests would be to use `covers?` inside `fire_at`.  For this to be really
   # slick, though, you'll want `covers?` to not just return a true or a false.
-  # Make it wicked cool by having it return the specific position object
+  # Make it wicked cool by having it return the specific hole object
   # that was being fired on.  Then you can immediately mark it as hit without
   # searching for it again.
 
-  def test_15_board_class_exists
-    assert Board
+  def test_15_grid_class_exists
+    assert Grid
   end
 
   # Remember, for a moment, just solve this one in the simplest way possible. As
   # far as this test is concerned, what does `has_ship_on?` always return?
-  def test_16_empty_board
-    board = Board.new
-    refute board.has_ship_on?(1, 1)
-    refute board.has_ship_on?(10, 7)
+  def test_16_empty_grid
+    grid = Grid.new
+    refute grid.has_ship_on?(1, 1)
+    refute grid.has_ship_on?(10, 7)
   end
 
-  def test_17_empty_board_can_display_itself
-    board = Board.new
-    assert_output(empty_board) do
-      board.display
+  def test_17_empty_grid_can_display_itself
+    grid = Grid.new
+    assert_output(empty_grid) do
+      grid.display
     end
   end
 
-  def empty_board
+  def empty_grid
     %Q{    1   2   3   4   5   6   7   8   9   10
   -----------------------------------------
 A |   |   |   |   |   |   |   |   |   |   |
@@ -173,41 +173,41 @@ J |   |   |   |   |   |   |   |   |   |   |
   end
 
   def test_18_place_ship
-    board = Board.new
-    assert board.place_ship(Ship.new(4), 3, 3, true)
-    refute board.has_ship_on?(2, 3)
-    assert board.has_ship_on?(3, 3)
-    assert board.has_ship_on?(4, 3)
-    assert board.has_ship_on?(6, 3)
-    refute board.has_ship_on?(7, 3)
-    refute board.has_ship_on?(5, 4)
+    grid = Grid.new
+    assert grid.place_ship(Ship.new(4), 3, 3, true)
+    refute grid.has_ship_on?(2, 3)
+    assert grid.has_ship_on?(3, 3)
+    assert grid.has_ship_on?(4, 3)
+    assert grid.has_ship_on?(6, 3)
+    refute grid.has_ship_on?(7, 3)
+    refute grid.has_ship_on?(5, 4)
   end
 
   # Don't forget on this next one that giving the ship coordinates and placing
-  # it on the board are two separate steps.  You can do the first before knowing
+  # it on the grid are two separate steps.  You can do the first before knowing
   # whether it's possible to do the second.
   def test_19_cant_place_overlapping_ships
-    board = Board.new
-    assert board.place_ship(Ship.new(4), 3, 3, true)
-    refute board.place_ship(Ship.new(4), 1, 3, true)
-    refute board.place_ship(Ship.new(4), 4, 3, true)
-    refute board.place_ship(Ship.new(4), 4, 2, false)
-    assert board.place_ship(Ship.new(4), 7, 7, true)
+    grid = Grid.new
+    assert grid.place_ship(Ship.new(4), 3, 3, true)
+    refute grid.place_ship(Ship.new(4), 1, 3, true)
+    refute grid.place_ship(Ship.new(4), 4, 3, true)
+    refute grid.place_ship(Ship.new(4), 4, 2, false)
+    assert grid.place_ship(Ship.new(4), 7, 7, true)
   end
 
-  def test_20_ready_board_can_display_itself
-    board = Board.new
-    assert board.place_ship(Ship.new(2), 3, 6, true)
-    assert board.place_ship(Ship.new(3), 7, 4, true)
-    assert board.place_ship(Ship.new(3), 4, 8, true)
-    assert board.place_ship(Ship.new(4), 1, 1, true)
-    assert board.place_ship(Ship.new(5), 6, 2, false)
-    assert_output(ready_board) do
-      board.display
+  def test_20_ready_grid_can_display_itself
+    grid = Grid.new
+    assert grid.place_ship(Ship.new(2), 3, 6, true)
+    assert grid.place_ship(Ship.new(3), 7, 4, true)
+    assert grid.place_ship(Ship.new(3), 4, 8, true)
+    assert grid.place_ship(Ship.new(4), 1, 1, true)
+    assert grid.place_ship(Ship.new(5), 6, 2, false)
+    assert_output(ready_grid) do
+      grid.display
     end
   end
 
-  def ready_board
+  def ready_grid
     %Q{    1   2   3   4   5   6   7   8   9   10
   -----------------------------------------
 A | O | O | O | O |   |   |   |   |   |   |
@@ -224,48 +224,48 @@ J |   |   |   |   |   |   |   |   |   |   |
 }
   end
 
-  def test_21_misses_on_empty_board
-    board = Board.new
-    refute board.fire_at(1, 1)
-    refute board.fire_at(10, 7)
+  def test_21_misses_on_empty_grid
+    grid = Grid.new
+    refute grid.fire_at(1, 1)
+    refute grid.fire_at(10, 7)
   end
 
-  def test_22_misses_outside_board
-    board = Board.new
-    refute board.fire_at(18, 1)
-    refute board.fire_at(10, 26)
+  def test_22_misses_outside_grid
+    grid = Grid.new
+    refute grid.fire_at(18, 1)
+    refute grid.fire_at(10, 26)
   end
 
-  def test_23_hits_on_board
-    board = Board.new
-    board.place_ship(Ship.new(4), 3, 3, true)
-    refute board.fire_at(1, 1)
-    assert board.fire_at(3, 3)
+  def test_23_hits_on_grid
+    grid = Grid.new
+    grid.place_ship(Ship.new(4), 3, 3, true)
+    refute grid.fire_at(1, 1)
+    assert grid.fire_at(3, 3)
   end
 
   # Depending on how you implemented prior steps, this next one might
-  # be a big refactor.  You might have to change board.fire_at, ship.fire_at,
-  # and a position method (if you made a Position class).
+  # be a big refactor.  You might have to change grid.fire_at, ship.fire_at,
+  # and a hole method (if you made a Hole class).
   def test_24_repeat_hit
-    board = Board.new
-    board.place_ship(Ship.new(4), 3, 3, true)
-    assert board.fire_at(3, 3)
-    refute board.fire_at(3, 3)
+    grid = Grid.new
+    grid.place_ship(Ship.new(4), 3, 3, true)
+    assert grid.fire_at(3, 3)
+    refute grid.fire_at(3, 3)
   end
 
-  # The test before this one needed to set a position as hit.  This tests need
-  # to do the opposite: see if positions are hit.
-  def test_25_used_board_can_display_itself
-    board = Board.new
-    board.place_ship(Ship.new(4), 6, 4, true)
-    assert board.fire_at(7, 4)
-    refute board.fire_at(7, 5)
-    assert_output(used_board) do
-      board.display
+  # The test before this one needed to set a hole as hit.  This tests need
+  # to do the opposite: see if holes are hit.
+  def test_25_used_grid_can_display_itself
+    grid = Grid.new
+    grid.place_ship(Ship.new(4), 6, 4, true)
+    assert grid.fire_at(7, 4)
+    refute grid.fire_at(7, 5)
+    assert_output(used_grid) do
+      grid.display
     end
   end
 
-  def used_board
+  def used_grid
     %Q{    1   2   3   4   5   6   7   8   9   10
   -----------------------------------------
 A |   |   |   |   |   |   |   |   |   |   |
@@ -282,36 +282,36 @@ J |   |   |   |   |   |   |   |   |   |   |
 }
   end
 
-  def test_26_entire_board_can_be_sunk
-    board = Board.new
-    refute board.sunk?
-    board.place_ship(Ship.new(2), 6, 4, true)
-    refute board.sunk?
-    board.fire_at(6, 4)
-    refute board.sunk?
-    board.fire_at(7, 4)
-    assert board.sunk?
+  def test_26_entire_grid_can_be_sunk
+    grid = Grid.new
+    refute grid.sunk?
+    grid.place_ship(Ship.new(2), 6, 4, true)
+    refute grid.sunk?
+    grid.fire_at(6, 4)
+    refute grid.sunk?
+    grid.fire_at(7, 4)
+    assert grid.sunk?
   end
 
   def test_27_x_of
-    board = Board.new
-    assert_equal 1, board.x_of("A1")
-    assert_equal 1, board.x_of("G1")
-    assert_equal 6, board.x_of("D6")
-    assert_equal 10, board.x_of("D10")
+    grid = Grid.new
+    assert_equal 1, grid.x_of("A1")
+    assert_equal 1, grid.x_of("G1")
+    assert_equal 6, grid.x_of("D6")
+    assert_equal 10, grid.x_of("D10")
   end
 
   def test_28_y_of
-    board = Board.new
-    assert_equal 1, board.y_of("A1")
-    assert_equal 7, board.y_of("G1")
-    assert_equal 4, board.y_of("D6")
-    assert_equal 4, board.y_of("D10")
+    grid = Grid.new
+    assert_equal 1, grid.y_of("A1")
+    assert_equal 7, grid.y_of("G1")
+    assert_equal 4, grid.y_of("D6")
+    assert_equal 4, grid.y_of("D10")
   end
 
-  def test_29_players_have_boards
-    assert_equal Board, HumanPlayer.new.board.class
-    assert_equal Board, ComputerPlayer.new.board.class
+  def test_29_players_have_grids
+    assert_equal Grid, HumanPlayer.new.grid.class
+    assert_equal Grid, ComputerPlayer.new.grid.class
   end
 
   # Finally, we ask the user for input.  When the human player places ships,
@@ -334,10 +334,10 @@ J |   |   |   |   |   |   |   |   |   |   |
     end
     assert_equal 2, player.ships.length
     assert_equal 5, player.ships[1].length
-    assert player.board.has_ship_on?(1, 1)
-    assert player.board.has_ship_on?(4, 1)
-    assert player.board.has_ship_on?(1, 2)
-    refute player.board.has_ship_on?(1, 3)
+    assert player.grid.has_ship_on?(1, 1)
+    assert player.grid.has_ship_on?(4, 1)
+    assert player.grid.has_ship_on?(1, 2)
+    refute player.grid.has_ship_on?(1, 3)
   end
 
 
@@ -358,10 +358,10 @@ J |   |   |   |   |   |   |   |   |   |   |
     end
     assert_equal 2, player.ships.length
     assert_equal 3, player.ships[1].length
-    assert player.board.has_ship_on?(2, 1)
-    assert player.board.has_ship_on?(2, 2)
-    assert player.board.has_ship_on?(1, 6)
-    refute player.board.has_ship_on?(1, 1)
+    assert player.grid.has_ship_on?(2, 1)
+    assert player.grid.has_ship_on?(2, 2)
+    assert player.grid.has_ship_on?(1, 6)
+    refute player.grid.has_ship_on?(1, 1)
   end
 
 
@@ -440,10 +440,10 @@ J |   |   |   |   |   |   |   |   |   |   |
     end
 
     assert_equal 5, human.ships.length
-    assert human.board.has_ship_on?(1, 2)
-    assert human.board.has_ship_on?(3, 3)
-    assert human.board.has_ship_on?(9, 5)
-    refute human.board.has_ship_on?(7, 7)
+    assert human.grid.has_ship_on?(1, 2)
+    assert human.grid.has_ship_on?(3, 3)
+    assert human.grid.has_ship_on?(9, 5)
+    refute human.grid.has_ship_on?(7, 7)
 
     assert_equal 5, computer.ships.length
     assert_equal 4, computer.ships[3].length
@@ -454,7 +454,7 @@ J |   |   |   |   |   |   |   |   |   |   |
   end
 
 
-  # Third, test that a human player can see the two boards.
+  # Third, test that a human player can see the two grids.
   def test_39_display_game_status
     human1 = HumanPlayer.new("Amy")
     human2 = HumanPlayer.new("Beth")
@@ -552,7 +552,7 @@ J |   |   |   |   |   |   |   |   |   |   |
   end
 
   # Just checking to see if the display works after some shots have been fired.
-  # Note that Amy can see on the top board where she has hit Beth's ships and
+  # Note that Amy can see on the top grid where she has hit Beth's ships and
   # missed Beth's ships.
   #
   # This one is surprisingly hard.  Up until now, you won't kept any track of
