@@ -1,0 +1,20 @@
+{
+    "name": "employee_reviews",
+    "version": "0.0.1",
+    "title": "Employee Reviews",
+    "description": "Create classes to track employees and their departments, interpret employee reviews, and give out raises to those with good reviews.",
+    "difficultyModes": [
+        "Normal",
+        "Hard",
+        "Nightmare"
+    ],
+    "keywords": [
+        "Classes",
+        "TDD",
+        "Blocks",
+        "Classification",
+        "Keyword Arguments",
+        "Regular Expressions",
+        "Ruby"
+    ]
+}
