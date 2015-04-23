@@ -5,7 +5,8 @@
     "description": "Take an existing legacy codebase with no associations or validations and add them.",
     "difficultyModes": [
         "Normal",
-        "Hard"
+        "Hard",
+        "Nightmare"
     ],
     "keywords": [
         "TDD",
