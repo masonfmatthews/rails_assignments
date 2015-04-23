@@ -32,10 +32,10 @@ Use the homework submission form on the course website to turn in a link to your
 
 #### Part 1
 
-You want to keep track of employees (with their names and salaries), departments (with their names), and which employees are in which department.  You should be able to:
+You want to keep track of employees (with their names, email addresses, phone numbers, and salaries), departments (with their names), and which employees are in which department.  You should be able to:
 
 * Create a new department (given its name).
-* Create a new employee (given his/her name and salary).
+* Create a new employee (given his/her name, email address, phone number, and salary).
 * Add an employee to a department.
 * Get an employee's name.
 * Get an employee's salary.
