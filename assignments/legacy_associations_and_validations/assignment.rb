@@ -1,29 +1,8 @@
 class Assignment < ActiveRecord::Base
-  belongs_to :course
-  has_many :assignment_questions, -> {order :order_number}, dependent: :destroy
-  has_many :assignment_grades, dependent: :destroy
-
-  validates :course_id, presence: true
-  validates :name, presence: true
-  validates :active_at, presence: true
-  validates :due_at, presence: true
-  validates :percent_of_grade, presence: true
-
-  validate :active_no_later_than_due?
 
   scope :active_for_students, -> { where("active_at <= ? AND due_at >= ? AND students_can_submit = ?", Time.now, Time.now, true) }
 
   delegate :code_and_name, :color, to: :course, prefix: true
-
-  accepts_nested_attributes_for :assignment_questions,
-      :allow_destroy => true,
-      :reject_if     => :all_blank
-
-  def active_no_later_than_due?
-    if active_at? && due_at? && active_at > due_at
-      errors.add(:active_at, "must be no later than due at.")
-    end
-  end
 
   def status(user = nil)
     AssignmentStatus.new(assignment: self, user: user)

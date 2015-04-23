@@ -1,14 +1,4 @@
 class CourseStudent < ActiveRecord::Base
-  belongs_to :course
-  belongs_to :student, class_name: "User"
-  has_many :assignment_grades, dependent: :restrict_with_error
-  has_many :awarded_achievements, dependent: :destroy
-  has_many :time_cards, dependent: :destroy
-  has_many :feedback_answers, dependent: :destroy
-
-  validates :course, presence: true
-  validates :student, presence: true
-  validates :student, uniqueness: {scope: :course_id}
 
   scope :approved, -> { where(approved: true) }
   scope :unapproved, -> { where(approved: false) }

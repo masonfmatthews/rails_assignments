@@ -1,20 +1,5 @@
 class Lesson < ActiveRecord::Base
-  belongs_to :course
-  has_many :meeting_lessons, dependent: :destroy
-  has_many :meetings, -> {order :held_at}, through: :meeting_lessons
-  has_many :readings, dependent: :destroy
-  has_many :child_lessons, -> {order :id}, class_name: "Lesson", foreign_key: "parent_lesson_id", dependent: :destroy
-  belongs_to :parent_lesson, class_name: "Lesson", foreign_key: "parent_lesson_id"
-  belongs_to :pre_class_assignment, class_name: "Assignment", foreign_key: "pre_class_assignment_id"
-  belongs_to :in_class_assignment, class_name: "Assignment", foreign_key: "in_class_assignment_id"
-
-  validates :name, presence: true
-
   delegate :code_and_name, to: :course, prefix: true
-
-  accepts_nested_attributes_for :readings,
-      :allow_destroy => true,
-      :reject_if     => proc { |attributes| attributes['caption'].blank? && attributes['url'].blank? }
 
   scope :roots, -> { where("parent_lesson_id IS NULL") }
   scope :without_day_assignments, -> { where("day_assignment_id IS NULL") }

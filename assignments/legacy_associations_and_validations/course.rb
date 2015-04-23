@@ -1,25 +1,4 @@
 class Course < ActiveRecord::Base
-  has_many :assignments, -> {order :due_at, :active_at}, dependent: :destroy
-  has_many :achievements, dependent: :destroy
-  has_many :meetings, -> {order :held_at}
-  has_many :meeting_lessons, through: :meetings
-  has_many :lessons, dependent: :destroy
-  has_many :policies, -> {order :order_number}, dependent: :destroy
-  has_many :course_students, dependent: :restrict_with_error
-  has_many :students, -> {order "last_name, first_name"}, through: :course_students
-  has_many :course_instructors, dependent: :destroy, inverse_of: :course
-  has_many :instructors, through: :course_instructors
-  has_many :grade_thresholds, -> {order "grade DESC"}, dependent: :destroy
-  has_many :feedback_questions, -> {order :order_number}, dependent: :destroy
-
-  has_one :primary_course_instructor, -> {where primary: true},
-    class_name: "CourseInstructor"
-  has_one :primary_instructor, through: :primary_course_instructor, source: :instructor
-
-  belongs_to :term
-
-  validates :name, presence: true
-  validates :course_code, presence: true
 
   default_scope { order("courses.term_id DESC, courses.course_code, courses.id DESC") }
 
@@ -30,22 +9,6 @@ class Course < ActiveRecord::Base
 
   delegate :starts_on, to: :term, prefix: true
   delegate :ends_on, to: :term, prefix: true
-
-  accepts_nested_attributes_for :course_instructors,
-      allow_destroy: true,
-      reject_if: proc { |attributes| attributes['instructor_id'].blank? }
-
-  accepts_nested_attributes_for :policies,
-      allow_destroy: true,
-      reject_if: :all_blank
-
-  accepts_nested_attributes_for :grade_thresholds,
-      allow_destroy: true,
-      reject_if: :all_blank
-
-  accepts_nested_attributes_for :feedback_questions,
-      allow_destroy: true,
-      reject_if: :all_blank
 
   def self.example_courses
     self.where(public: true).order("id DESC").first(5)
