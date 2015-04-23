@@ -13,7 +13,7 @@ After completing this assignment, you should be able to effectively...
 
 ## Deliverables
 
-* **An ERD Diagram.** Create a database diagram in Lucidchart (or a similar tool).
+* **An ERD.** Create a database diagram in Lucidchart (or a similar tool).
 
 Submit your homework via the class assignments Google Form.  Put the link to your diagram in the github repository field.
 
