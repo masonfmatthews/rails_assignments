@@ -16,11 +16,11 @@ After completing this assignment, you should...
 
 ## Deliverables
 
-* **A Data Structure Diagram.** Before writing any code, review the requirements below and draw a data structure diagram for this project.
-* **A Github Organization.** Create an organization in github to represent your team for this project.  Give all team members full rights.
-* **A Repository.** Create a repository in your github organization.
-* **A Heroku App.** Your application should be deployed and running on Heroku.
-* **A Test Suite.** Your application should be developed using test driven development.  It is up to you whether you use ping-pong pairing.
+* **An ERD.** Before writing any code, review the requirements below and draw a data structure diagram for this project.
+* **A GitHub organization.** Create an organization in github to represent your team for this project.  Give all team members full rights.
+* **A repository.** Create a repository in your github organization.
+* **A Heroku app.** Your application should be deployed and running on Heroku.
+* **A test suite.** Your application should be developed using test driven development.  It is up to you whether you use ping-pong pairing.
 * **A Clean Design.** Your applicaton should utilize one of the three design frameworks mentioned in class thus far (Bootstrap, Foundation, or Bourbon/Neat/etc).
 * **A README.** Your README should describe the application and include a link to the live version on Heroku.
 
