@@ -18,22 +18,23 @@ After completing this assignment, you should...
 
 * **A Repository.** Create your own repository for this assignment.
 * **A Test Suite.** Every action in your controllers should be tested.
+* **A README.** Your README should describe the API and provide instructions for others on how to use it.
 
 ## Normal Mode
 
 For this project, you will be building a Rails-based application which serves up only an API.  This API will be responding with JSON.  The API must have the following actions in the following locations:
 
 * `/api/v1/candidates`
-  * Based on a candidates table, with at least name and party attributes
+  * Based on a `candidates` table, with at least `name` and `party` attributes
   * `index` action
   * `show` action
 * `/api/v1/voters`
-  * Based on a voters table, with at least name and party attributes
+  * Based on a `voters` table, with at least `name` and `party` attributes
   * `create` action
-  * `show` action, with authentication to show that you are the voter
-  * `update` action, with authentication to show that you are the voter
+  * `show` action, with authentication to prove that you are the voter
+  * `update` action, with authentication to prove that you are the voter
 * `/api/v1/votes`
-  * Based on a votes table, with at least voter_id and candidate_id attributes
+  * Based on a `votes` table, with at least `voter_id` and `candidate_id` attributes
   * Each voter can cast at most one vote, period.
   * `create` action, with authentication to show that you are the voter
   * `index` action (which shows all candidates and a number of votes for each)

@@ -9,6 +9,7 @@ Create a Rails application which presents a novel (unique, new) API to the world
 After completing this assignment, you should...
 
 * Understand the variety of public APIs available to developers
+* Understand the basics of deploying Rails apps to Heroku
 * Be able to read and utilize API documentation for publicly available data sets
 * Be able to merge data from multiple points of origin
 * Be able to create a public-facing API
