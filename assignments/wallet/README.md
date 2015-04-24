@@ -6,33 +6,23 @@ Build a Rails app to tell you how much money you have right now.  The applicatio
 
 ## Objectives
 
-### Learning Objectives
-
 After completing this assignment, you should...
 
-* Understand how to create a basic Rails app (with one database table)
-* Understand more components of the MVC architecture
+* Understand how to create a complete Rails app (with one database table)
+* Understand all components of the MVC architecture
 * Understand basic HTML forms
-
-### Performance Objectives
-
-After completing this assignment, you should be able to effectively...
-
-* Generate a new Rails app
-* Create and use an ActiveRecord model
+* Create and use an ActiveRecord model, a controller, multiple views, and a router.
 * Create and use a Rails scaffold
 
-## Details
+## Deliverables
 
-### Deliverables
-
-* **A Repository.** Fork this github repository, then clone it to your local machine, cd into the directory, and call `rails new .`.  Commit often, not just at the end.
-* **Your Second Rails App!**
+* **A repository.** Create a new repository.  Commit often, not just at the end.
 * **A README.** Create a README that describes the purpose of this project and the steps necessary to set it up and use it.
+* **A test suite.** Build your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
 
-Create a pull request when you're done.
+## Normal Mode
 
-### Requirements
+Assume that you only (ever) pay for things with your debit card.  In order to avoid spending more than you have, you want to build an application to keep track of how much money exists in your account.  You'll need to be able to make deposits and withdrawals, and you'll store each of these as a record in your data table.
 
 This application will be built around a set of scaffold-like views (for editing transactions), but it will include an additional page at the root of the application.
 
@@ -48,10 +38,6 @@ Regarding the code:
 * You will be tempted to create two columns (one for credits and another for debits).  That is not the only option.
 * Choose wisely between float and decimal.
 * Hint: the word "transaction" is a bit risky in Rails.  You can name a table `transactions` and a model `Transaction`, but you should not have any fields/columns in your database called `transaction`.  If you can think of a better name than "transaction" for the event of spending or depositing money, feel free to use it!
-
-## Normal Mode
-
-Assume that you only (ever) pay for things with your debit card.  In order to avoid spending more than you have, you want to build an application to keep track of how much money exists in your account.  You'll need to be able to make deposits and withdrawals, and you'll store each of these as a record in your data table.
 
 The first transaction in the application will be something like "Initial Deposit," so you'll assume that the account has $0 in it prior to the initial deposit.
 

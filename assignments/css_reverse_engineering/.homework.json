@@ -5,11 +5,10 @@
     "description": "Given screenshots of web pages, reproduce the look of each using CSS.",
     "difficultyModes": [
         "Normal",
-        "Hard"
+        "Nightmare"
     ],
     "keywords": [
         "CSS",
-        "HTML",
-        "Ruby"
+        "HTML"
     ]
 }

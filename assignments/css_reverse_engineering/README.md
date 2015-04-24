@@ -7,29 +7,20 @@ Given screenshots of web pages (or parts of webpages), reproduce the look of eac
 
 ## Objectives
 
-### Learning Objectives
-
 After completing this assignment, you should...
 
 * Understand the structure of HTML documents
 * Understand CSS selectors, styles, and attributes
 * Understand CSS pseudo-selectors
-
-### Performance Objectives
-
-After completing this assignment, you should be able to effectively...
-
 * Use online tools like Codepen for rapid HTML and CSS experimentation
 * Create simple HTML documents
 * Style them with simple CSS documents
 
-## Details
-
-### Deliverables
+## Deliverables
 
 * Links to your pens.
 
-### Requirements
+## Normal Mode
 
 Your goal today is to reproduce webpages or components of webpages that you might find on the web.
 
@@ -40,7 +31,7 @@ Your work will probably proceed like this:
 * As you change HTML or CSS, the view of the page below will automatically refresh, but you do need to save before your changes stick around.
 * When you are finished with each mode of this assignment, you can copy the link from your address bar and submit it to your instructor via e-mail.
 
-## Easy Mode
+#### Task 1
 
 The first task is to make a (terribly ugly) webpage containing one of Shakespeare's sonnets.  You will be making a webpage in Codepen that looks exactly like this:
 
@@ -48,7 +39,7 @@ The first task is to make a (terribly ugly) webpage containing one of Shakespear
 
 So that you don't have to re-type the whole thing, [here is the sonnet in text form](http://www.poetryfoundation.org/poem/174354).  Pay attention to all the details, from color to font to borders.  Look down in the resources section for a tool that will help you compare your work with this image.
 
-## Normal Mode
+#### Task 2
 
 The second task is to make the following button:
 
@@ -74,7 +65,7 @@ To get this to work, you'll need to use a liberal number of nested divs, and wil
 
 ## Additional Resources
 
-* Mac's built-in screenshoting tool (CMD + Shift + 4, then draw a box around what you want).
+* Mac's built-in screenshoting tool (Command + Shift + 4, then draw a box around what you want).
 * [Sip.app](https://itunes.apple.com/us/app/sip/id507257563?mt=12) for picking colors.
 * [PerfectPixel](http://www.welldonecode.com/perfectpixel/) for checking pixel precision.
 * I already mentioned this, but [Google](http://www.google.com)!!

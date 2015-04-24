@@ -5,12 +5,15 @@
     "description": "Recreate your Github profile page (with real, live data) in a Rails application.  Use Github's public API.",
     "difficultyModes": [
         "Normal",
-        "Hard",
-        "Nightmare"
+        "Hard"
     ],
     "keywords": [
         "API Consumption",
         "Rails",
-        "Ruby"
+        "Ruby",
+        "ERB",
+        "Views",
+        "HTML",
+        "CSS"
     ]
 }

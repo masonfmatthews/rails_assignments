@@ -25,7 +25,7 @@ After completing this assignment, you should...
 For this project, you will be building a Rails-based application which serves up only an API.  This API will be responding with JSON.  The API must have the following actions in the following locations:
 
 * `/api/v1/candidates`
-  * Based on a `candidates` table, with at least `name` and `party` attributes
+  * Based on a `candidates` table, with at least `name`, `hometown`, `district`, and `party` attributes
   * `index` action
   * `show` action
 * `/api/v1/voters`
