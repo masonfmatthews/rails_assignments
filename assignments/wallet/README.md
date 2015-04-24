@@ -20,7 +20,7 @@ After completing this assignment, you should...
 * **A repository.** Create a new repository.  Commit often, not just at the end.
 * **A README.** Create a README that describes the purpose of this project and the steps necessary to set it up and use it.
 * **A test suite.** Build your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
-* **A reflection on your estimate.**  Well?  How did you do?
+* **A reflection on your estimate.**
 
 ## Normal Mode
 
