@@ -10,7 +10,6 @@ After completing this assignment, you should...
 
 * Understand basic MVC architecture
 * Understand basic SQL data table design
-* Understand workflow design
 * Understand basic Rails file conventions
 * Understand how test-driven development extends to the Rails structure
 * Understand that smaller amounts of working code are more valuable than vast amounts of unfinished code
@@ -32,7 +31,6 @@ After completing this assignment, you be should able to effectively...
 * **A working Rails app on Heroku.**
 * **A test suite.** Build your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
 * **An ERD.** Create a database diagram in Lucidchart (or a similar tool).
-* **A Workflow diagram.**  Any format is fine, including paper.
 
 ## Normal Mode
 

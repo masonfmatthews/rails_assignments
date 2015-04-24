@@ -6,29 +6,22 @@ Build an application that allows teachers to log in and log out based on email a
 
 ## Objectives
 
-### Learning Objectives
-
 After completing this assignment, you should...
 
 * Understand basic Rails authentication
 * Understand sessions in Rails
-* Understand basic Rails associations
-
-### Performance Objectives
 
 After completing this assignment, you should be able to effectively...
 
-* Implement a :has_many and :belongs_to relationships in Rails
 * Build your own authentication system
 
 ## Details
 
 ### Deliverables
 
-* **A Repository.** Create a new github repository under your account.  Commit often, not just at the end.  Continue to #shipit!
-* **A README.** Doesn't have to be much, but it does have to exist.  It must include at least one header and a link to your app running on Heroku.
-* **A Working Rails app on Heroku.**
-* (No test suite quite yet)
+* **A repository.** Create a new github repository under your account.  Commit often, not just at the end.  Continue to #shipit!
+* **A README.** It must include at least one header and a link to your app running on Heroku.
+* **A test suite.** Build your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
 
 ## Normal Mode
 

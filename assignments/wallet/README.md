@@ -16,9 +16,11 @@ After completing this assignment, you should...
 
 ## Deliverables
 
+* **An estimate.**  After you read through this assignment (but before you start coding), write down a number of hours that you expect each part to take (1-3).  Record your hours as you go.
 * **A repository.** Create a new repository.  Commit often, not just at the end.
 * **A README.** Create a README that describes the purpose of this project and the steps necessary to set it up and use it.
 * **A test suite.** Build your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
+* **A reflection on your estimate.**  Well?  How did you do?
 
 ## Normal Mode
 

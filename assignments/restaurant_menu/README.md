@@ -6,15 +6,12 @@ Create an online menu for a restaurant with a fixed number of categories and ima
 
 ## Objectives
 
-### Learning Objectives
-
 After completing this assignment, you should...
 
 * Understand REST and when to break it
 * Understand the Rails Asset Pipeline
 * Understand how Rails uses gems
-
-### Performance Objectives
+* Understand workflow design
 
 After completing this assignment, you should be able to effectively...
 
@@ -24,15 +21,15 @@ After completing this assignment, you should be able to effectively...
 * Use Heroku to serve up images from the asset pipeline
 * Start putting cleaner style on your apps
 
-## Details
-
-### Deliverables
+## Deliverables
 
 * **A Repository.** Fork this repository to your own github account.
 * **A README.** Wipe out this README and write your own.  It should include a link to the app running on Heroku.
-* **A Working Rails App.**
-* Continue to #shipit
-* (No test suite quite yet)
+* **A Working Rails App on Heroku.**
+* **A test suite.** Build your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
+* **A Workflow diagram.**  Any format is fine, including paper.
+
+Continue to #shipit!
 
 ## Normal Mode
 
@@ -42,10 +39,10 @@ This application will require the following:
 
 * Two models: Dish and Course.  An example of a dish is "Meatloaf" and an example of a course is "Entrees".  Dishes should have prices, names, and descriptions.  Courses should have names.  You need to add a foreign key to one of these tables, but you have to determine that for yourself.
 * One controller: DishesController.  You may decide to add another controller to display your menu if you would like, but it will be simplest if you build `dishes/index` to display all items in the menu format rather than in the standard scaffolded table.  Regardless of where you put it, your menu should show in an appealing format, grouped in courses.
-* Each course should have an image associated with it, and the course's image should be displayed somewhere in its group.
+* Each course should have an image associated with it (set up by you, the developer, not by users uploading it), and the course's image should be displayed somewhere in its group.
 * Foundation stylesheets
 * Users should be able to edit the dish's information by clicking on the dish's name.
-* Usrrs should be able to add dishes for a specific course.
+* Users should be able to add dishes for a specific course.
 * Users should be able to destroy a dish by going to the dish's edit page and then hitting a delete button on that page.
 * Users should not be able to edit courses.  Those should be set up by developers either through seeds or through manually creating them via `rails console`.
 * The show action for each dish should redirect to the dish's edit page.  This means that you do need a `def show` in your controller, but you don't need a `show.html.erb` in your `views/dishes` folder.
@@ -61,10 +58,10 @@ Hard mode requires the addition of two features:
 
 ## Nightmare Mode
 
-Rather than allowing users to paste in URLs of images, require them to UPLOAD the images.
+Rather than allowing users to paste in URLs of images, require them to UPLOAD the images.  This is harder than having images for each course (set up by you, the developer).  This is user-specified imagery.
 
 ## Additional References
 
-* [Foundation](http://foundation.zurb.com/)
+* [Bootstrap](http://getbootstrap.com/)
 * [SCSS Guide](http://sass-lang.com/)
 * [The Asset Pipeline on Heroku](https://devcenter.heroku.com/articles/rails-4-asset-pipeline)
