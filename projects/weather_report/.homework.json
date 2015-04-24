@@ -1,0 +1,17 @@
+{
+    "name": "weather_report",
+    "version": "0.0.1",
+    "title": "Weather Report",
+    "description": "Build a Ruby application to pull data from multiple Weather Underground API endpoints and present a weather report to the user.",
+    "difficultyModes": [
+        "Normal",
+        "Hard",
+        "Nightmare"
+    ],
+    "keywords": [
+        "TDD",
+        "APIs",
+        "JSON",
+        "HTTP Requests"
+    ]
+}
