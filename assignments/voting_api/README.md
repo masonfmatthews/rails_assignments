@@ -19,6 +19,7 @@ After completing this assignment, you should...
 * **A Repository.** Create your own repository for this assignment.
 * **A Test Suite.** Every action in your controllers should be tested.
 * **A README.** Your README should describe the API and provide instructions for others on how to use it.
+* **An ERD.** Create a database diagram in Lucidchart (or a similar tool).
 
 ## Normal Mode
 

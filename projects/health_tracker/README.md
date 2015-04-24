@@ -2,39 +2,37 @@
 
 ## Description
 
-As a team, build a Rails application to store information on daily weight, daily steps taken, calories consumed, and exercises performed.
+Build a Rails application to store information on your weight (measured once per day), daily steps taken, calories consumed, and exercises performed.
 
 ## Objectives
-
-### Learning Objectives
 
 After completing this assignment, you should...
 
 * Understand basic MVC architecture
 * Understand basic SQL data table design
+* Understand workflow design
 * Understand basic Rails file conventions
-* Understand how test-driven development extends to Rails models
+* Understand how test-driven development extends to the Rails structure
 * Understand that smaller amounts of working code are more valuable than vast amounts of unfinished code
-
-### Performance Objectives
 
 After completing this assignment, you be should able to effectively...
 
 * Set up a github organization.
 * Create a new Rails application.
 * Create multiple data tables for use in the same application.
-* Manually create simple routes.
+* Create simple routes.
 * Create simple model validations.
 * As a team, use multiple branches to perform separate work, then merge work together.
 
-## Details
+## Deliverables
 
-### Deliverables
-
-* **A github organization.** Create an organization in github to represent your team for this project.  Give all team members full rights.
-* **A Repository.** Fork this repository to your own github organization's account.  In just this case, your repository should have multiple branches (that is, don't delete them after merging).
-* **A README.** Wipe out this README and write your own.
-* **A Working Rails App.**
+* **A GitHub organization.** Create an organization in GitHub to represent your team for this project.
+* **A Repository.** Create a new repository.  In the end, your repository should have multiple branches (that is, don't delete them after merging).
+* **A README.**
+* **A working Rails app on Heroku.**
+* **A test suite.** Build your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
+* **An ERD.** Create a database diagram in Lucidchart (or a similar tool).
+* **A Workflow diagram.**  Any format is fine, including paper.
 
 ## Normal Mode
 
@@ -49,7 +47,7 @@ The forms for viewing and entering these pieces of information can look however 
 
 During the course of this assignment:
 
-* You can use scaffold for at most two of these data tables.
+* You can use scaffold for the first three of these controllers, but build one by hand without scaffold.
 * During development, the application should have a number of points in time in which there are no known bugs.  If you have links that go nowhere, pages that don't work, or random errors you can't explain, DON'T move on to the next feature.  Fix the bugs first, clean up the links, and get it in a solid state.  Then put `#shipit` somewhere in the commit message and move on to the next feature.  I'll check your commits to see how many times you've been shippable.
 * Your dashboard must:
   * have links to all four of the list pages.
@@ -61,7 +59,7 @@ There are a few data requirements:
 * Each of these measurements should be given for a particular date.
 * You should not be able to enter two weight measurements for the same date.
 * You should be able to enter multiple records for steps taken, calories consumed, and exercises performed for the same date.
-* Hint: when naming tables, think about how the names will work in singular and in plural.  For example, you might be tempted to have a model called `CaloriesConsumed`, but you have to admit that `calories_consumeds` is an awful table name.  Also, don't name a table `calories`.  Try it and you'll see why.
+* Hint: when naming tables, think about how the names will work in singular and in plural.  For example, you might be tempted to have a model called `CaloriesConsumed`, but you have to admit that `calories_consumeds` is an awful table name.  Also, don't name a table `calories`.  If you don't believe me, try it and you'll see why.
 
 ## Hard Mode
 
