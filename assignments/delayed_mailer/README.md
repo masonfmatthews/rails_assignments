@@ -14,7 +14,12 @@ After completing this assignment, you should...
 
 ## Deliverables
 
-* **A Repository.** You will be working from an existing application.  Your instructor will provide that link.
+* **An estimate.**  After you read through this assignment (but before you start coding), write down a number of hours that you expect each part to take (1-3).  Record your hours as you go.
+* **A repository.** You will be working from an existing application.  Your instructor will provide that link.
+* **A README.** The README should include data on all of the metrics requested below.
+* **A test suite.** Build your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
+* **A working app on Heroku.**
+* **A reflection on your estimate.**
 
 ## Normal Mode
 
