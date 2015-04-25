@@ -17,8 +17,11 @@ After completing this assignment, you should...
 
 ## Deliverables
 
-* **A Repository.** You will be working from the existing application found in this repository, but you will make your own copy.
+* **An estimate.**  After you read through this assignment (but before you start coding), write down a number of hours that you expect each part to take (1-3).  Record your hours as you go.
+* **A repository.** You will be working from the existing application found in this repository, but you will make your own copy.
 * **A README.** The README should include data on all of the metrics requested below.
+* **A test suite.** Build your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
+* **A reflection on your estimate.**
 
 ## Normal Mode
 
