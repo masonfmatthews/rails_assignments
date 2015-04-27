@@ -1,8 +1,8 @@
 {
     "name": "github_profile_page",
     "version": "0.0.1",
-    "title": "Github Profile Page",
-    "description": "Recreate your Github profile page (with real, live data) in a Rails application.  Use Github's public API.",
+    "title": "GitHub Profile Page",
+    "description": "Recreate your GitHub profile page (with real, live data) in a Rails application.  Use GitHub's public API.",
     "difficultyModes": [
         "Normal",
         "Hard"

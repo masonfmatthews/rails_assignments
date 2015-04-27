@@ -2,7 +2,7 @@
 
 ## Description
 
-Given an existing application which pulls from the Github API and displays its results in an HTML page, add a database which will store the Github responses so that the API does not need to be queried repeatedly.  Decide on a cache invalidation strategy.
+Given an existing application which pulls from the GitHub API and displays its results in an HTML page, add a database which will store the GitHub responses so that the API does not need to be queried repeatedly.  Decide on a cache invalidation strategy.
 
 ## Objectives
 
@@ -21,12 +21,12 @@ After completing this assignment, you should...
 
 ## Normal Mode
 
-For this assignment, you will be taking an existing application which was created to pull from the Github API and attempt to generate a user's repositories page.  The application chosen for tonight did not totally meet that goal, but accomplished the core parts of it.
+For this assignment, you will be taking an existing application which was created to pull from the GitHub API and attempt to generate a user's repositories page.  The application chosen for tonight did not totally meet that goal, but accomplished the core parts of it.
 
-The issue we are now faced with is that we don't want to call out to the Github API each time a user requests the same page.  If a user's profile is requested more than once, the information should be pulled from a database in this Rails app, and Github will not get an additional request.  This approach has two benefits:
+The issue we are now faced with is that we don't want to call out to the GitHub API each time a user requests the same page.  If a user's profile is requested more than once, the information should be pulled from a database in this Rails app, and GitHub will not get an additional request.  This approach has two benefits:
 
 1. It takes longer to pull from an API and render its results than it takes to display data from a database.
-2. Subsequent requests of the same information does not count against our allowed number of Github API requests.
+2. Subsequent requests of the same information does not count against our allowed number of GitHub API requests.
 
 Once you've accomplished this, take it a step further.  This database that you've created can be thought of as a "cache" of the github data.  You keep it around to make future requests faster or easier.
 

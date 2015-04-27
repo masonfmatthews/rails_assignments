@@ -27,7 +27,7 @@ After completing this assignment, you should...
 
 For this project, you will be starting with an application which runs very slowly.  This ineffiency is due partly to the sheer amount of data present, but mostly due to the structure of the code and the database.  Your task is to make it run in a reasonable amount of time.
 
-Once you pull down the application from Github, run `bundle install` and `rake db:migrate`, then follow the steps below.
+Once you pull down the application from GitHub, run `bundle install` and `rake db:migrate`, then follow the steps below.
 
 * Run `rake db:seed`, but time it.  Record the amount of time it takes for the seeds to run.
 * Turn on your server and open your browser.

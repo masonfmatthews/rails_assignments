@@ -17,7 +17,7 @@ After completing this assignment, you should...
 
 ## Deliverables
 
-* **A Github Organization.** Create an organization in github to represent your team for this project.  Give all team members full rights.
+* **A GitHub Organization.** Create an organization in github to represent your team for this project.  Give all team members full rights.
 * **A Repository.** Create a repository in your github organization.
 * **A Heroku App.** Your application should be deployed and running on Heroku.
 * **A Test Suite.** Your application should be developed using test driven development.  It is up to you whether you use ping-pong pairing.
@@ -27,7 +27,7 @@ After completing this assignment, you should...
 
 For this project, you have complete autonomy on the data that your application displays, the sources of that data, and the behavior that your application has.  The conditions for this assignment are:
 
-* You must consume at least two publicly available APIs on two different data sets (e.g. two API requests from the Github API are not sufficient).  A few links to public data set directories are given below.
+* You must consume at least two publicly available APIs on two different data sets (e.g. two API requests from the GitHub API are not sufficient).  A few links to public data set directories are given below.
 * You must consume (and use) at least five data points from your incoming APIs.
 * You must merge this data in some meaningful and interesting way.
 * You must display this merged data in a JSON API of your own making.  The api must be accessible under `/api/v1/`.
