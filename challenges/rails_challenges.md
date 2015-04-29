@@ -64,4 +64,12 @@
 
 * (Teacher hint: see if they caught to also do update)
 
-#### 
+#### JavaScript
+
+* When the button to submit the form is clicked, disable the button so that the user cannot double-click.  Do not use jQuery.
+
+#### jQuery
+
+* Using jQuery, hide the checkboxes until the user types in a name.
+
+* If the user deletes the name, hide the checkboxes again.
