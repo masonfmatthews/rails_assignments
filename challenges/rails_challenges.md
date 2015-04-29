@@ -73,3 +73,11 @@
 * Using jQuery, hide the checkboxes until the user types in a name.
 
 * If the user deletes the name, hide the checkboxes again.
+
+#### AREL
+
+* Write an AREL query to return all responses that were created in the last week.
+
+* Write an AREL query to return all responses with names that start with "M".
+
+* Write an AREL query to return all responses with three or more favorites.
