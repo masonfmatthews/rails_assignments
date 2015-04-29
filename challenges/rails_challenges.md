@@ -56,10 +56,20 @@
 
 * Why is it bad to see if the name fields are equal?
 
-#### Scope
+#### Scope and Authorization
 
-* Modify your results index page so that the user only sees results which he or she wrote.
+* Modify your results index page so that the user only sees results which he or she wrote.  Use a scope.
 
 * Modify the results' show, edit, and destroy pages so that the user is redirected if he/she didn't create that particular result.
 
 * (Teacher hint: see if they caught to also do update)
+
+#### Git Messes
+
+* What command do you run if you want to discard all changes since your last commit?
+
+* What command do you use if you run `git add` and then want to revert it?
+
+* What command do you use if you run `git commit` and then want to revert it?
+
+* What command do you use if you run `git push` and then want to revert it?
