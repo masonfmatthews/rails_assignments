@@ -47,3 +47,9 @@
 * The form currently has four mostly-repeated lines to show the checkboxes.  The thank-you page also has four mostly-repeated lines to display the results.  DRY out this duplication.
 
 * When are partials better to use than helpers?  When is the opposite true?
+
+#### Session
+
+* Modify your data table and your action so that there is some way to group responses together based on which user wrote them.  Do this without creating a user model or checking to see if the "Name" fields are equal.
+
+* Why is it bad to see if the name fields are equal?
