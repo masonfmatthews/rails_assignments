@@ -17,3 +17,13 @@
 * Set an environment variable called `API_KEY` which is only available in development.
 
 * What is a better approach to storing environment variables?
+
+* Do you ever run migrations on the test database?
+
+#### ActiveRecord
+
+* Create a migration for storing survey results submitted on `home/form`.  It needs five fields (matching the HTML form fields), plus an `id` field.
+
+* Whenever the form is submitted, create a new record in the database.
+
+* Change the "Thank You" view to show information out of the database rather than out of params.
