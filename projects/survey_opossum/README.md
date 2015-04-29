@@ -36,16 +36,17 @@ After completing this assignment, you should be able to effectively...
 
 ### Deliverables
 
-* **A Data Structure Diagram.** Before writing any code, review the requirements below and draw a data structure diagram for this project.  It should include:
+* **A data structure diagram.** Before writing any code, review the requirements below and draw a data structure diagram for this project.  It should include:
   * A box for each table
   * Each field you'll need for each table inside its box
   * A data type for each field
   * A mark to indicate that it's a required field
   * Relationships between each pair of tables with a primary/foreign key pair
-* **A github organization.** Create an organization in github to represent your team for this project.  Give all team members full rights.
-* **A Repository.** Create a new repository under your github organization's account.
+* **A workflow diagram.**  Any format is fine, including paper.
+* **A GitHub organization.** Create an organization in github to represent your team for this project.  Give all team members full rights.
+* **A repository.** Create a new repository under your github organization's account.
 * **A README.** Your README should describe the application and include a link to the live version on Heroku.
-* **A Working App.** See the requirements below!
+* **A working app.** See the requirements below!
 
 ### Requirements
 

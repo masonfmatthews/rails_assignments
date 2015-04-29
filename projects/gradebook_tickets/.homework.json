@@ -1,0 +1,17 @@
+{
+    "name": "gradebook_tickets",
+    "version": "0.0.1",
+    "title": "Gradebook Tickets",
+    "description": "Given an existing version of the Gradebook application, students will form groups and work on tickets to improve the project, then progressively merge changes together.",
+    "difficultyModes": [
+        "Normal"
+    ],
+    "keywords": [
+        "Group Work",
+        "Branching and Merging",
+        "Testing",
+        "JavaScript",
+        "Rails",
+        "Ruby"
+    ]
+}

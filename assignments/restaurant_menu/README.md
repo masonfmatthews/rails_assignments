@@ -23,11 +23,11 @@ After completing this assignment, you should be able to effectively...
 
 ## Deliverables
 
-* **A Repository.** Fork this repository to your own github account.
+* **A repository.** Fork this repository to your own github account.
 * **A README.** Wipe out this README and write your own.  It should include a link to the app running on Heroku.
-* **A Working Rails App on Heroku.**
+* **A working Rails app on Heroku.**
 * **A test suite.** Build your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
-* **A Workflow diagram.**  Any format is fine, including paper.
+* **A workflow diagram.**  Any format is fine, including paper.
 
 Continue to #shipit!
 
