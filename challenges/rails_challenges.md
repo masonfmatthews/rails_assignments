@@ -52,4 +52,14 @@
 
 * Modify your data table and your action so that there is some way to group responses together based on which user wrote them.  Do this without creating a user model or checking to see if the "Name" fields are equal.
 
+* Alternatively, prevent any user from submitting the form more than once (even if he/she hits back).
+
 * Why is it bad to see if the name fields are equal?
+
+#### Scope
+
+* Modify your results index page so that the user only sees results which he or she wrote.
+
+* Modify the results' show, edit, and destroy pages so that the user is redirected if he/she didn't create that particular result.
+
+* (Teacher hint: see if they caught to also do update)
