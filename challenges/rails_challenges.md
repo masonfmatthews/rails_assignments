@@ -41,3 +41,9 @@
 * Edit an existing form response.  Uncheck a box which you had previously checked.  When you go back to view that response, the box will still be checked.  RAGE!  Fix this bug.
 
 * Can you think of a better user interface for this information rather than showing a series of checkboxes?
+
+#### Helpers and Partials
+
+* The form currently has four mostly-repeated lines to show the checkboxes.  The thank-you page also has four mostly-repeated lines to display the results.  DRY out this duplication.
+
+* When are partials better to use than helpers?  When is the opposite true?
