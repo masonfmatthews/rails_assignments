@@ -10,4 +10,10 @@
 
 * The view does an `if params[:name]` check.  This is a code smell.  How could you do this better?
 
-####
+#### Dev vs. Prod
+
+* Modify the Gemfile to use the 'puma' server in production.
+
+* Set an environment variable called `API_KEY` which is only available in development.
+
+* What is a better approach to storing environment variables?
