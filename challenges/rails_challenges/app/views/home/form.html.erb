@@ -1,0 +1,22 @@
+<% if params[:name] %>
+  Thanks for submitting the form!  Here are your answers:<br>
+  Name: <%= params[:name] %><br>
+  Chocolate? <%= params[:chocolate] ? "Yes!" : "No" %><br>
+  Rainbows? <%= params[:rainbows] ? "Yes!" : "No" %><br>
+  Puppies? <%= params[:puppies] ? "Yes!" : "No" %><br>
+  Cash? <%= params[:cash] ? "Yes!" : "No" %><br>
+<% else %>
+  <%= form_tag home_form_path do %>
+    <div>
+      Name: <%= text_field_tag :name %>
+    </div>
+    <div>
+      Favorites:<br>
+      <%= check_box_tag :chocolate %> Chocolate<br>
+      <%= check_box_tag :rainbows %> Rainbows<br>
+      <%= check_box_tag :puppies %> Puppies<br>
+      <%= check_box_tag :cash %> Cold Hard Cash<br>
+    </div>
+    <%= submit_tag %>
+  <% end %>
+<% end %>
