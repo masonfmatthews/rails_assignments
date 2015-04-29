@@ -28,8 +28,16 @@
 
 * Change the "Thank You" view to show information out of the database rather than out of params.
 
+* This migration was probably pretty dissatisfying to create.  How would you change your migration to make the survey more flexible in the future?
+
 #### REST
 
 * Having both the form and the thank-you page in one action is suboptimal.  Restructure the `home` controller to implement REST.
 
 * You may wish that I had not asked you to restructure the `home` controller.  What would you rather have done instead?
+
+#### HTML Forms
+
+* Edit an existing form response.  Uncheck a box which you had previously checked.  When you go back to view that response, the box will still be checked.  RAGE!  Fix this bug.
+
+* Can you think of a better user interface for this information rather than showing a series of checkboxes?
