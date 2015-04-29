@@ -27,3 +27,9 @@
 * Whenever the form is submitted, create a new record in the database.
 
 * Change the "Thank You" view to show information out of the database rather than out of params.
+
+#### REST
+
+* Having both the form and the thank-you page in one action is suboptimal.  Restructure the `home` controller to implement REST.
+
+* You may wish that I had not asked you to restructure the `home` controller.  What would you rather have done instead?
