@@ -19,7 +19,7 @@ After completing this assignment, you should...
 
 ## Deliverables
 
-* **A GitHub repository.** Add code to the previous repository used for last night's work.
+* **A GitHub repository.**
 * **A Currency class in its own file.**
 * **A CurrencyConverter class in its own file.**
 * **A quality README.**
