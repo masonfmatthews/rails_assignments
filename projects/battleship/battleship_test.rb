@@ -120,9 +120,9 @@ class BattleshipTest < Minitest::Test
   end
 
   # Around here, you're going to get frustrated if you have been keeping an
-  # array of holes like [[1, 1], [2, 1], [3,1]].  Consider making this an
-  # array of Hole objects instead.  Then you can add other fields besides x
-  # and y.  For instance, you can write a method `hit?` on Hole.
+  # array of positions like [[1, 1], [2, 1], [3,1]].  Consider making this an
+  # array of Position objects instead.  Then you can add other fields besides x
+  # and y.  For instance, you can write a method `hit?` on Position.
 
   def test_14_unplaced_ship_is_not_sunk
     ship = Ship.new(2)
@@ -132,7 +132,7 @@ class BattleshipTest < Minitest::Test
   # One last note before we move onto the grid.  The best solution to the above
   # tests would be to use `covers?` inside `fire_at`.  For this to be really
   # slick, though, you'll want `covers?` to not just return a true or a false.
-  # Make it wicked cool by having it return the specific hole object
+  # Make it wicked cool by having it return the specific position object
   # that was being fired on.  Then you can immediately mark it as hit without
   # searching for it again.
 
@@ -245,7 +245,7 @@ J |   |   |   |   |   |   |   |   |   |   |
 
   # Depending on how you implemented prior steps, this next one might
   # be a big refactor.  You might have to change grid.fire_at, ship.fire_at,
-  # and a hole method (if you made a Hole class).
+  # and a position method (if you made a Position class).
   def test_24_repeat_hit
     grid = Grid.new
     grid.place_ship(Ship.new(4), 3, 3, true)
@@ -253,8 +253,8 @@ J |   |   |   |   |   |   |   |   |   |   |
     refute grid.fire_at(3, 3)
   end
 
-  # The test before this one needed to set a hole as hit.  This tests need
-  # to do the opposite: see if holes are hit.
+  # The test before this one needed to set a position as hit.  This tests need
+  # to do the opposite: see if positions are hit.
   def test_25_used_grid_can_display_itself
     grid = Grid.new
     grid.place_ship(Ship.new(4), 6, 4, true)
