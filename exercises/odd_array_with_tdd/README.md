@@ -6,7 +6,9 @@ Create one (very odd) class that contains an Array but only allows odd items to 
 
 ## Instructions
 
-You are a (very odd) mathematician who has set out to prove that any mathematical operation can be performed using only odd numbers (e.g. 1, 3, 5, 333) and no even numbers (e.g. 2, 4, 6, 448).  You'll be writing a lot of code along the way, but before you get started on the mathy stuff, you want to make sure that you have a class which will help you with the basics.  You need a class like an array which will only store odd numbers in it.  Behavior should include:
+You are a (very odd) mathematician who has set out to prove that any mathematical operation can be performed using only odd numbers (e.g. 1, 3, 5, 333) and no even numbers (e.g. 2, 4, 6, 448).  You'll be writing a lot of code along the way, but before you get started on the mathy stuff, you want to make sure that you have a class which will help you with the basics.  You need a class like an array which will only store odd numbers in it.  Do NOT use inheritance; use composition instead.
+
+Behavior should include:
 
 * You can initialize an OddArray by passing it an array.
 * You can add an element to OddArray using the shovel operator.
