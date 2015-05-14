@@ -18,7 +18,7 @@ After completing this assignment, you should...
 
 ## Deliverables
 
-* **An estimate.**  After you read through this assignment (but before you start coding), write down a number of hours that you expect each part to take (1-3).  Record your hours as you go.
+* **An estimate.** After you read through this assignment (but before you start coding), write down a number of hours that you expect each part to take (1-3).  Record your hours as you go.
 * **A GitHub repository.**
 * **An Employee class in its own file.**
 * **A Department class in its own file.**
