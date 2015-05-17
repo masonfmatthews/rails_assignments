@@ -84,6 +84,12 @@ As mentioned above, placing reviews into two buckets is a "Classification" probl
 
 Finally, go out on the Internet and search for at least three examples of good review texts and three examples of bad review texts.  Pass them into your algorithm and see if you agree with its assessment.
 
+## Nightmare Mode
+
+Up until this point in the class, you have assumed that when your program ends, all objects created by your code are lost.  For instance, if you make a new employee with a name of "Janice", no record of Janice will exist for the next execution of the code to find.
+
+Modify your code so that if employees and departments are made once, they will be available for all subsequent runs of your application.
+
 ## Additional Resources
 
 * My favorite tutorial for learning Regular Expressions is [RegexOne](http://regexone.com/)
