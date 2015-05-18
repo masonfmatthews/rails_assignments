@@ -33,8 +33,18 @@ class ArrayAndHashChallenge < MiniTest::Test
     assert_equal Hash.new, names(nil)
   end
 
-  def test_last_names_overwrite
-    expected = {"Washington" => "George", "Roosevelt" => "Franklin"}
+  def test_bare_name
+    expected = {"Adams" => "John"}
+    assert_equal expected, names("John Quincy Adams")
+  end
+
+  def test_short_name
+    expected = {"Adams" => "John"}
+    assert_equal expected, names("John Quincy Adams")
+  end
+
+  def test_last_names_dont_overwrite
+    expected = {"Washington" => "George", "Roosevelt" => ["Theodore", "Franklin"]}
     assert_equal expected, names(["George Washington", "Theodore Roosevelt", "Franklin Roosevelt"])
   end
 end
