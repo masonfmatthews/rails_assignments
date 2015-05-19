@@ -28,11 +28,12 @@ Use the homework submission form on the course website to turn in a link to your
 
 Simply put, modify your existing Employee Reviews code to store all instance variables in Employee and Department to the database.  In addition, modify your test suite so that all existing tests pass given the new persistent data store.
 
+There's one exception: if you built your prior application with the ability to store MANY reviews for one employee, drop that functionality.  All you need for this assignment is ONE review per employee (which means that you can store it in a single field in the `employees` table).
+
 One tricky part will be the array of employees stored in each department.  Rather than trying to make an "Array" type data field (which only works in a few database management systems anyway), add a foreign key which points to a department to the employees table.
 
 Write these additional methods on your models:
 
-* Return the total salary for an entire department.
 * Return the total number of employees in a department.
 * Return the employee who is being paid the least in a department.
 * Return all employees in a department, ordered alphabetically by name.
@@ -42,7 +43,7 @@ Write these additional methods on your models:
 * Move everyone from one department to another department.
 * Give a raise of 10% to ALL employees with good reviews.
 
-DON'T FORGET TEST-DRIVEN DEVELOPMENT.  Write a test for each one of these first, makes sure the test FAILS, then write code to make it pass, then refactor as needed.  Finally, commit.  Then repeat until you complete all the additional methods.
+DON'T FORGET TEST-DRIVEN DEVELOPMENT.  Write a test for each one of these first, make sure the test FAILS, then write code to make it pass, then refactor as needed.  Finally, commit.  Then repeat until you complete all the additional methods.
 
 ## Hard Mode
 
