@@ -49,7 +49,7 @@ Person A:
 * Associate `courses` with `course_students` (both directions).  If the course has any students associated with it, the course should not be deletable.
 * Associate `assignments` with `courses` (both directions).  When a course is destroyed, its assignments should be automatically destroyed.
 * Associate `lessons` with their `pre_class_assignments` (both directions).
-* Set up a Cchool to have many `courses` through the school's `terms`.
+* Set up a School to have many `courses` through the school's `terms`.
 * Validate that Lessons have `names`.
 * Validate that Readings must have an `order_number`, a `lesson_id`, and a `url`.
 * Validate that the Readings `url` must start with `http://` or `https://`.  Use a regular expression.
@@ -94,6 +94,7 @@ Person B:
 * Set up a Course to have many `students` through the course's `course_students`.
 * Associate a Course with its ONE `primary_instructor`.  This primary instructor is the one who is referenced by a course_instructor which has its `primary` flag set to `true`.
 
+Again, don't forget to write tests!
 
 ## Nightmare Mode
 
@@ -112,3 +113,5 @@ Person B:
 Then, together:
 
 * Associate Lessons with their `child_lessons` (and vice-versa).  Sort the `child_lessons` by `id`.
+
+(And, of course, tests tests tests).
