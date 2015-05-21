@@ -53,4 +53,10 @@ class InheritanceChallenge < MiniTest::Test
     assert_equal 4, Motorcycle.new("Honda", "CTX700N").number_of_gears
   end
 
+  def test_trike
+    assert TrikeMotorcycle
+    assert_equal Vehicle, TrikeMotorcycle.superclass.superclass
+    assert_equal 3, TrikeMotorcycle.new("Can-Am", "Spyder").number_of_tires
+  end
+
 end
