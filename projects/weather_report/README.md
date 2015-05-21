@@ -54,4 +54,5 @@ Store the responses in a database so that if the same request is made twice by y
 
 ## Additional Resources
 
+* [HTTParty](https://github.com/jnunemaker/httparty)
 * [Weather Underground documentation](http://www.wunderground.com/weather/api/d/docs?MR=1)
