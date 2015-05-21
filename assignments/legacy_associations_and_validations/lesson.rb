@@ -5,8 +5,6 @@ class Lesson < ActiveRecord::Base
   scope :without_day_assignments, -> { where("day_assignment_id IS NULL") }
   scope :without_night_assignments, -> { where("night_assignment_id IS NULL") }
 
-  after_save :update_cached_values
-
   def self.linked_to_assignment(assignment)
     found_lesson = where(pre_class_assignment_id: assignment.id).first
     found_lesson ||= where(in_class_assignment_id: assignment.id).first
