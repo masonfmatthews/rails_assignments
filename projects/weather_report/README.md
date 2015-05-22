@@ -13,6 +13,7 @@ After completing this assignment, you should...
 * Be able to access an API using a token
 * Be able to make HTTP requests via HTTParty
 * Be able to pull and merge information from multiple API endpoints
+* Be able to write tests that mock API responses
 
 ## Deliverables
 
@@ -40,13 +41,17 @@ Make sure that the summary you display is easy to read for users.  A pile of num
 
 Your code must be written in classes and be spread across multiple files.  It is suggested that you build one class for each API endpoint which you access, and then you create instances of each class when you have parameters to make a call to that endpoint.  If you can think of a better way that still involves classes, though, go for it.
 
-No database is needed for this assignment.
+Testing is going to be tricky on this one.  You should mock the API responses so that you don't need to hit the API every time you run your tests.  You should also be able to explain WHY this is good.
+
+No database is needed for Normal Mode.
 
 ## Hard Mode
 
 Rather than just receiving a zip code from the user, allow him or her to type in a city and state instead (for instance: `Durham, NC`).  You can expect that they will type it in with a comma and a two-character state code.
 
 You should use regular expressions to determine which format (zip or city, st) the user has entered, and then make the appropriate API calls based on that.
+
+No database is needed for Hard Mode.
 
 ## Nightmare Mode
 
