@@ -47,9 +47,9 @@ No database is needed for Normal Mode.
 
 ## Hard Mode
 
-Rather than just receiving a zip code from the user, allow him or her to type in a city and state instead (for instance: `Durham, NC`).  You can expect that they will type it in with a comma and a two-character state code.
+Rather than just receiving a zip code from the user, allow him or her to type in a city and state instead (for instance: `Durham, NC` or `Durham, North Carolina`).
 
-You should use regular expressions to determine which format (zip or city, st) the user has entered, and then make the appropriate API calls based on that.
+You should use regular expressions to determine which format (zip or city, state or city, st) the user has entered, and then make the appropriate API calls based on that.
 
 No database is needed for Hard Mode.
 
