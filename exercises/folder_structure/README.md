@@ -1,20 +1,22 @@
-# Display a Model Object as JSON
+# Folder Structure
 
 ## Description
 
-Create a class which inherits from `ActiveRecord::Base` and can display one row or all rows in JSON format.
+Now that you've dealt with multiple types of code, invent a standard folder structure to keep all your code straight.
 
 ## Instructions
 
-Assume that you have a table named `candidates` which contains the following fields:
+Since week one, you've built code which spans multiple files.  However, at this point you've been dealing with code (and other files) of many different types.  Here is a list:
 
-* `name:string`
-* `hometown:string`
-* `district:string`
-* `party_id:integer`
+* Ruby classes
+* Executable Ruby code
+* Gemfiles
+* Tests
+* Migrations
+* Shared header code (e.g. `establish_connection`)
+* Database files (ending in .sqlite3)
+* ... any others?
 
-Write this class with two methods in it.  The first will return JSON of all the fields for a particular candidate, and the second will return JSON of all of the fields for all of the candidates.
+It's getting sort of crazy, isn't it?
 
-Once you are finished, review your code.  Will this code need modifications if you add fields to the database and want them to appear in the JSON as well?  The best solutions do not.
-
-(If you sort this out before time is up, modify your code to also nest all properties of the associated party for each candidate.  Assume that party simply has `name` and `abbreviation` fields.)
+Since we have a strong desire for order, let's develop a standard.  Assume that each project you're working on will be in its own folder.  Within the scope of one project, specify which subfolders should exist and indicate which types of files should go where.
