@@ -12,6 +12,7 @@ Since week one, you've built code which spans multiple files.  However, at this 
 * Executable Ruby code
 * Gemfiles
 * Tests
+* Mocked Test Data
 * Migrations
 * Shared header code (e.g. `establish_connection`)
 * Database files (ending in .sqlite3)
