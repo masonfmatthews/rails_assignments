@@ -41,7 +41,7 @@ For this project, you will be building a Rails-based application which serves up
   * `destroy` action, with token authentication to show that you are the voter
   * `index` action (which shows all candidates and a number of votes for each)
 
-See the notes section below for links that will be helpful.
+See the notes section below for links that will be helpful.  Your easiest path will be to accept the token from the user as a parameter.
 
 ## Hard Mode
 
@@ -52,16 +52,29 @@ Extend the application to allow for voters to vote multiple times (one for each 
   * `index` action
   * `show` action
 
-Modify the candidates, voters, and votes models and controllers to allow:
+Modify the candidates, voters, and votes models and controllers as follows:
 
-* candidates to belong to a race
+* candidates belong to a race
 * votes belong to a candidate, a voter, and a race
-* votes to be unique for a voter and a race, not just one vote per voter
-* votes index page to show number of votes per candidate grouped by race.
+* votes are unique for a voter and a race, not just one vote per voter
+* votes index is grouped by race
+* votes index shows number of votes per candidate, and is sorted by number of votes (within the race)
+
+Also, modify your token auth to receive the token in the request header rather than as a parameter.
 
 ## Nightmare Mode
 
-Instead of using Basic Auth or Token Auth, use OAuth.
+Extend the application to track ballots.  A ballot does not refer to one piece of paper that has been turned in by one voter, but to the set of races which appear together on the ballot for a particular geographic region.  Specifically:
+
+* races have many ballots and ballots have many races
+* voters belong to a ballot
+* voters can only vote for races on their ballot
+
+Also, extend your voting restrictions to allow certain races to take the form "vote for at most two of these candidates."  Make sure that "two" can be replaced with any number for a particular race.
+
+Make your own choices about which API endpoints to add.
+
+Also, instead of using Token Auth, use OAuth.
 
 ## Notes
 
