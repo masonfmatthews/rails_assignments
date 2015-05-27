@@ -16,6 +16,7 @@ Since week one, you've built code which spans multiple files.  However, at this 
 * Migrations
 * Shared header code (e.g. `establish_connection`)
 * Database files (ending in .sqlite3)
+* README
 * ... any others?
 
 It's getting sort of crazy, isn't it?

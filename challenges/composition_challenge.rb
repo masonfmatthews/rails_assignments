@@ -11,6 +11,7 @@ class CompositionChallenge < MiniTest::Test
 
   def test_class_exists
     assert OddArray
+    refute OddArray.superclass == Array
   end
 
   def test_initializer_takes_array_parameter

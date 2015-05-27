@@ -12,7 +12,7 @@ After completing this assignment, you should...
 * Understand how APIs can be used to change data as well as view it.
 * Be able to write a versioned, nested API to share and allow edits to a database.
 * Be able to write Rails tests to cover a Rails API.
-* Be able to write a basic-auth or token-based authentication system for an API.
+* Be able to write a token-based authentication system for an API.
 
 ## Deliverables
 
@@ -32,12 +32,13 @@ For this project, you will be building a Rails-based application which serves up
 * `/api/v1/voters`
   * Based on a `voters` table, with at least `name` and `party` attributes
   * `create` action
-  * `show` action, with authentication to prove that you are the voter
-  * `update` action, with authentication to prove that you are the voter
+  * `show` action, with token authentication to prove that you are the voter
+  * `update` action, with token authentication to prove that you are the voter
 * `/api/v1/votes`
   * Based on a `votes` table, with at least `voter_id` and `candidate_id` attributes
   * Each voter can cast at most one vote, period.
-  * `create` action, with authentication to show that you are the voter
+  * `create` action, with token authentication to show that you are the voter
+  * `destroy` action, with token authentication to show that you are the voter
   * `index` action (which shows all candidates and a number of votes for each)
 
 See the notes section below for links that will be helpful.
