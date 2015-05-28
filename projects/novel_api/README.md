@@ -20,7 +20,7 @@ After completing this assignment, you should...
 * **A GitHub Organization.** Create an organization in github to represent your team for this project.  Give all team members full rights.
 * **A Repository.** Create a repository in your github organization.
 * **A Heroku App.** Your application should be deployed and running on Heroku.
-* **A Test Suite.** Your application should be developed using test driven development.  It is up to you whether you use ping-pong pairing.
+* **A Test Suite.** Your application should be developed using test driven development.
 * **A README.** Your README should describe the API and provide instructions for others on how to use it.
 
 ## Normal Mode
@@ -50,3 +50,21 @@ Cache your data in a database to (a) speed up future queries and (b) reduce the 
 * [Duke APIs](http://dev.colab.duke.edu/resource/duke-public-apis)
 * [Sports APIs](http://www.programmableweb.com/news/91-sports-apis-fanfeedr-seatwave-and-espn/2012/08/01)
 * [Random API Directory](http://www.programmableweb.com/apis/directory)
+* [GitHub](https://api.github.com/users/masonfmatthews/events)
+* [Who is my Representative](http://whoismyrepresentative.com/getall_mems.php?zip=27701)
+* [Twitter](https://dev.twitter.com/rest/public)
+* [Nutritionix](https://www.mashape.com/msilverman/nutritionix-nutrition-database)
+* [TrailAPI](https://www.mashape.com/trailapi/trailapi)
+* [Yoda Speak](https://www.mashape.com/ismaelc/yoda-speak)
+* [Marvel API](http://developer.marvel.com/docs)
+* [Blackjack API](http://deckofcardsapi.com/)
+* [Static Data Sets](http://vincentarelbundock.github.io/Rdatasets/datasets.html)
+* NPR
+* Flickr
+* Getty Images
+* LinkedIn
+* YouTube
+* Twitch
+* IGN
+* ESPN
+* ...and on and on...
