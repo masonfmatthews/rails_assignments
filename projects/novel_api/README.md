@@ -9,7 +9,6 @@ Create a Rails application which presents a novel (unique, new) API to the world
 After completing this assignment, you should...
 
 * Understand the variety of public APIs available to developers
-* Understand the basics of deploying Rails apps to Heroku
 * Be able to read and utilize API documentation for publicly available data sets
 * Be able to merge data from multiple points of origin
 * Be able to create a public-facing API
@@ -19,7 +18,6 @@ After completing this assignment, you should...
 
 * **A GitHub Organization.** Create an organization in github to represent your team for this project.  Give all team members full rights.
 * **A Repository.** Create a repository in your github organization.
-* **A Heroku App.** Your application should be deployed and running on Heroku.
 * **A Test Suite.** Your application should be developed using test driven development.
 * **A README.** Your README should describe the API and provide instructions for others on how to use it.
 
@@ -32,7 +30,6 @@ For this project, you have complete autonomy on the data that your application d
 * You must merge this data in some meaningful and interesting way.
 * You must display this merged data in a JSON API of your own making.  The api must be accessible under `/api/v1/`.
 * You must write clear API documentation in your README.
-* Your application must be deployed and working on Heroku.
 
 Authentication is optional.
 

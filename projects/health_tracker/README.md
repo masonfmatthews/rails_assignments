@@ -13,6 +13,7 @@ After completing this assignment, you should...
 * Understand basic Rails file conventions
 * Understand how test-driven development extends to the Rails structure
 * Understand that smaller amounts of working code are more valuable than vast amounts of unfinished code
+* Understand the basics of deploying Rails apps to Heroku
 
 After completing this assignment, you be should able to effectively...
 

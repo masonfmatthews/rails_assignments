@@ -25,16 +25,16 @@ After completing this assignment, you should...
 
 For this project, you will be building a Rails-based application which serves up only an API.  This API will be responding with JSON.  The API must have the following actions in the following locations:
 
-* `/api/v1/candidates`
+* `/candidates`
   * Based on a `candidates` table, with at least `name`, `hometown`, `district`, and `party` attributes
   * `index` action
   * `show` action
-* `/api/v1/voters`
+* `/voters`
   * Based on a `voters` table, with at least `name` and `party` attributes
   * `create` action
   * `show` action, with token authentication to prove that you are the voter
   * `update` action, with token authentication to prove that you are the voter
-* `/api/v1/votes`
+* `/votes`
   * Based on a `votes` table, with at least `voter_id` and `candidate_id` attributes
   * Each voter can cast at most one vote, period.
   * `create` action, with token authentication to show that you are the voter
