@@ -35,7 +35,7 @@ Your work will probably proceed like this:
 
 The first task is to make a (terribly ugly) webpage containing one of Shakespeare's sonnets.  You will be making a webpage in Codepen that looks exactly like this:
 
-![Easy Mode Screenshot](sonnet.png)
+![Task 1 Screenshot](sonnet.png)
 
 So that you don't have to re-type the whole thing, [here is the sonnet in text form](http://www.poetryfoundation.org/poem/174354).  Pay attention to all the details, from color to font to borders.  Look down in the resources section for a tool that will help you compare your work with this image.
 
@@ -43,7 +43,7 @@ So that you don't have to re-type the whole thing, [here is the sonnet in text f
 
 The second task is to make the following button:
 
-![Normal Mode Screenshot](button.png)
+![Task 2 Screenshot](button.png)
 
 The trick here is that you have to do all the work in CSS.  Your HTML must look exactly like this:
 
