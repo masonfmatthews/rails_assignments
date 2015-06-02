@@ -35,6 +35,10 @@ Your Rails application will not need to have any database tables.
 
 For Hard Mode, implement your Public Activity Page in a second view.
 
+## Nightmare Mode
+
+For Nightmare Mode, make ALL the links on your two pages work, but have them redirect to the real pages on github.com.
+
 ## Notes
 
 * [Example Repository Page](https://github.com/masonfmatthews?tab=repositories)
