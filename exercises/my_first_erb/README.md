@@ -11,3 +11,5 @@ Rather than creating a web app which generates only JSON, it's time to create HT
 https://github.com/masonfmatthews
 
 The primary purpose of this exercise is to get a Rails app to display HTML styled with CSS.  Feel free to copy what you find when you "View Source" on your GitHub Profile page, then paste it into the right place in your new Rails app.
+
+If you complete this exercise, turn off your WiFi, hit refresh, and see what it looks like.  Then see if you can fix it.
