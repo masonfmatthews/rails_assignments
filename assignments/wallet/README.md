@@ -13,6 +13,7 @@ After completing this assignment, you should...
 * Understand basic HTML forms
 * Create and use an ActiveRecord model, a controller, multiple views, and a router.
 * Create and use a Rails scaffold
+* Create integration tests
 
 ## Deliverables
 

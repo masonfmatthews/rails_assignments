@@ -18,6 +18,7 @@ After completing this assignment, you should...
 ## Deliverables
 
 * **A Repository.** Create your own repository for this assignment.
+* **A test suite.** Build your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
 
 ## Normal Mode
 
