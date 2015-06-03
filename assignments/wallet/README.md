@@ -49,7 +49,7 @@ The first transaction in the application will be something like "Initial Balance
 
 #### Part Two
 
-Add more statistics to the index page, including the following:
+Add more statistics to the dashboard page, including the following:
 
 * The total number of transactions on the account.
 * The total amount spent in the current calendar month
