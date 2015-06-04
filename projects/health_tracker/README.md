@@ -9,7 +9,7 @@ Build a Rails application to store information on your weight (measured once per
 After completing this assignment, you should...
 
 * Understand basic MVC architecture
-* Understand basic SQL data table design
+* Understand basic data table design
 * Understand basic Rails file conventions
 * Understand how test-driven development extends to the Rails structure
 * Understand that smaller amounts of working code are more valuable than vast amounts of unfinished code

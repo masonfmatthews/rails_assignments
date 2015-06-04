@@ -18,7 +18,7 @@ After completing this assignment, you should...
 ## Deliverables
 
 * **A Repository.** Create your own repository for this assignment.
-* **A test suite.** Build your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
+* **A test suite.** Build your application using TDD.  Your test suite must include unit tests and controller tests.
 
 ## Normal Mode
 
@@ -31,6 +31,15 @@ You will notice a lot going on on this page, from styling to navigation bars to 
 Your application should have TWO pages.  The root page can be very simple.  It should show a text field and a button.  Feel free to add whatever styling or headers you see fit.  In the text field, the user should enter a GitHub username (e.g. `masonfmatthews`).  The submit button should pass this information on to your second page, which will display your clone of the GitHub profile page for that user.
 
 Your Rails application will not need to have any database tables.
+
+You're going to find that this is a LOT of work.  There's so much to do here that **you're not going to finish it all.**  Use this as an exercise in choosing your battles, but also make sure that you're PRACTICING DISCIPLINE.  This includes:
+
+* Writing tests
+* Making small parts work rather than trying to tackle everything at once
+* Committing often
+* Actually writing something (even a short something) in the README
+
+Since this is so much work, set a time limit for yourself, then just stop when you reach it.  If everything that you've done before that time is disciplined, you'll have something useful at the end regardless of when you stop.
 
 ## Hard Mode
 
