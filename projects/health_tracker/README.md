@@ -44,7 +44,7 @@ Build an application which lets you enter and review information about your heal
 
 The forms for viewing and entering these pieces of information can look however you'd like them to, but the user will need to be able to access your application by going to the root address (e.g. `http://simmering-plateau-1234.herokuapp.com/`) and seeing a dashboard.  From the dashboard, the user can then follow links to get to the other pages.
 
-There must also be a fifth table: `exercise_types`.  This table only needs an `id` and a `name`, but it must be related to the table of exercises.  In other words, each exercise must be assigned an exercise type.  You do not need to create views to edit these types if you don't want to; you can set them up via seeds.
+There must also be a fifth table: `exercise_types`.  This table only needs an `id` and a `name`, but it must be related to the table of exercises.  In other words, each exercise must be assigned an exercise type.  You do not need to create views or a controller to edit these types if you don't want to; you can set them up via seeds.
 
 During the course of this assignment:
 
