@@ -1,8 +1,8 @@
 ## RAILS: Rails Environments Challenge
 
-* Modify the Gemfile to use the 'faker' gem in development and test.
+* Modify the Gemfile to use the 'faker' gem in development and test only.
 
-* Modify the Gemfile to use the 'puma' gem in production.
+* Modify the Gemfile to use the 'puma' gem in production only.
 
 * On the `form` view, show the "Cold Hard Cash" checkbox in development only.
 
