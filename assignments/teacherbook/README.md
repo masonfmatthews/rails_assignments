@@ -20,10 +20,12 @@ After completing this assignment, you should be able to effectively...
 ### Deliverables
 
 * **A repository.** Create a new github repository under your account.  Commit often, not just at the end.  Continue to #shipit!
-* **A README.** It must include at least one header and a link to your app running on Heroku.
+* **A README.** It must include at least one header and one paragraph.
 * **A test suite.** Build your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
 
 ## Normal Mode
+
+(First off, if you've actually been a teacher, humor me and pretend that this is a useful app!)
 
 You run a school, and you know that your teachers can't seem to keep track of their kids' parents' e-mail addresses (or, if they can, they spend too much time on it).  You want the teachers to be able to log into a simple system and create/update/delete parent e-mail addresses.  For each teacher, you need to keep track of just his or her name.  For each parent, you need to keep track of the student name, the parent name, and the parent e-mail address.
 
