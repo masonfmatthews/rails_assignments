@@ -49,7 +49,7 @@ There must also be a fifth table: `exercise_types`.  This table only needs an `i
 During the course of this assignment:
 
 * Each developer should build out code to manage one of these pieces of information by him or herself, and should do so in different branches.  Merging should be done together, and then the remaining work can be divided up or done together however you see fit.
-* You can use scaffold for three of these controllers, but you must build one by hand without scaffold.
+* You can use scaffold for two of the four main controllers, but you must build the other two by hand without scaffold.  If you decide that you want a controller for the fifth (`exercise_types`), do whatever you like to create that controller.
 * During development, the application should have a number of points in time in which there are no known bugs.  If you have links that go nowhere, pages that don't work, or random errors you can't explain, DON'T move on to the next feature.  Fix the bugs first, clean up the links, and get it in a solid state.  Then put `#shipit` somewhere in the commit message and move on to the next feature.  I'll check your commits to see how many times you've been shippable.
 * You should create at least a few seeds and fixtures.
 * Your dashboard must:
