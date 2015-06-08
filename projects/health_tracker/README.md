@@ -23,6 +23,7 @@ After completing this assignment, you be should able to effectively...
 * As a team, use multiple branches to perform separate work, then merge work together.
 * Deploy a Rails application to Heroku
 * Utilize seeds and fixtures
+* Create and use a module for shared behavior
 
 ## Deliverables
 
@@ -31,7 +32,7 @@ After completing this assignment, you be should able to effectively...
 * **A Repository.** Create a new repository.  In the end, your repository should have multiple branches (that is, don't delete them after merging).
 * **A README.**
 * **A working Rails app on Heroku.**
-* **A test suite.** Build your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
+* **A test suite.** Build your application using TDD.  Your test suite must include unit tests and controller tests.
 
 ## Normal Mode
 
@@ -64,6 +65,8 @@ There are a few data requirements:
 * You should be able to enter multiple records for steps taken, calories consumed, and exercises performed for the same date.
 
 Hint: when naming tables, think about how the names will work in singular and in plural.  For example, you might be tempted to have a model called `CaloriesConsumed`, but you have to admit that `calories_consumeds` is an awful table name.  Also, don't name a table `calories`.  If you don't believe me, try it and you'll see why.
+
+Finally, you'll note that these models have a lot in common.  Write a module to extract some of this shared behavior.
 
 ## Hard Mode
 
