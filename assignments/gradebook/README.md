@@ -11,6 +11,7 @@ After completing this assignment, you should...
 * Understand the difference between authentication and authorization
 * Understand the session and how Rails uses it
 * Be able to build an application which has multiple types of users
+* Be able to use modules in a Rails app.
 
 ## Deliverables
 
@@ -30,7 +31,7 @@ Assume that you are responsible for building software to track student grades.  
 
 That's the idea; build your application to meet all of the requirements given below.
 
-It's possible that you are familiar with public schools and are frustrated by the centralization and standardization of scores that this app would enable.  You may feel resistance to building this app.  If so, read on to Hard Mode before throwing shade on your instructor.
+It's possible that you are familiar with public schools and are frustrated by the centralization and standardization of scores that this app would enable.  You may feel resistance to building this app.  If so, roll with it for now, and read on to Hard Mode before throwing shade on your instructor.
 
 The expected data structure for this assignment is for teachers to have many students, students to have many parents, and students to have many grades.  This means that we're implicitly making the assumption that no parent has two kids in the same school.  That's unrealistic, true, but it's the set of assumptions that makes the data structure simplest.  
 
@@ -52,6 +53,8 @@ The following actions should possible for the following types of users:
   * Change his or her password.
 
 These lists are not cumulative.  For instance, a student should NOT be able to create teachers.
+
+During this assignment, you must create a module which contains all of the authentication behavior, and which is included by the Parent, Teacher, and Student models.
 
 ## Hard Mode
 
