@@ -11,7 +11,6 @@ After completing this assignment, you should...
 * Understand the difference between authentication and authorization
 * Understand the session and how Rails uses it
 * Be able to build an application which has multiple types of users
-* Be able to use modules in a Rails app.
 
 ## Deliverables
 
@@ -54,7 +53,7 @@ The following actions should possible for the following types of users:
 
 These lists are not cumulative.  For instance, a student should NOT be able to create teachers.
 
-During this assignment, you must create a module which contains all of the authentication behavior, and which is included by the Parent, Teacher, and Student models.
+Part of this assignment is to review requirements and decide how to tackle a smaller problem before you tackle the whole thing.  **Don't panic** if you can't finish it all.  Just #shipit a few times and get some sleep.
 
 ## Hard Mode
 
