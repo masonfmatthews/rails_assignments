@@ -1,4 +1,4 @@
-## Rails Challenge Drafts
+## Rails Challenge Draft Document
 
 #### Session
 
