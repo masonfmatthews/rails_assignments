@@ -38,4 +38,4 @@ Rather than using Bootstrap's built-in modal functionality, build your own modal
 ## Notes
 
 * [JQuery Documentation](http://api.jquery.com/)
-* [Bootstrap Documentation](http://getbootstrap.com/2.3.2/javascript.html#modals)
+* [Bootstrap 2 Documentation](http://getbootstrap.com/2.3.2/javascript.html#modals)
