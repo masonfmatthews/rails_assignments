@@ -1,5 +1,7 @@
 ## RAILS: JQuery Challenge
 
-* Using jQuery, hide the checkboxes until the user types in a name.
+* Using jQuery, hide the checkboxes and their labels when the form page loads.
 
-* If the user deletes the name, hide the checkboxes again.
+* When the user types in his or her name, show the checkboxes.
+
+* If the user totally deletes his or her name, hide the checkboxes again.

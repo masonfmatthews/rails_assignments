@@ -32,7 +32,7 @@ Third, write SQL statements (in your gist) and model methods (in your model file
 * Find the number (count) of each type of question in the database
 * Find the most common answer to a particular question (given a question_id)
 * Find all survey names, and show their author's email addresses with them
-* Find all authors who have never created a survey
+* Find all questions that have never been answered
 
 Unless otherwise specified, return all columns in the requested table (e.g. authors).
 
@@ -41,7 +41,7 @@ Unless otherwise specified, return all columns in the requested table (e.g. auth
 Add these queries to your SQL gist and to your models:
 
 * Find the email address of the author who has created the most surveys
-* Find all questions which have been answered more than five timess
+* Find all questions which have been answered more than five times
 
 ## Nightmare Mode
 
