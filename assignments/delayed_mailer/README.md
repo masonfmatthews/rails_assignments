@@ -15,10 +15,8 @@ After completing this assignment, you should...
 ## Deliverables
 
 * **An estimate.**  After you read through this assignment (but before you start coding), write down a number of hours that you expect each part to take (1-3).  Record your hours as you go.
-* **A repository.** You will be working from an existing application.  Your instructor will provide that link.
-* **A README.** The README should include data on all of the metrics requested below.
-* **A test suite.** Build your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
-* **A working app on Heroku.**
+* **A repository.** You will be working from your existing application.
+* **A test suite.** Extend your application using TDD.  This was not needed last night, as you were only changing existing code.  Your test suite must include unit tests, controller tests, and at least two integration tests.
 * **A reflection on your estimate.**
 
 ## Normal Mode
@@ -32,6 +30,8 @@ Your controller action which receives this e-mail address should queue up a mess
 This has the advantage of giving the user a quick web application response time and doing the heavy lifting asynchronously.
 
 ## Hard Mode
+
+First, get your app running on Heroku!  You will need a plugin like [SendGrid](https://addons.heroku.com/sendgrid?utm_campaign=category&utm_medium=dashboard&utm_source=addons).
 
 Although running the database queries asynchronously is a big advantage, it still has the potential to slow down the entire server.  If we're doing enough work at any particular point in time, the server will still be slow about handing small web requests.
 
