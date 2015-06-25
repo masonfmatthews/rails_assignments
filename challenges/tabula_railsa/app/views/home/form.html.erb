@@ -1,21 +1,31 @@
 <% if params[:name] %>
   Thanks for submitting the form!  Here are your answers:<br>
   Name: <%= params[:name] %><br>
-  Chocolate? <%= params[:chocolate] ? "Yes!" : "No" %><br>
-  Rainbows? <%= params[:rainbows] ? "Yes!" : "No" %><br>
-  Puppies? <%= params[:puppies] ? "Yes!" : "No" %><br>
-  Cold Hard Cash? <%= params[:cash] ? "Yes!" : "No" %><br>
+  Do you like Chocolate? <%= params[:chocolate] ? "Yes!" : "No" %><br>
+  Do you like Rainbows? <%= params[:rainbows] ? "Yes!" : "No" %><br>
+  Do you like Puppies? <%= params[:puppies] ? "Yes!" : "No" %><br>
+  Do you like Cold Hard Cash? <%= params[:cash] ? "Yes!" : "No" %><br>
 <% else %>
   <%= form_tag home_form_path do %>
     <div>
       Name: <%= text_field_tag :name %>
     </div>
     <div>
-      Favorites:<br>
-      <%= check_box_tag :chocolate %> Chocolate<br>
-      <%= check_box_tag :rainbows %> Rainbows<br>
-      <%= check_box_tag :puppies %> Puppies<br>
-      <%= check_box_tag :cold_hard_cash %> Cold Hard Cash<br>
+      Favorites:
+      <ul>
+        <li class="item">
+          <%= check_box_tag :chocolate %> I like <%= label_tag :chocolate %>
+        </li>
+        <li class="item">
+          <%= check_box_tag :rainbows %> I like <%= label_tag :rainbows %>
+        </li>
+        <li class="item">
+          <%= check_box_tag :puppies %> I like <%= label_tag :puppies %>
+        </li>
+        <li class="item">
+          <%= check_box_tag :cold_hard_cash %> I like <%= label_tag :cold_hard_cash %>
+        </li>
+      </ul>
     </div>
     <%= submit_tag %>
   <% end %>

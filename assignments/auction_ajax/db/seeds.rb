@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Item.create(name: "Alpaca", description: "Cute.  Fluffy.  Comes with snow.",
-    image_url: "http://www.aghistoryproject.org/wp-content/uploads/2013/11/Alpaca-In-Snow.jpg",
+    image_url: "http://hdwbin.com/wp-content/uploads/2014/10/alpaca-in-snow.jpg",
     starting_price: 125.00)
 
 Item.create(name: "iPhone 4", description: "Used, white, 16GB, all original packaging and cables.",

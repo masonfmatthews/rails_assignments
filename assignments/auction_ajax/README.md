@@ -15,7 +15,6 @@ After completing this assignment, you should...
 ## Deliverables
 
 * **A Repository.** This README is stored in a folder with an existing Rails application.  Fork this repository and do your work in this Rails app.
-* **A test suite.** Build your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
 
 ## Normal Mode
 
