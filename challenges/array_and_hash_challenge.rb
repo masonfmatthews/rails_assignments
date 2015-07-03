@@ -16,12 +16,12 @@ class ArrayAndHashChallenge < MiniTest::Test
   end
 
   def test_complex_name
-    expected = {"Adams" => "John"}
+    expected = {"Adams" => "John Quincy"}
     assert_equal expected, names(["John Quincy Adams"])
   end
 
   def test_two_names
-    expected = {"Washington" => "George", "Adams" => "John"}
+    expected = {"Washington" => "George", "Adams" => "John Quincy"}
     assert_equal expected, names(["George Washington", "John Quincy Adams"])
   end
 
@@ -34,15 +34,16 @@ class ArrayAndHashChallenge < MiniTest::Test
   end
 
   def test_bare_name
-    expected = {"Adams" => "John"}
+    expected = {"Adams" => "John Quincy"}
     assert_equal expected, names("John Quincy Adams")
   end
 
   def test_short_name
-    expected = {"Adams" => "John"}
+    expected = {"Adams" => "John Quincy"}
     assert_equal expected, names("John Quincy Adams")
   end
 
+  # This test goes above and beyond the call of duty.  Only worry about making it pass if you have extra time.
   def test_last_names_dont_overwrite
     expected = {"Washington" => "George", "Roosevelt" => ["Theodore", "Franklin"]}
     assert_equal expected, names(["George Washington", "Theodore Roosevelt", "Franklin Roosevelt"])
