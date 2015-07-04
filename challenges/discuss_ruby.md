@@ -1,8 +1,8 @@
 ## Detailed Ruby Questions
 
-* What is the difference between a hash and an array?
+* When would you use a hash instead of an array?
 
-* What is the difference between a string and a symbol?
+* When would you use a symbol instead of a string?
 
 * When would you use modules instead of inheritance?
 
