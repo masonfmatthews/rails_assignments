@@ -6,18 +6,20 @@ require 'minitest/pride'
 
 # WRITE YOUR CODE BELOW THIS COMMENT...
 
-
-
-
-
-# ...AND ABOVE THIS COMMENT.  DO NOT EDIT THE HUMAN CLASS BELOW.
-
 class Human
-  include Intelligent
-  include Bipedal
-
   def initialize(name)
     @name = name
+  end
+end
+
+class ArtificialIntelligence
+  def initialize(name)
+    @name = name
+  end
+end
+
+class Ostrich
+  def initialize
   end
 end
 
