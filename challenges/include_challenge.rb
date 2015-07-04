@@ -42,21 +42,16 @@ class IncludeChallenge < MiniTest::Test
     assert_raises(NoMethodError) {Ai.new("Skynet", 3.0).run}
   end
 
-  # So... humor me for a moment and pretend like ostriches don't have brains.
   def test_constants
     assert_equal 2, Human::NUMBER_OF_LEGS
-    assert_equal 1, Human::NUMBER_OF_BRAINS
     assert_equal 2, Ostrich::NUMBER_OF_LEGS
-    assert_equal 1, Ai::NUMBER_OF_BRAINS
+    assert_raises(NameError) {Ai::NUMBER_OF_LEGS}
   end
 
-  # Again... ostriches get no brains.  My apologies to all ostriches out there.
   def test_methods_like_constants
     human = Human.new("Cathy")
     assert_equal 2, human.number_of_legs
-    assert_equal 1, human.number_of_brains
     ai = Ai.new("Master Control Program", 1.0)
-    assert_equal 1, ai.number_of_brains
     assert_raises(NoMethodError) {ai.number_of_legs}
   end
 
