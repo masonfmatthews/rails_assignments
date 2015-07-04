@@ -4,7 +4,7 @@
 
 * What is the difference between `render` and `redirect_to`?
 
-* What is the difference between development and production?
+* What are the differences between development and production?
 
 ## Big Picture Questions
 
