@@ -10,7 +10,7 @@ Yesterday you built classes to keep track of various properties of vehicles.  To
 
 * Trucks can carry cargo (return `true` when `.cargo?` is called)
 * Planes can carry cargo
-* Standard vehicles cannot carry cargo (a `NoMethodError` is raised when `.cargo?` is called)
+* Standard vehicles cannot carry cargo (you will not define the method for them, so a `NoMethodError` will be raised when `.cargo?` is called on them)
 * Planes can fly (return `true` when `.can_fly?` is called)
 * Helicopters can fly (return `true` when `.can_fly?` is called)
 * Standard vehicles cannot fly (a `NoMethodError` is raised when `.can_fly?` is called)
