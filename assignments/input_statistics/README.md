@@ -1,4 +1,4 @@
-# User Input Tracker
+# User Input Statistics
 
 ## Description
 
