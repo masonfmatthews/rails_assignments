@@ -37,7 +37,6 @@ Other requirements:
 * Your code should include at least two methods.
 * This game should be run from the command line by typing "ruby guessing_game.rb".
 
-
 ## Hard Mode
 
 Hard Mode has two parts to it:

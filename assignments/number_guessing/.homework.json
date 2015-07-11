@@ -1,11 +1,20 @@
 {
   "name": "number-guessing",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "title": "Number Guessing Game",
   "description": "Create a number guessing game in which the computer picks a number and you have to guess it.  The computer will give you cues like 'Too High' or 'Too Low.'",
+  "difficultyModes": [
+      "Normal",
+      "Hard",
+      "Nightmare"
+  ],
   "keywords": [
-    "arrays",
-    "git commit",
-    "methods"
+    "Control Flow",
+    "Arrays",
+    "git",
+    "GitHub",
+    "Methods",
+    "Random Numbers",
+    "Command Line Ruby"
   ]
 }

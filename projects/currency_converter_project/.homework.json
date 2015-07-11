@@ -1,16 +1,20 @@
 {
     "name": "currency_converter",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "title": "Currency Converter",
-    "description": "Build on the Currency assignment.  Create a ruby class for converting currencies using Test-Driven Development.",
+    "description": "Create two Ruby classes: one for storing currencies and another for converting currencies.",
     "difficultyModes": [
         "Normal",
-        "Hard"
+        "Hard",
+        "Nightmare"
     ],
     "keywords": [
-        "operators",
-        "oop",
-        "ruby",
-        "classes"
+        "Operators",
+        "OOP",
+        "Ruby",
+        "Classes",
+        "Multiple Files",
+        "Exceptions",
+        "String Parsing"
     ]
 }
