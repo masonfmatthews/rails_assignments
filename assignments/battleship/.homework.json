@@ -1,12 +1,20 @@
 {
   "name": "battleship",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "title": "Battleship",
   "description": "The task for this assignment is to write a program that plays the game of Battleship.  The user will act as Player 1, and the computer will act as Player 2.",
+  "difficultyModes": [
+      "Normal",
+      "Hard",
+      "Nightmare"
+  ],
   "keywords": [
-    "week-1",
-    "ruby-basics",
-    "oo",
-    "games"
+    "Ruby",
+    "OOP",
+    "Games",
+    "Testing",
+    "Enumerable",
+    "Inheritance",
+    "Composition"
   ]
 }
