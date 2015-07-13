@@ -1,7 +1,7 @@
 {
-    "name": "novel_api",
-    "version": "0.0.1",
-    "title": "Novel API",
+    "name": "build_your_own_api",
+    "version": "1.0.0",
+    "title": "Build Your Own API",
     "description": "Create a Rails application which presents a novel (unique, new) API to the world.  This API must consume at least two other, publicly available APIs.",
     "difficultyModes": [
         "Normal",
