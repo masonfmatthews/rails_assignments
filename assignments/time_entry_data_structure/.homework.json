@@ -1,18 +1,19 @@
 {
     "name": "time_entry_data_structure",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "title": "Time Entry Data Structure",
     "description": "Create a data structure diagram for a web app that stores developer time entries.",
     "difficultyModes": [
         "Normal",
-        "Hard"
+        "Hard",
+        "Nightmare"
     ],
     "keywords": [
         "ERD",
-        "Many-to-many",
+        "Database Design",
+        "Migrations",
         "Polymorphic join",
-        "Self-referential association",
-        "Rails",
+        "ActiveRecord",
         "Ruby"
     ]
 }
