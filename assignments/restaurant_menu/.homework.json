@@ -1,16 +1,17 @@
 {
-    "name": "menu",
-    "version": "0.0.1",
-    "title": "Menu",
+    "name": "restaurant_menu",
+    "version": "1.0.0",
+    "title": "Restaurant Menu",
     "description": "Create an online menu for a restaurant with a fixed number of categories and images for each category.  Allow users to enter new menu items and display them on a single menu page.",
     "difficultyModes": [
         "Normal",
-        "Hard"
+        "Hard",
+        "Nightmare"
     ],
     "keywords": [
         "Asset Pipeline",
         "Associations",
-        "Bourbon",
+        "CSS Frameworks",
         "Images",
         "Ruby",
         "SCSS"
