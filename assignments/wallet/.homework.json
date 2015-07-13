@@ -1,15 +1,18 @@
 {
     "name": "wallet",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "title": "Wallet",
     "description": "Build a Rails app to tell you how much money you have right now.  The application will have one data table of transactions, simple edit/create forms, and a total amount displayed on the index page.",
     "difficultyModes": [
-        "Normal"
+        "Normal",
+        "Hard"
     ],
     "keywords": [
         "ActiveRecord",
+        "Resources",
         "MVC",
         "Rails",
-        "Ruby"
+        "Ruby",
+        "Estimation"
     ]
 }

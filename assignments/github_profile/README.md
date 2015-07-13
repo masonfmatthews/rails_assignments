@@ -34,7 +34,7 @@ Your Rails application will not need to have any database tables.
 
 You're going to find that this is a LOT of work.  There's so much to do here that **you're not going to finish it all.**  Use this as an exercise in choosing your battles, but also make sure that you're PRACTICING DISCIPLINE.  This includes:
 
-* Writing tests
+* Writing tests BEFORE writing code
 * Making small parts work rather than trying to tackle everything at once
 * Committing often
 * Actually writing something (even a short something) in the README
@@ -43,11 +43,11 @@ Since this is so much work, set a time limit for yourself, then just stop when y
 
 ## Hard Mode
 
-For Hard Mode, implement your Public Activity Page in a second view.
+For Hard Mode, make all the links on your two pages work, but have them redirect to the real pages on github.com.
 
 ## Nightmare Mode
 
-For Nightmare Mode, make ALL the links on your two pages work, but have them redirect to the real pages on github.com.
+For Nightmare Mode, implement your Public Activity Page in a second view.
 
 ## Notes
 

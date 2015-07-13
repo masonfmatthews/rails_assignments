@@ -13,14 +13,13 @@ After completing this assignment, you should...
 * Understand basic HTML forms
 * Create and use an ActiveRecord model, a controller, multiple views, and a router.
 * Create and use a Rails scaffold
-* Create integration tests
 
 ## Deliverables
 
 * **An estimate.**  After you read through this assignment (but before you start coding), write down a number of hours that you expect this assignment to take.  Record your hours as you go.
 * **A repository.** Create a new repository.  Commit often, not just at the end.
 * **A README.** Create a README that describes the purpose of this project and the steps necessary to set it up and use it.
-* **A test suite.** Build your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
+* **A test suite.** Build your application using TDD.  Your test suite must include unit tests and controller tests, and at least two of each must have been written by you.
 * **A reflection on your estimate.**
 
 ## Normal Mode
