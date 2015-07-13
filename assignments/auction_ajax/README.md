@@ -1,4 +1,4 @@
-# Auction App - Add AJAX
+# Auction Site with AJAX
 
 ## Description
 

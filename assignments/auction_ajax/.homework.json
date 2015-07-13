@@ -1,6 +1,6 @@
 {
     "name": "auction_ajax",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "title": "Auction App with AJAX",
     "description": "Given an existing (incredibly simple) auction app, increase its functionality by adding AJAX functionality.",
     "difficultyModes": [

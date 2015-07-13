@@ -1,6 +1,6 @@
 {
     "name": "add_javascript",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "title": "Add Javascript",
     "description": "Given an existing application with `accepts_nested_attributes_for` behavior, add javascript to make a page more responsive.",
     "difficultyModes": [
