@@ -10,9 +10,9 @@
     ],
     "keywords": [
         "ERD",
+        "Databases"
         "Database Design",
         "Migrations",
-        "Polymorphic join",
         "ActiveRecord",
         "Ruby"
     ]

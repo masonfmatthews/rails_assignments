@@ -1,11 +1,12 @@
 {
     "name": "employee_reviews_with_db",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "title": "Employee Reviews with a Database",
     "description": "Modify your existing Employee Reviews code to persist the information in a database.  Modify your test suite to utilize the database as well.",
     "difficultyModes": [
         "Normal",
-        "Hard"
+        "Hard",
+        "Nightmare"
     ],
     "keywords": [
         "TDD",
@@ -13,6 +14,7 @@
         "Databases",
         "Database Design",
         "ActiveRecord",
+        "Legacy Code",
         "Migrations"
     ]
 }

@@ -26,11 +26,11 @@ Use the homework submission form on the course website to turn in a link to your
 
 ## Normal Mode
 
-Simply put, modify your existing Employee Reviews code to store all instance variables in Employee and Department to the database.  In addition, modify your test suite so that all existing tests pass given the new persistent data store.
+Simply put, modify your existing Employee Reviews code to store all instance variables in Employee and Department objects to the database.  In addition, modify your test suite so that all existing tests pass given the new persistent data store.
 
 There's one exception: if you built your prior application with the ability to store MANY reviews for one employee, drop that functionality.  All you need for this assignment is ONE review per employee (which means that you can store it in a single field in the `employees` table).
 
-One tricky part will be the array of employees stored in each department.  Rather than trying to make an "Array" type data field (which only works in a few database management systems anyway), add a foreign key which points to a department to the employees table.
+One tricky part will be the array of employees stored in each department.  Rather than trying to make an "Array" type data field (which only works in a few database management systems anyway), add a foreign key to the employees table which points to a department in the departments table.
 
 Write these additional methods on your models:
 
