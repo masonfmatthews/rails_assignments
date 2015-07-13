@@ -55,9 +55,15 @@ You'll need to look up and understand CSS "pseudo-selectors" to get this to work
 
 Again, make this pixel-perfect!
 
+## Hard Mode
+
+Take a look at your GitHub repositories page.  [Here is an example](https://github.com/masonfmatthews?tab=repositories).
+
+There's a lot going on on this page, but it's not ridiculous.  For hard mode, recreate this page with as much precision as you can, but don't worry about getting all the information on the page right.  Just start at the top and try to create the menu bar, then work on the left column, then try the right.  Say gibberish if you would like, but DO NOT copy and paste anything from GitHub's source.
+
 ## Nightmare Mode
 
-Note that we skipped "Hard Mode."  The third task is much, much harder, but if you'd like to really learn a lot about HTML and CSS, try to reproduce the following webpage:
+The third task is much, much harder, but if you'd like to really learn a lot about HTML and CSS, try to reproduce the following webpage:
 
 ![Nightmare Mode Screenshot](surf_and_paddle.png)
 
