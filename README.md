@@ -42,14 +42,7 @@
   * Study concept over implementation
   * Use short feedback loops
 * Agile Practices
-  * Iterate with data collection and reflection
-  * Example reflection/feedback mechanisms:
-    * Project post-mordems
-    * Iteration retrospectives
-    * Frequent client meetings
-    * Daily stand-ups
-    * Run code and tests often, ideally after every change.
-    * Pair programming
+  * Iterate with rigorous data collection and reflection
   * Estimating is hard
   * Hammer-user vs. shiny-object
   * All code becomes legacy code
