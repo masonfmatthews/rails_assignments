@@ -2,4 +2,4 @@
 
 *.sqlite3
 !/exercises/phone_numbers_sql/contact.sqlite3
-!/exercises/phone_numbers_sql/time_entries.sqlite3
+!/exercises/time_entry_sql_practice/time_entries.sqlite3
