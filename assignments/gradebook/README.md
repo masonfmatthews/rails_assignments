@@ -14,7 +14,7 @@ After completing this assignment, you should...
 
 ## Deliverables
 
-* **An estimate.**  After you read through this assignment (but before you start coding), write down a number of hours that you expect each part to take (1-3).  Record your hours as you go.
+* **An estimate.**  After you read through this assignment (but before you start coding), write down a number of hours that you expect this app to take.  Record your hours as you go.
 * **A Repository.** Create a new repository your own github organization's account.
 * **A README.**
 * **A test suite.** Build your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
@@ -24,7 +24,7 @@ Submit your homework via the class assignments Google Form.
 
 ## Normal Mode
 
-Although it's definitely a mixed bag, education is a hot spot in both the entrepreneural community and in legislatures these days.  Startups are being funded to create all manner of education software, so we're going to jump on the bandwagon and build something.
+Although it's definitely a mixed bag, education is a hot spot in both the entrepreneurial community and in legislatures these days.  Startups are being funded to create all manner of education software, so we're going to jump on the bandwagon and build something.
 
 Assume that you are responsible for building software to track student grades.  Three types of users will access your software: teachers (who will enter all of the information about grades, parents, and students), students (who will view their own grades), and parents (who will view their student's grades).
 
@@ -53,7 +53,7 @@ The following actions should possible for the following types of users:
 
 These lists are not cumulative.  For instance, a student should NOT be able to create teachers.
 
-Part of this assignment is to review requirements and decide how to tackle a smaller problem before you tackle the whole thing.  **Don't panic** if you can't finish it all.  Just #shipit a few times and get some sleep.
+Part of this assignment is to review requirements and decide how to tackle a smaller problem before you tackle the whole thing.
 
 ## Hard Mode
 

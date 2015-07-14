@@ -1,6 +1,6 @@
 {
     "name": "gradebook",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "title": "Gradebook",
     "description": "Build an application to track student progress on predefined lists of concepts.  Allow parents, teachers, and students to see grades.",
     "difficultyModes": [
