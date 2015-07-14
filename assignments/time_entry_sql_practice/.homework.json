@@ -1,0 +1,15 @@
+{
+    "name": "time_entry_sql_practice",
+    "version": "1.0.0",
+    "title": "Time Entry SQL Practice",
+    "description": "Given a data structure for tracking time entries, create a set of SQL queries to pull out meaningful information.",
+    "difficultyModes": [
+        "Normal",
+        "Hard",
+        "Nightmare"
+    ],
+    "keywords": [
+        "Databases",
+        "SQL"
+    ]
+}

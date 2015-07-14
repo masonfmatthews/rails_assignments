@@ -29,9 +29,9 @@ If you happen to go to work for an agency/consultancy after finishing your studi
 Your assignment is to design a data structure (visually, in a tool like Lucidchart) to store information about your company's development team, your company's projects, and hours worked across those projects.  Your data structure must capture the following:
 
 * Developers have names, email addresses, and start dates with the company.
-* Projects have names and start dates, and are assigned to a client.
 * Clients have names and are assigned to an industry.
-* A developer can be assigned to many projects.
+* Projects have names and start dates, and are assigned to a client.
+* A developer can be assigned to many projects.
 * Conversely, a project can have many developers assigned to it.
 * Developers can create time entries, which state:
   * Who did the work
