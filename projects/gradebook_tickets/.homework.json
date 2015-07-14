@@ -1,6 +1,6 @@
 {
     "name": "gradebook_tickets",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "title": "Gradebook Tickets",
     "description": "Given an existing version of the Gradebook application, students will form groups and work on tickets to improve the project, then progressively merge changes together.",
     "difficultyModes": [
