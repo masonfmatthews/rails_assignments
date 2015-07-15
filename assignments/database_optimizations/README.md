@@ -33,6 +33,7 @@ Once you pull down the application from GitHub, run `bundle install` and `rake d
 * Turn on your server and open your browser.
 * Open Chrome's timeline in developer tools, then go to `localhost:3000`.
 * Determine how long it takes the index page to load.  Record that time.
+* Open your Mac's
 * Add appropriate indices to the data structure (via migrations).
 * Record how long it takes to run the migrations that add indices.
 * Use Chrome's developer tools to determine how long it takes the index page to load.  Record that time.
