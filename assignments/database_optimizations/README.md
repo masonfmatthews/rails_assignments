@@ -25,15 +25,19 @@ After completing this assignment, you should...
 
 ## Normal Mode
 
-For this project, you will be starting with an application which runs very slowly.  This ineffiency is due partly to the sheer amount of data present, but mostly due to the structure of the code and the database.  Your task is to make it run in a reasonable amount of time.
+#### Part One - Analysis
+
+For this project, you will be starting with an application which runs very slowly.  This inefficiency is due partly to the sheer amount of data present, but mostly due to the structure of the code and the database.  Your task is to make it run in a reasonable amount of time.
 
 Once you pull down the application from GitHub, run `bundle install` and `rake db:migrate`, then follow the steps below.
 
+* Open your Mac's Activity Monitor, click on the "Memory" tab, and write down the numbers for "Memory Used," "Cache," and "Swap Used."
 * Run `rake db:seed`, but time it.  Record the amount of time it takes for the seeds to run.
+* As the seeds near their end, write down the three numbers from Activity Monitor again.
 * Turn on your server and open your browser.
 * Open Chrome's timeline in developer tools, then go to `localhost:3000`.
 * Determine how long it takes the index page to load.  Record that time.
-* Open your Mac's
+* Reload the page again, but write down the three peak numbers from Activity Monitor.
 * Add appropriate indices to the data structure (via migrations).
 * Record how long it takes to run the migrations that add indices.
 * Use Chrome's developer tools to determine how long it takes the index page to load.  Record that time.
@@ -49,6 +53,10 @@ You've done a good job of analyzing runtime, but now take a look at storage spac
 * Record the size of your development log.
 * Give at least one method (feel free to Google) for reducing the size of one of these, yet keeping your data intact.
 * Do you think that this is smaller, about right, or larger than the size of databases you'll be working with in your career?
+
+#### Part Two - Search Bar
+
+........
 
 ## Hard Mode
 
