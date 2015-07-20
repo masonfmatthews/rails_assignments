@@ -56,7 +56,9 @@ You've done a good job of analyzing runtime, but now take a look at storage spac
 
 #### Part Two - Search Bar
 
-........
+A common feature which you'll be asked to develop is a Google-like search.  You enter information in one field, and results are returned when any one of a number of fields matches what you entered.
+
+...
 
 ## Hard Mode
 
