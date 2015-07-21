@@ -1,6 +1,6 @@
 {
     "name": "delayed_mailer",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "title": "Delayed Mailer",
     "description": "Given an existing application with a long-running view, modify the application to ask for the user's e-mail address, then send the information by e-mail using background processing and ActiveJob.",
     "difficultyModes": [
