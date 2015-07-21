@@ -31,27 +31,30 @@ For this project, you will be starting with an application which runs very slowl
 
 Once you pull down the application from GitHub, run `bundle install` and `rake db:migrate`, then follow the steps below.
 
-1. Open your Mac's Activity Monitor, click on the "Memory" tab, and write down the numbers for "Memory Used," "Cache," and "Swap Used."
 1. Run `rake db:seed`.  When it is finished, it will tell you how long the process took (in seconds).  Record the amount of time.
-1. Turn on your server and open your browser.
-1. Open Chrome's timeline in developer tools, then go to `localhost:3000`.
-1. Determine how long it takes the index page to load.  Record that time.
-1. Reload the page again, but write down the three peak numbers from Activity Monitor.
+1. Turn on your server and open your browser to `localhost:3000`.  You will have to sort out which parameters you need to pass it.
+1. Open Chrome's timeline in developer tools, then hit Cmd-R on your keyboard.  The timeline will track time to load the page.  Record the following:
+  1. Total time in Chrome's timeline
+  1. "Idle" time in Chrome's timeline
+  1. The time given by Rails at the top of the page
+  1. The time given by Rails at the bottom of the page (sorry for the long scroll)
+  1. Explain what these four numbers are and which are subsets of the others
 1. Add appropriate indices to the data structure (via migrations).
 1. Record how long it takes to run the migrations that add indices.
-1. Use Chrome's developer tools to determine how long it takes the index page to load.  Record that time.
-1. Calculate your percent improvement in runtime.
-1. Examine the code that is run when the root path loads.  Modify the commands which access the database to make them more efficient.
+1. Reload the root page and record the four time numbers again.  Calculate your percent improvement in runtime.
+1. Examine the code that is run when the root path loads.  Modify the controller commands which access the database to make them more efficient.
 1. Calculate your percent improvement in runtime.
 1. Once you have optimized your code as much as you think you can, drop the database, run `rake db:migrate`, and then time how long it takes to run `rake db:seed`.  Was there an improvement or a worsening of runtime?  By what percent and why?
 1. Which is faster: (a) running `rake db:seed` without indices and then running a migration to add indices, or (b) adding indices during your initial `rake db:migrate`, then running `rake db:seed`?
 
-You've done a good job of analyzing runtime, but now take a look at storage space:
+You've done a thorough job of analyzing runtime, but now take a look at storage space:
 
 * Record the size of your database (in bytes).
 * Record the size of your development log.
 * Give at least one method (feel free to Google) for reducing the size of one of these, yet keeping your data intact.
 * Do you think that this is smaller, about right, or larger than the size of databases you'll be working with in your career?
+
+Now let's talk about the "memory" numbers given on the page.  What impact have your changes had on memory usage?  If you reload a page again and again (with no code changes in between reloads), does memory used stay the same?  Have you ever been able to make memory used go down?
 
 #### Part Two - Search Bar
 
