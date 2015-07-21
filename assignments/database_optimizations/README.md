@@ -31,21 +31,20 @@ For this project, you will be starting with an application which runs very slowl
 
 Once you pull down the application from GitHub, run `bundle install` and `rake db:migrate`, then follow the steps below.
 
-* Open your Mac's Activity Monitor, click on the "Memory" tab, and write down the numbers for "Memory Used," "Cache," and "Swap Used."
-* Run `rake db:seed`, but time it.  Record the amount of time it takes for the seeds to run.
-* As the seeds near their end, write down the three numbers from Activity Monitor again.
-* Turn on your server and open your browser.
-* Open Chrome's timeline in developer tools, then go to `localhost:3000`.
-* Determine how long it takes the index page to load.  Record that time.
-* Reload the page again, but write down the three peak numbers from Activity Monitor.
-* Add appropriate indices to the data structure (via migrations).
-* Record how long it takes to run the migrations that add indices.
-* Use Chrome's developer tools to determine how long it takes the index page to load.  Record that time.
-* Calculate your percent improvement in runtime.
-* Examine the code that is run when the root path loads.  Modify the commands which access the database to make them more efficient.
-* Calculate your percent improvement in runtime.
-* Once you have optimized your code as much as you think you can, drop the database, run `rake db:migrate`, and then time how long it takes to run `rake db:seed`.  Was there an improvement or a worsening of runtime?  By what percent and why?
-* Which is faster: (a) running `rake db:seed` without indices and then running a migration to add indices, or (b) adding indices during your initial `rake db:migrate`, then running `rake db:seed`?
+1. Open your Mac's Activity Monitor, click on the "Memory" tab, and write down the numbers for "Memory Used," "Cache," and "Swap Used."
+1. Run `rake db:seed`.  When it is finished, it will tell you how long the process took (in seconds).  Record the amount of time.
+1. Turn on your server and open your browser.
+1. Open Chrome's timeline in developer tools, then go to `localhost:3000`.
+1. Determine how long it takes the index page to load.  Record that time.
+1. Reload the page again, but write down the three peak numbers from Activity Monitor.
+1. Add appropriate indices to the data structure (via migrations).
+1. Record how long it takes to run the migrations that add indices.
+1. Use Chrome's developer tools to determine how long it takes the index page to load.  Record that time.
+1. Calculate your percent improvement in runtime.
+1. Examine the code that is run when the root path loads.  Modify the commands which access the database to make them more efficient.
+1. Calculate your percent improvement in runtime.
+1. Once you have optimized your code as much as you think you can, drop the database, run `rake db:migrate`, and then time how long it takes to run `rake db:seed`.  Was there an improvement or a worsening of runtime?  By what percent and why?
+1. Which is faster: (a) running `rake db:seed` without indices and then running a migration to add indices, or (b) adding indices during your initial `rake db:migrate`, then running `rake db:seed`?
 
 You've done a good job of analyzing runtime, but now take a look at storage space:
 
@@ -58,9 +57,17 @@ You've done a good job of analyzing runtime, but now take a look at storage spac
 
 A common feature which you'll be asked to develop is a Google-like search.  You enter information in one field, and results are returned when any one of a number of fields matches what you entered.
 
-...
+Add a single search field (and search button) to the `all_data` view in the reports controller.  The user should be able to type any part of an assembly's `name`, a hit's `match_gene_name` or a gene's `gene` field.  When the search button is pressed, the page will reload and the user will be shown all of the hits for which any of those things match.
+
+In other words, if a user types in "special" and one assembly has a `name` "Special Assembly" (and no hits have "special" in their `match_gene_name`), all hits for just that assembly will be shown.  If a user types in "tetanus" and only one hit has a `match_gene_name` which includes "tetanus" (and no assemblies have "tetanus" in their `name`), only that one hit will be shown.  If a user types in "AACCGGTT", only hits for genes with "AACCGGTT" in them should be shown.
+
+The search should also be case insensitive.
 
 ## Hard Mode
+
+Improve the intelligence of the search bar.  If you type in multiple words, your search algorithm should split on spaces and display results for which ALL of the terms are found in ANY of the three fields.  For instance, if you search for "Special Tetanus ACTG", a result would still get returned if "Special" was in its assembly, "Tetanus" was in its hit, and "ACTG" was in its gene.
+
+## Nightmare Mode
 
 This data structure has a number of tables connected with a series of one-to-many relationships between them.  A more advanced way to improve efficiency would be to cache the id of the upper-most (ancestor) table's id in a field in the lower-most (descendant) table.  To accomplish this, do the following:
 

@@ -9,7 +9,7 @@
 now = Time.now
 today = Date.today
 
-assembly_count = 100
+assembly_count = 10
 sequence_count = 10000
 gene_count = 50000
 hit_count = 500000
