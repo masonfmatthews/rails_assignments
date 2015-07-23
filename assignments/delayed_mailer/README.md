@@ -8,15 +8,15 @@ Given an existing application with a long-running view, modify the application t
 
 After completing this assignment, you should...
 
-* Understand how and why applications run asynchronous background processes.
-* Create jobs for resource-intensive tasks using ActiveJob.
+* Understand how mail can (and when mail should) be sent from a Rails application
+* Be able to create jobs for resource-intensive tasks using ActiveJob.
 * Send mail later using ActionMailer.
 
 ## Deliverables
 
 * **An estimate.**  After you read through this assignment (but before you start coding), write down a number of hours that you expect this assignment to take.  Record your hours as you go.
 * **A repository.** You will be working from your existing application.
-* **A test suite.** Extend your application using TDD.  This was not needed last night, as you were only changing existing code.  Your test suite must include unit tests, controller tests, and at least two integration tests.
+* **A test suite.** Extend your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
 * **A reflection on your estimate.**
 
 ## Normal Mode

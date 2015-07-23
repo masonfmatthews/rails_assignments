@@ -2,12 +2,15 @@
     "name": "data_file_import",
     "version": "0.0.1",
     "title": "Data File Import",
-    "description": "",
+    "description": "Given an existing application, add functionality for users to upload a data file and have that data file be imported into the database via background processing.",
     "difficultyModes": [
         "Normal",
-        ""
+        "Hard"
     ],
     "keywords": [
-        ""
+        "Background processing",
+        "File uploads",
+        "ActiveJob",
+        "SQL inserts"
     ]
 }
