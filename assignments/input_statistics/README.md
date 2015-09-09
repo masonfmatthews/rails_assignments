@@ -32,7 +32,7 @@ Once the user is finished, you should present statistics about the inputs.  You 
 
 Your program should still work if the user inputs negative numbers and/or non-integer rational numbers (e.g. `3.45`).
 
-If the user enters something that is not a number (e.g. `Potato`), your program should state that this was a mistake and ask again.
+If the user enters something that is not a number (e.g. `Potato`), your program should state that this was a mistake and ask again.  HINT: To determine if input is a number, you might consider converting the input (a `String`) to a number, then converting it back, then checking to see if it matches the original.
 
 ## Hard Mode
 

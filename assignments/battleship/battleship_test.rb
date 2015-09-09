@@ -83,6 +83,7 @@ class BattleshipTest < Minitest::Test
     ship = Ship.new(4)
     assert ship.place(2, 1, true)
     refute ship.place(3, 2, false)
+    refute ship.place(3, 2, true)
   end
 
   def test_11_ships_know_if_they_overlap
