@@ -31,6 +31,7 @@ class BattleshipTest < Minitest::Test
 
   def test_03_humans_can_be_named
     assert_equal "Alice", HumanPlayer.new("Alice").name
+    assert_equal "Bob", HumanPlayer.new("Bob").name
   end
 
   def test_04_computers_cannot_be_named
@@ -106,6 +107,7 @@ class BattleshipTest < Minitest::Test
 
     assert ship.fire_at(2, 1)
     refute ship.fire_at(1, 1)
+    refute ship.fire_at(2, 1)
   end
 
   def test_13_ships_can_be_sunk
@@ -115,6 +117,8 @@ class BattleshipTest < Minitest::Test
     refute ship.sunk?
     ship.fire_at(2, 1)
     refute ship.sunk?
+    ship.fire_at(3, 1)
+    assert ship.sunk?
     ship.fire_at(3, 1)
     assert ship.sunk?
   end
