@@ -54,7 +54,7 @@ At this stage, your code should:
 
 Finally, all of this code must be written using test-driven development.  Your test suite should have at least one complete example (also known as a "pathological" example) of how the two classes can be used in the real world.
 
-## Part 2
+#### Part 2
 
 Once your baseline app is complete, modify your method on Departments which gives out raises.  It should now take a block which will specify which employees are eligible for raises.  Prior to this stage, you only allowed "satisfactory" employees to get raises, but now it can be more flexible.
 
@@ -68,7 +68,7 @@ At this stage, your code should:
 
 * Have a method which takes a block and calls `yield`.
 
-## Part 3
+#### Part 3
 
 As part of this repository, you have a file called `sample_reviews.txt`.  This file includes two negative employee reviews and two positive employee reviews.  Your task is to write a method on the employee class which looks the employee review text stored in an employee instance variable (in Part 1) and return a `true` or `false` for whether this employee is performing satisfactorily.  This also means that you will be removing the ability for users to manually mark whether an employee is performing satisfactorily.  This will now be determined by code.
 
