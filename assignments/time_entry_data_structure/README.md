@@ -31,7 +31,7 @@ Your assignment is to design a data structure (visually, in a tool like Lucidcha
 * Developers have names, email addresses, and start dates with the company.
 * Clients have names and are assigned to an industry.
 * Projects have names and start dates, and are assigned to a client.
-* A developer can be assigned to many projects.
+* A developer can be assigned to many projects.
 * Conversely, a project can have many developers assigned to it.
 * Developers can create time entries, which state:
   * Who did the work
