@@ -2,7 +2,7 @@
 
 ## Description
 
-Modify your existing Employee Reviews code to persist the information in a database.  Modify your test suite to utilize the database as well.
+Modify an existing Employee Reviews program to persist the information in a database.  Modify the test suite to utilize the database as well.
 
 ## Objectives
 
@@ -16,7 +16,7 @@ After completing this assignment, you should...
 
 ## Deliverables
 
-* **A modified version of your original GitHub repository.**
+* **A GitHub repository.**  Fork this repository if you would like, but remember that you don't get GitHub credit for it.
 * **A migration to create a database.**
 * **A modified README.**
 * **A modified test suite.**
@@ -26,9 +26,7 @@ Use the homework submission form on the course website to turn in a link to your
 
 ## Normal Mode
 
-Simply put, modify your existing Employee Reviews code to store all instance variables in Employee and Department objects to the database.  In addition, modify your test suite so that all existing tests pass given the new persistent data store.
-
-There's one exception: if you built your prior application with the ability to store MANY reviews for one employee, drop that functionality.  All you need for this assignment is ONE review per employee (which means that you can store it in a single field in the `employees` table).
+Simply put, modify this existing Employee Reviews code to store all instance variables in Employee and Department objects to the database.  In addition, modify the test suite so that all existing tests pass given the new persistent data store.
 
 One tricky part will be the array of employees stored in each department.  Rather than trying to make an "Array" type data field (which only works in a few database management systems anyway), add a foreign key to the employees table which points to a department in the departments table.
 
@@ -41,7 +39,7 @@ Write these additional methods on your models:
 * Return all employees with names which are palindromes.
 * Return the department with the most employees.
 * Move everyone from one department to another department.
-* Give a raise of 10% to ALL employees with good reviews.
+* Give a raise of 10% to ALL employees with good reviews.  This is different from the raise method which already exists, and also needs to operate over all employees of ALL departments.
 
 DON'T FORGET TEST-DRIVEN DEVELOPMENT.  Write a test for each one of these first, make sure the test FAILS, then write code to make it pass, then refactor as needed.  Finally, commit.  Then repeat until you complete all the additional methods.
 
