@@ -31,9 +31,4 @@ class StringSplitChallenge < MiniTest::Test
     assert_equal "", first_name("")
     assert_equal "", last_name("")
   end
-
-  def test_nil_name
-    assert_equal "", first_name(nil)
-    assert_equal "", last_name(nil)
-  end
 end

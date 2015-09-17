@@ -30,7 +30,9 @@ Simply put, modify this existing Employee Reviews code to store all instance var
 
 One tricky part will be the array of employees stored in each department.  Rather than trying to make an "Array" type data field (which only works in a few database management systems anyway), add a foreign key to the employees table which points to a department in the departments table.
 
-Write these additional methods on your models:
+## Medium Mode
+
+Write these additional methods on your models.  With each of these methods, you COULD solve it using mostly Ruby, and you COULD solve it using mostly SQL.  Feel free to choose either path:
 
 * Return the total number of employees in a department.
 * Return the employee who is being paid the least in a department.

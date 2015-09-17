@@ -7,7 +7,7 @@ class Employee
     @salary = salary
     @email = email
     @phone = phone
-    @reviews = []
+    @review = ""
     @satisfactory = true
   end
 
@@ -23,8 +23,8 @@ class Employee
     @salary += amount
   end
 
-  def give_review(review)
-    @reviews << review
+  def give_review(text)
+    @review = text
     assess_performance
     true
   end
@@ -35,8 +35,8 @@ class Employee
     good_terms = Regexp.union(good_terms)
     bad_terms = Regexp.union(bad_terms)
 
-    count_good = @reviews.last.scan(good_terms).length
-    count_bad = @reviews.last.scan(bad_terms).length
+    count_good = @review.scan(good_terms).length
+    count_bad = @review.scan(bad_terms).length
 
     @satisfactory = (count_good - count_bad > 0)
   end

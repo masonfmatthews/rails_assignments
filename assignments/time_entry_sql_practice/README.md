@@ -34,7 +34,7 @@ Submit your homework via the class assignments Google Form.
 * Find all time entries.
 * Find the developer who joined most recently.
 * Find the number of projects for each client.
-* Find all projects, and show each one's client's industry next to it.
+* Find all time entries, and show each one's client name next to it.
 * Find all developers in the "Ohio sheep" group.
 * Find the total number of hours worked for each client.
 * Find the client for whom Mrs. Lupe Schowalter (the developer) has worked the greatest number of hours.
