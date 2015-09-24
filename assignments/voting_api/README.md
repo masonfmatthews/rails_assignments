@@ -28,6 +28,7 @@ For this project, you will be building a Rails-based application which serves up
   * Based on a `candidates` table, with at least `name`, `hometown`, `district`, and `party` attributes
   * `index` action
   * `show` action
+  * `create` action
 * `/voters`
   * Based on a `voters` table, with at least `name`, `party`, and `token` attributes
   * `create` action
