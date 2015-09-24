@@ -38,7 +38,7 @@ For this project, you will be building a Rails-based application which serves up
   * Each voter can cast at most one vote, period.
   * `create` action, with token authentication to show that you are the voter
   * `destroy` action, with token authentication to show that you are the voter
-  * `index` action (which shows all candidates and a number of votes for each)
+  * `index` action (which shows all candidates and a number of votes for each; yes, this last part requires extra reading)
 
 See the notes section below for links that will be helpful.  Your easiest path will be to accept the token from the user as a parameter.  If you find yourself thinking about tokens in HTTP Headers, back up and just pass it as a parameter for now.
 
