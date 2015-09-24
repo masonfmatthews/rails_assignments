@@ -10,7 +10,6 @@ After completing this assignment, you should...
 
 * Understand how organizations present information via APIs.
 * Understand how APIs can be used to change data as well as view it.
-* Be able to write a versioned, nested API to share and allow edits to a database.
 * Be able to write Rails tests to cover a Rails API.
 * Be able to write a token-based authentication system for an API.
 
@@ -30,7 +29,7 @@ For this project, you will be building a Rails-based application which serves up
   * `index` action
   * `show` action
 * `/voters`
-  * Based on a `voters` table, with at least `name` and `party` attributes
+  * Based on a `voters` table, with at least `name`, `party`, and `token` attributes
   * `create` action
   * `show` action, with token authentication to prove that you are the voter
   * `update` action, with token authentication to prove that you are the voter
@@ -41,7 +40,7 @@ For this project, you will be building a Rails-based application which serves up
   * `destroy` action, with token authentication to show that you are the voter
   * `index` action (which shows all candidates and a number of votes for each)
 
-See the notes section below for links that will be helpful.  Your easiest path will be to accept the token from the user as a parameter.
+See the notes section below for links that will be helpful.  Your easiest path will be to accept the token from the user as a parameter.  If you find yourself thinking about tokens in HTTP Headers, back up and just pass it as a parameter for now.
 
 ## Hard Mode
 
@@ -79,4 +78,4 @@ Also, instead of using Token Auth, use OAuth.
 ## Notes
 
 * [Building API Basics](http://www.theodinproject.com/ruby-on-rails/apis-and-building-your-own)
-* [Railscast on securing APIs](http://railscasts.com/episodes/352-securing-an-api)
+* [Generating a Random Token](http://ruby-doc.org/stdlib-1.9.3/libdoc/securerandom/rdoc/SecureRandom.html)

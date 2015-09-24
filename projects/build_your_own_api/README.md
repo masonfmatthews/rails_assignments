@@ -12,6 +12,7 @@ After completing this assignment, you should...
 * Be able to read and utilize API documentation for publicly available data sets
 * Be able to merge data from multiple points of origin
 * Be able to create a public-facing API
+* Be able to write versioned, nested routes
 * Be able to create your own API documentation
 
 ## Deliverables
