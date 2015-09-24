@@ -1,4 +1,4 @@
-# Novel API
+# Build Your Own API
 
 ## Description
 
@@ -26,11 +26,10 @@ After completing this assignment, you should...
 For this project, you have complete autonomy on the data that your application displays, the sources of that data, and the behavior that your application has.  The conditions for this assignment are:
 
 * You must consume at least two publicly available APIs on two different data sets (e.g. two API requests from the GitHub API are not sufficient).  A few links to public data set directories are given below.
-* You must consume (and use) at least five data points from your incoming APIs.
-* You must merge this data in some meaningful and interesting way.
+* You must combine this data in some meaningful and interesting way.
 * You must display this merged data in a JSON API of your own making.  The api must be accessible under `/api/v1/...`.
-* Your API must have at least two different endpoints (e.g. `/api/v1/search` and `/api/v1/details`)
-* Each endpoint must accept at least two parameters to allow users to ask a variety of questions.
+* Your API must have at least one endpoint (e.g. `/api/v1/search` or `/api/v1/details`), but more are allowed.
+* The endpoint must accept at least two parameters to allow users to ask a variety of questions.
 * You must write clear API documentation in your README.  Give an explicit list of all your endpoints and their parameters.  Ideally, your README will also include sample output for each of your endpoints.
 
 Authentication is optional.
@@ -66,4 +65,4 @@ Cache your data in a database to (a) speed up future queries and (b) reduce the 
 * Twitch
 * IGN
 * ESPN
-* ...and on and on...
+* ...and here's [a beastly list](http://tiyd-rails-2015-08.github.io/notes/apis)
