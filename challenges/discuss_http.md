@@ -13,3 +13,5 @@
 * What is the difference between HTTP and HTTPS?
 
 * What are the port numbers for HTTP and HTTPS?
+
+* What are HTTP Status Codes?  Describe three of them.
