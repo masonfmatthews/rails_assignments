@@ -26,13 +26,13 @@ In this assignment, you will be building a Rails application which consumes info
 
 https://github.com/masonfmatthews?tab=repositories
 
-You will notice a lot going on on this page, from styling to navigation bars to icons.  Make it as similar as you can, but keep in mind that the most important part is for the information on the page to be accurate and complete.
+You will notice a lot going on on this page, from styling to navigation bars to icons.  You won't get to it all, so as you're selecting sections of the page to work on, keep in mind that the most important part is for the information on the page to be accurate and pulled from the API.
 
 Your application should have TWO pages.  The root page can be very simple.  It should show a text field and a button.  Feel free to add whatever styling or headers you see fit.  In the text field, the user should enter a GitHub username (e.g. `masonfmatthews`).  The submit button should pass this information on to your second page, which will display your clone of the GitHub profile page for that user.
 
 Your Rails application will not need to have any database tables.
 
-You're going to find that this is a LOT of work.  There's so much to do here that **you're not going to finish it all.**  Use this as an exercise in choosing your battles, but also make sure that you're PRACTICING DISCIPLINE.  This includes:
+Once again, you're going to find that this is a LOT of work.  There's so much to do here that **you're not going to finish it all.**  Use this as an exercise in choosing your battles, but also make sure that you're PRACTICING DISCIPLINE.  This includes:
 
 * Writing tests BEFORE writing code
 * Making small parts work rather than trying to tackle everything at once
