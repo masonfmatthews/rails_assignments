@@ -32,10 +32,11 @@ This application will be built around a set of scaffold-like views (for editing 
 
 * The user should be able to go to the root URL of the application and see a dashboard.  The dashboard should include:
   * the total amount of money in his/her account (this should be a method which is tested!)
+  * the total number of transactions ever
   * a link to the list of transactions
   * a link to create a new transaction
-* The user should be chastised vehemently if the balance on the account is negative.
-* The user should be able to see all transactions, add new transactions, and edit or delete existing transactions.  The total and count on the root page should update as these transactions change.
+* On the dashboard, the user should be chastised vehemently if the balance on the account is negative.
+* In the scaffolded pages, the user should be able to see all transactions, add new transactions, and edit or delete existing transactions.  The total and count on the root page should update as these transactions change.
 
 Regarding the code:
 
@@ -50,7 +51,6 @@ The first transaction in the application will be something like "Initial Balance
 
 Add more statistics to the dashboard page, including the following:
 
-* The total number of transactions on the account.
 * The total amount spent in the current calendar month
 * The total amount spent in the prior calendar month
 * The total number of transactions in the current calendar month
