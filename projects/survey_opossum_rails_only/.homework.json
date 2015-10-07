@@ -1,0 +1,18 @@
+{
+    "name": "survey_opossum",
+    "version": "1.0.0",
+    "title": "Survey Opossum",
+    "description": "SurveyMonkey has started charging $4 billion per survey (not really, but go with us here). Their customers are (understandably) outraged. Being the savvy entrepreneurs that you are, you spot an opportunity and jump on it. Time to build the SurveyMonkey killer!",
+    "difficultyModes": [
+        "Normal",
+        "Hard",
+        "Nightmare",
+        "Apocalypse"
+    ],
+    "keywords": [
+        "Databases",
+        "Front End Engineering",
+        "Rails",
+        "Ruby"
+    ]
+}
