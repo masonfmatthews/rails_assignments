@@ -27,7 +27,7 @@ You must add the following Javascript functionality to this page:
 * Hide the last empty row of the grading scale section when the page loads.
 * When the "Add Grade Threshold" button is clicked, show the last row.  You do not need to make it show an additional row if the user clicks again.
 * When a Delete button is clicked, hide the row to which it belongs, but mark the hidden `_destroy` field in that row as truthy.
-* Back on the course detail page, you'll notice that clicking on the various nav buttons in the blue box will cause the page to snap to that section.  Implement smooth scrolling instead. You'll have to look it up on Google.
+* Back on the course detail page, you'll notice that clicking on the various nav buttons in the blue box will cause the page to snap to that section.  Implement smooth scrolling instead.  You'll have to look it up on Google, and I expect that you'll copy and paste a solution into your code.  It's okay if you don't understand it all; welcome to the vast world of JavaScript.
 
 ## Hard Mode
 
