@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  assignment_name: MyString
+  grade: 1
+  student_id: 1
+
+two:
+  assignment_name: MyString
+  grade: 1
+  student_id: 1
