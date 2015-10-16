@@ -1,0 +1,18 @@
+{
+    "name": "stack_undertow",
+    "version": "0.1.0",
+    "title": "Stack Undertow",
+    "description": "As students, you have spent a lot of time on StackOverflow.  However, now that you've been in the class long enough to have a few developer nightmares ("I just can't find the right answers!!!"), you've decided that it's time to build an improved version, and you've recruited students from another class to aid you in your quest.",
+    "difficultyModes": [
+        "Normal",
+        "Hard",
+        "Nightmare"
+    ],
+    "keywords": [
+        "Databases",
+        "Front End Engineering",
+        "Rails",
+        "Ruby",
+        "APIs"
+    ]
+}
