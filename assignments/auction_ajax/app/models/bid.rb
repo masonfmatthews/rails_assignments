@@ -14,7 +14,7 @@ class Bid < ActiveRecord::Base
   end
 
   def bid_must_exceed_starting_price
-    if amount && item && amount <= item.starting_price
+    if amount && item && amount < item.starting_price
       errors.add(:amount, "must exceed starting price.")
     end
   end
