@@ -45,7 +45,22 @@ After completing this assignment, you should...
 
 ## Normal Mode
 
-.....
+* Site visitors can sign up for new accounts.
+* Users can log in and log out.
+* Users can post new questions.
+* Users can answer questions.
+* Users can upvote or downvote questions.
+* Users can upvote or downvote answers.
+* Site visitors can view all questions, answers, and votes on questions and answers (without logging in)
+
+* Users can receive points for posting questions, posting answers, or receiving upvotes.
+* Users can lose points for receiving downvotes.
+* Question poster can set a bounty on a question.
+* Question poster can award a bounty for an answer to a question with a bounty on it.
+* Site visitors can see a leaderboard of users.
+
+* Awards
+* Permissions based on points
 
 ## Hard Mode
 
