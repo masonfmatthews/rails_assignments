@@ -6,13 +6,13 @@ As students, you have spent a lot of time on StackOverflow.  However, now that y
 
 ## Objectives
 
-### Objectives (Front End)
+### Front End Objectives
 
 After completing this assignment, you should...
 
 * .....
 
-### Objectives (Rails)
+### Rails Objectives
 
 After completing this assignment, you should...
 
@@ -22,9 +22,7 @@ After completing this assignment, you should...
 * Know how to build a back-end API to enable a rich user interface
 * Gain experience resolving ambiguities in requirements and assumptions built into two different code bases
 
-## Details
-
-### Deliverables
+## Deliverables
 
 * **A data structure diagram.** Before writing any code, review the requirements below and draw a data structure diagram for this project.  It should include:
   * A box for each table
@@ -39,11 +37,9 @@ After completing this assignment, you should...
 * **A Rails API running on Heroku.**
 * **An Angular App served from .....**
 
-### Requirements
-
-.....
-
 ## Normal Mode
+
+At its core, your application needs to allow users to ask questions, give answers, and vote.  You also need to provide anyone with the ability to search for questions and see answers.  Your application should allow the following actions:
 
 * Site visitors can sign up for new accounts.
 * Users can log in and log out.
@@ -51,7 +47,13 @@ After completing this assignment, you should...
 * Users can answer questions.
 * Users can upvote or downvote questions.
 * Users can upvote or downvote answers.
-* Site visitors can view all questions, answers, and votes on questions and answers (without logging in)
+* Site visitors (and logged in users) can view questions (and their answers and votes) without logging in.
+  * When the site loads, top questions should be shown.
+  * Search functionality should allow users to search for questions/answers, and have them appear sorted by quality.
+
+## Hard Mode
+
+If you complete the basics, you should begin awarding points for certain actions on the site, and keep track of how many points each user has acquired.  Your application should allow the following actions:
 
 * Users can receive points for posting questions, posting answers, or receiving upvotes.
 * Users can lose points for receiving downvotes.
@@ -59,13 +61,13 @@ After completing this assignment, you should...
 * Question poster can award a bounty for an answer to a question with a bounty on it.
 * Site visitors can see a leaderboard of users.
 
-* Awards
-* Permissions based on points
-
-## Hard Mode
-
-.....
-
 ## Nightmare Mode
 
-.....
+Once you have a point system in place, you can take more advanced actions based on these points.  Your application should allow the following actions:
+
+* Users should receive badges for accomplishing certain things in the application.  Stack Overflow's system can be found [here](http://stackoverflow.com/help/badges).  Choose at least five of these badges and implement them in your system.
+* Users should only be able to perform certain tasks once they have acquired a certain number of points.  Stack Overflow calls these "privileges," and their system can be found [here](http://stackoverflow.com/help/privileges).  Implement the following privileges:
+  * A certain number of points (more than zero, you choose the threshold) needed to create posts
+  * A higher number of points (you choose the threshold) needed to upvote
+  * A higher number of points (you choose the threshold) needed to set a bounty
+  * A higher number of points (you choose the threshold) points needed to downvote
