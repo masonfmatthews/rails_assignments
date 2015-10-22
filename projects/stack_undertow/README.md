@@ -27,6 +27,7 @@ After completing this assignment, you should...
 After completing this assignment, you should...
 
 * Be able to design a database and ReSTful API to support a range of features
+* Be able to send e-mail from Rails
 * Know how to build an API to provide data to a reactive User Interface (UI)
 * Gain experience writing high-throughput APIs with Rails
 
@@ -72,6 +73,7 @@ At its core, your application needs to allow users to ask questions, give answer
 * Anyone can search for Questions and Answers, so that they can find them faster and more easily.
   * Search results should be ranked by quality.
   * Results in the list should contain the number of Votes and Answers.
+* Askers can receive an e-mail when one of their Questions is answered, so that they know when to log back in.
 
 ## Hard Mode
 
