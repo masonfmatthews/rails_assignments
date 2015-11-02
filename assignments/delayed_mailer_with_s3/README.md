@@ -28,7 +28,7 @@ Your task tonight is to offload the generation of this index page to a backgroun
 
 Your controller action which receives this e-mail address should queue up a message to be delivered later via a background process.  When the background job is picked up off the queue, that process should do the work of querying the database and generating the report.  The report should then be e-mailed to that e-mail address.
 
-In addition, the report itself should not be attached to the e-mail.  It should be created in an HTML or CSV file (your choice) and saved to Amazon S3 using paperclip.  The email should include a link to the file stored on S3.
+In addition, the report itself should not be attached to the e-mail.  It should be created in a CSV file and saved to Amazon S3 using paperclip.  The email should include a link to the file stored on S3.
 
 This has the advantage of giving the user a quick web application response time and doing the heavy lifting asynchronously.
 
