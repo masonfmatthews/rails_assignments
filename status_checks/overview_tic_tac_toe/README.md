@@ -23,9 +23,9 @@ After completing this assignment, you should...
 
 For this assignment, you are going to build a tic tac toe game.  The purpose of this work is to review the core components of a Ruby application and demonstrate your ability to put them together appropriately.  In order to help you and your instructor reflect on your acquired skills, you will be working independently.  You may talk with others and draw on whiteboards together, but no other students should look at your actual code, and you should not look at theirs.  You may, of course, use Google and online references as frequently as you would like.
 
-You are building an application to play tic tac toe, and the requirements will be presented to you in a particular order.  You MUST complete each one of these in order, without jumping around.  Each completed phase must have tests in place, a README in place, a series of good commit messages, and a final commit message (for that particular phase) which includes the `#shipit` tag.
+You are building an application to play tic tac toe, and the requirements are presented below in a particular order.  You MUST complete each one of these phases in order, without jumping around.  Each completed phase must have tests in place, a README in place, a series of good commit messages, and a final commit message (for that particular phase) which includes the `#shipit` tag.
 
-Record the number of hours you put towards each of the phases.
+Record the number of hours you put towards each of the phases, and email or message your instructor when you complete each phase.
 
 ### Phase One
 
