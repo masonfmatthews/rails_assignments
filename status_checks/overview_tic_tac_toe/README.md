@@ -33,12 +33,14 @@ Record the number of hours you put towards each of the phases.
 * The user should be asked for a location.  A1 is the upper-left, A2 is the upper-middle, A3 is the upper-right, B1 is the middle-left, etc.
 * When the user enters something that is not A1, A2, A3, B1, B2, B3, C1, C2, or C3, the user should be reprimanded and asked to try again.
 * When the user enters a valid location, the board should redisplay with an X in that location.
-* The user should be asked for another location, and these steps should continue until the board is completely full of X's.  Then the game (and the program) should end.
+* The user should be asked for another location, etc, etc, and X's should continue to accumulate on the board.  Don't worry about duplicate entries, and let the game keep going until the user hits Control-C to end it.
+* Your application should include and utilize at least one class written by you.
 
 ### Phase Two
 
-* Refactor your application to use two classes: `Board` and `Position`.
 * The computer should alert a player if they enter coordinates which are already occupied and then ask again.
+* The game should automatically end when the board is full of X's.
+* Your application should be refactored to utilize at least two classes written by you.
 * All the other functionality should stay the same.
 
 ### Phase Three
@@ -48,18 +50,20 @@ Record the number of hours you put towards each of the phases.
 * The computer should then alternate asking the players for coordinates and placing the appropriate X's or O's in the appropriate places.
 * If any player enters an invalid or already occupied set of coordinates, they should not lose their turn, but be asked again.
 * The game should continue until the board is completely full.  Do not yet think about assessing who has won.
-* Continue to use your two classes.
+* Utilize at least two of your own classes.  Write more as you see fit.
 
 ### Phase Four
 
 * The game should stop if someone wins, and the computer should report the winner's name.
-* Continue to use your two classes.
+* Utilize at least two of your own classes.  Write more as you see fit.
 
 ### Phase Five
 
 * Modify the game so that the human (X) plays against the computer (O).  The computer can be dumb (e.g. just take the next available position), but it should be possible for the human to lose if the human makes even worse decisions.
-* Continue to use your two classes.
+* Utilize at least two of your own classes.  Write more as you see fit.
 
-### Phase Six
+### Bonus Phase
 
-* Make the computer player unbeatable.  Use [the XKCD guide to tic tac toe for the optimal strategy](https://xkcd.com/832/).
+* Make the computer player unbeatable.  You can use any of these references as you see fit:
+  * [The XKCD guide to optimal tic tac toe strategy](https://xkcd.com/832/).
+  * [The Minimax algorithm](https://en.wikipedia.org/wiki/Minimax).

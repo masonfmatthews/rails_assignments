@@ -1,6 +1,6 @@
 {
     "name": "overview_tic_tac_toe",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "title": "Overview: Tic Tac Toe",
     "description": "In order to review, practice, and demonstrate your Ruby knowledge, build a program of moderate complexity from the ground up by yourself.",
     "difficultyModes": [
