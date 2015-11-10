@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+ruti:
+  name: Ruti Wajnberg
+  party: Independent
+
+ilan:
+  name: Ilan Man
+  party: Democrat
