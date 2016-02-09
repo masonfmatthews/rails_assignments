@@ -6,7 +6,11 @@ class Grid
   end
 
   def has_ship_on?(x, y)
-    @ships.any? {|s| s.covers?(x, y)}
+    found = false
+    @ships.each do |s|
+      found = true if s.covers?(x, y)
+    end
+    found
   end
 
   def place_ship(ship, x, y, across)
