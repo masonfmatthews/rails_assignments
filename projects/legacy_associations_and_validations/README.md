@@ -61,7 +61,7 @@ Person B:
 
 * Associate `lessons` with `readings` (both directions).  When a lesson is destroyed, its readings should be automatically destroyed.
 * Associate `lessons` with `courses` (both directions).  When a course is destroyed, its lessons should be automatically destroyed.
-* Associate `courses` with `course_instructors` (both directions).  If the course has any students associated with it, the course should not be deletable.
+* Associate `courses` with `course_instructors` (both directions).  If the course has any instructors associated with it, the course should not be deletable.
 * Associate `lessons` with their `in_class_assignments` (both directions).
 * Set up a Course to have many `readings` through the Course's `lessons`.
 * Validate that Schools must have `name`.
