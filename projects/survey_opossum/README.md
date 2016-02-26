@@ -148,6 +148,4 @@ Survey Creation:
 
 Viewing Results:
 
-* Graph the answers.
-
-That's the only description you get.  Make it work, make it awesome, and definitely use JavaScript for the graphs.
+* Graph the answers.  That's the only description you get.  Make it work, make it awesome, and definitely use JavaScript for the graphs.
