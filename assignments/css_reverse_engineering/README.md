@@ -4,7 +4,6 @@
 
 Given screenshots of web pages (or parts of webpages), reproduce the look of each using CSS.
 
-
 ## Objectives
 
 After completing this assignment, you should...

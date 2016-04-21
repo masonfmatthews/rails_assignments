@@ -4,7 +4,6 @@
 
 Create classes to track employees and their departments, interpret employee reviews, and give out raises to those with good reviews.
 
-
 ## Objectives
 
 ### Learning Objectives
